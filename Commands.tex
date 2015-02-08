@@ -1,0 +1,6503 @@
+\begin{comment}
+\part{The World of \Miith}
+\end{comment}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Timeline}
+\end{comment}
+
+% I would like all my text commands to end in an \xspace, because then I don't have to put an explicit ``{}'' or ``\ '' after them to get a space.
+% To save space I want to define a command-definer that automatically appends an xspace to the defined command. 
+% I am adverse to creating a completely new command-definer, because then Kile (my IDE) will not understand that the new commands have been defined, and then autocompletion will not work. 
+% So I reuse the name ``\providecommand'', which Kile already knows about.
+% \renewcommand{\providecommand} [2]{\newcommand{#1}{#2{}\xspace}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Symbols}
+\end{comment}
+
+
+
+\begin{comment}
+\subsection{Grammar}
+\end{comment}
+
+% Form regular English S-possessive of a plural noun. 
+\newcommand*{\psp} [1]{#1'}
+\newcommand*{\pps} [1]{\psp{#1}}
+% Form regular English S-possessive of a noun. 
+\newcommand*{\ps}  [1]{#1's}
+
+
+
+\begin{comment}
+\subsection{Non-alphabetical symbols}
+\end{comment}
+
+%A paragraph break with no indentation
+%\newcommand{\new}{\subparagraph{}\noindent\ignorespaces}
+%\newcommand{\new}{\subparagraph{}}
+%\newcommand{\new}{\paragraph{}\noindent{}\ignorespaces}
+\newcommand{\new}  {\bigskip\noindent}
+
+\newcommand{\dash} {{}\thinspace---\thinspace}
+\newcommand{\dah}  {\dash} % A common misspelling.
+
+
+
+\begin{comment}
+\subsection{Consonants}
+\end{comment}
+
+% Voiced alveolar fricative. 
+\newcommand{\zh}{\v z}
+
+% A soft D in Rissitic.
+\newcommand{\rissdh}{dh}
+% \newcommand{\rissdh}{\textipa{\dh}}
+
+\begin{comment}
+\subsubsection{R-variants}
+\end{comment}
+
+% Short guttural R.
+\newcommand{\gr}    {\textinvscr}
+% Long guttural R.
+\newcommand{\grr}   {\textscr}
+% Regular English R.
+\newcommand{\rr}    {\*r}
+% 'Rolling' R.
+\newcommand{\rollr} {r}
+
+% A guttural R in Kingstongue.
+\newcommand{\Rhh}{\v R}
+\newcommand{\rhh}{\v r}
+% A long guttural R in Kingstongue.
+\newcommand{\Rrhh}{\v R}
+\newcommand{\rrhh}{\v r}
+
+
+
+\begin{comment}
+\subsection{Vowels}
+\end{comment}
+
+% Umlaut letters.
+\newcommand{\Aumlaut} {\"A}
+\newcommand{\aumlaut} {\"a}
+\newcommand{\Uumlaut} {\"U}
+\newcommand{\uumlaut} {\"u}
+
+% Long vowel in a stressed syllable.
+\newcommand{\Along}   {\=A} % Dark A
+\newcommand{\along}   {\=a} % Dark A
+\newcommand{\Ilong}   {\=\I} 
+\newcommand{\ilong}   {\=\i} 
+\newcommand{\Ulong}   {\=U} 
+\newcommand{\ulong}   {\=u} 
+
+% Round O.
+\newcommand{\Oround}  {\^O}
+\newcommand{\oround}  {\^o}
+
+% Non-silent final E.
+\newcommand{\finale}  {\"e}
+
+\begin{comment}
+\subsubsection{Resphan}
+\end{comment}
+
+% Flat A, dark A and long dark A in the Resphan tongue.
+\newcommand{\Aflatresphan} {A}
+\newcommand{\Adarkresphan} {A}
+\newcommand{\aflatresphan} {a}
+\newcommand{\adarkresphan} {a}
+\newcommand{\Alongresphan} {\Along}
+\newcommand{\alongresphan} {\along}
+\newcommand{\ahresphan}    {ah} % Like \alongresphan, but final
+
+% Long I in the Resphan tongue. 
+\newcommand{\Ilongresphan} {\Ilong}
+\newcommand{\ilongresphan} {\ilong}
+
+% Rounded O in the Resphan tongue. 
+\newcommand{\Oroundresphan} {O}
+\newcommand{\oroundresphan} {o}
+
+% AE diphthong in the Resphan tongue. 
+\newcommand{\aeresphan}    {ae}
+
+\begin{comment}
+\subsubsection{Rissitic}
+\end{comment}
+
+% Flat A, dark A and long dark A in the Rissitic tongue.
+\newcommand{\Aflatrissitic} {\"A}
+\newcommand{\Adarkrissitic} {A}
+\newcommand{\aflatrissitic} {\"a}
+\newcommand{\adarkrissitic} {a}
+\newcommand{\Alongrissitic} {Aa}
+\newcommand{\alongrissitic} {aa} 
+
+% Round O.
+\newcommand{\Oroundrissitic}  {\Oround}
+\newcommand{\oroundrissitic}  {\oround}
+
+% Ø in the Rissitic tongue.
+%\newcommand{\rissoe}{oe}
+\newcommand{\rissoe}          {\o}
+
+\begin{comment}
+\subsubsection{Diphthongs}
+\end{comment}
+
+\newcommand{\aediphthong} {a\"e}
+
+
+
+\begin{comment}
+\subsection{Y-variants}
+\end{comment}
+
+\begin{comment}
+\subsubsection{Consonantal}
+\end{comment}
+
+% Consonantal Y, as in English "yes".
+\newcommand{\y} {y}
+\newcommand{\Y} {Y}
+
+% Consonantal Y in the Nephilic tongue. 
+\newcommand{\yconsonantnephil} {\y}
+
+\begin{comment}
+\subsubsection{Vowel}
+\end{comment}
+
+% Vowel Y, as in Danish "tyv".
+\newcommand{\yvowel} {\"y}
+
+% Vowel Y in the Redcor tongue. 
+\newcommand{\yvowelredcor} {\yvowel}
+
+% Vowel and consonantal Y in the Rissitic tongue. 
+\newcommand{\yvowelrissitic}     {\yvowel}
+\newcommand{\yconsonantrissitic} {y}
+
+\begin{comment}
+\subsubsection{Diphthong}
+\end{comment}
+
+% Diphthong Y, as in English "fly". 
+\newcommand{\ydiphthong} {\^y}
+
+
+
+\begin{comment}
+\subsection{Groups of letters}
+\end{comment}
+
+% "an" in Redcor, as in French "France". 
+\newcommand{\anredcor} {\^an}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%       TIMELINE THINGS       %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{comment}
+\section{Commands}
+\end{comment}
+
+
+% ``Numeric value, basic''.
+% Create a numeric value with key #1 and value #2. 
+\newrobustcmd*{\nvb}[2]{%
+  \csedef{NV #1}{\number\numexpr#2}%
+}
+% ``Numeric value, offset''. 
+% Takes three arguments: New key, base key, offset. 
+% Create a numeric value with key #1 and value #2+#3. 
+\newrobustcmd*{\nvo}[3]{%
+  \csedef{NV #1}{\number\numexpr\csuse{NV #2}+\number\numexpr#3}}
+
+% Gives the difference between two numeric values.
+\newcommand*{\difference} [2]{%
+  \number\numexpr\csuse{NV #1}-\number\numexpr\csuse{NV #2}
+}
+
+\newrobustcmd*{\hiscb}[2]{\nvb{#1}{#2}}
+\newrobustcmd*{\hisc}[3] {\nvo{#1}{#2}{#3}}
+
+% `birthandage' specifies a person's name (`foo') birth year and his age at death. 
+% It also introduces two hisc's: `foo birth' and `foo death'. 
+% Birth year is given as a base hisc and an offset. 
+% Death year is computed as birth year + age. 
+\newcommand*{\birthandage}[4]{\hisc{#1 birth}{#2}{#3}\hisc{#1 death}{#1 birth}{#4}}
+% `deathandage' is like birthandage, except you get to specify a year of death, and the year of birth is calculated. 
+\newcommand*{\deathandage}[4]{\hisc{#1 death}{#2}{#3}\hisc{#1 birth}{#1 death}{-#4}}
+% `birthliving' lets you specify the birth year of a person who still lives. 
+\newcommand*{\birthliving}[3]{\hisc{#1 birth}{#2}{#3}}
+
+% Timeline environment. 
+\newenvironment{timeline}{\begin{description}}{\end{description}}
+% Timeline item. 
+\newcommand{\timeitem}[1] {\item[\yds{#1} (\yic{#1}):]}
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Stamp things}
+\end{comment}
+
+% These are `time stamps' and `place stamps' that are to be placed at the beginning of a chapter or section and indicate the time and/or place where the section takes place
+\newcommand{\typesetstamp} [1]{\subsubsection*{\noindent #1}}
+%\newcommand{\typesetstamp}[1]{\noindent\ignorespaces\textbf{#1}}
+
+% Typeset date with link. 
+% Takes four arguments: Year counter, day, month and label-to-link-to. 
+\newcommand{\typesetdatelink} [4]{%
+  Year \vaimonyear{#1}{} of the \hr{Vaimon Calendar}{\VaimonCalendar}
+  \\ \nopagebreak
+  #2 day of {#3}}
+
+% Typeset date.
+% Takes three arguments: Year counter, day, month. 
+\newcommand{\typesetdate} [3]{%
+  \typesetdatelink{#1}{#2}{#3}{#3}}
+
+% Like \typesetdate, but uses the Draconian Supremacy calendar.
+\newcommand{\typesetdraconiandate} [1]{%
+  Year \dragonyear{#1} of 
+  \hr{Draconian Supremacy calendar}{\Draconian{} Supremacy}
+}
+% Like \typesetdate, but uses the Black Dawn calendar.
+\newcommand{\typesetresphandate} [1]{%
+  Year \resphanyear{#1} of the \hr{Black Dawn calendar}{Black Dawn}
+}
+\newcommand{\typesetbeforevaimondate} [1]{%
+  \beforevaimonyear{#1} years before the 
+  \hr{Vaimon Calendar}{\VaimonCalendar}
+}
+\newcommand{\typesetdraconianvaimondate} [1]{%
+  \typesetdraconiandate{#1}\\
+  \typesetbeforevaimondate{#1}
+}
+\newcommand{\typesetdraconianresphanvaimondate} [1]{%
+  \typesetdraconiandate{#1}\\
+  \typesetresphandate{#1}\\
+  \typesetbeforevaimondate{#1}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Dominators of \Miith}
+\end{comment}
+
+
+
+\begin{comment}
+\subsection{\FirstbanewarBook}
+\end{comment}
+
+% The year where Tiamat first summons the Xzai-Shann. 
+% Considered the beginning of known history. 
+% \hiscb{XS}{0}
+% \hisc{Sethicus creates Dragons}{XS}{-1000000}
+
+\hiscb{Sethicus creates Dragons}{0}
+\hisc{Durance begins}           {Sethicus creates Dragons}{9457}
+\hisc{First Banewar begins}     {Durance begins}          {1362458}
+\hisc{First Banewar ends}       {First Banewar begins}    {171}
+\hisc{Saphyrae dominates}       {First Banewar ends}      {26942}
+\hisc{Aryoth invasion}          {Saphyrae dominates}      {3843}
+\hisc{Draconian Ascendancy}     {Aryoth invasion}         {320}
+\hisc{XS}                       {Draconian Ascendancy}    {0}
+
+\birthliving{Nexagglachel}      {XS}                  {28}
+\birthliving{Ishnaruchaefir}    {XS}                  {139}
+\birthliving{Secherdamon}       {XS}                  {951}
+\hisc{Scathae created}          {XS}                  {287}
+
+
+
+\begin{comment}
+\subsection{\ThanatzilBook}
+\end{comment}
+
+\birthliving{Semiza}                 {XS}                  {2425}
+\birthliving{Ilu}                    {Semiza birth}        {32}
+\hisc       {Ilu pregnant}           {Ilu birth}           {16}
+\birthandage{Thanatzil}              {Ilu pregnant}        {1} {21}
+\hisc       {First Humans conveived} {Thanatzil birth}     {15}
+
+
+
+\begin{comment}
+\subsection{\MerkyrahBook}
+\end{comment}
+
+\hisc{Semiza found}            {Thanatzil death}{13738}
+\hisc{Merkyrah falls}          {Semiza found}   {33}
+\hisc{Murder of the Dawn}      {Merkyrah falls} {0}
+
+
+
+\begin{comment}
+\subsection{\SecondbanewarBook}
+\end{comment}
+
+\hisc{Satharioth}              {Merkyrah falls}{1489}
+\hisc{Shrouding}               {Satharioth}    {116}
+\hisc{Second Banewar ends}     {Shrouding}     {0}
+
+\newcommand{\dateSecherdamonsVow} {%
+  \typesetdraconianresphanvaimondate{Second Banewar ends}}
+
+
+
+\begin{comment}
+\subsection{\ResphanWarsBook}
+\end{comment}
+
+\hisc{Zachirah death}                {Shrouding}      {431}
+\hisc{Malach fiasco}                 {Zachirah death} {286}
+
+
+
+\begin{comment}
+\subsection{\TheLieSublimeBook}
+\end{comment}
+
+\hisc{Cuezca rises}                  {Malach fiasco}       {261}
+\hisc{Cuezcan Apocalypse}            {Cuezca rises}        {137}
+
+
+
+
+
+
+
+\begin{comment}
+\section{Archons of \Miith}
+\end{comment}
+
+
+
+\begin{comment}
+\subsection{Cordos Vaimon's time}
+\end{comment}
+
+% The 0th year of the Imperial Calendar, the founding of the Vaimon Caliphate. 
+\newcommand{\ic}{\value{VC}}
+\hisc{VC}                               {Cuezcan Apocalypse} {94}
+\hisc{IC}                               {VC}                 {0}
+\hisc{Founding of the Vaimon Caliphate} {VC}                 {0}
+
+% Cordos Vaimon
+\birthandage{Cordos Vaimon}    {VC}                 {-51}{72}
+% Belandos Vaimon II (Cordos' father)
+\birthandage{Belandos}         {Cordos Vaimon birth}{-25}{55}
+% Faegos Vaimon (Cordos' grandfather)
+\birthandage{Faegos}           {Belandos birth}     {-20}{51}
+% Silqua Delaen
+\birthandage{Silqua}           {VC}                 {-35}{30}
+\birthandage{Silqua Vaimon}    {Silqua birth}       {0}  {30}
+% Silqua's two brothers. 
+\birthandage{Arcan Delain}     {Silqua birth}       {-15}{64}
+\birthandage{Lestor Delain}    {Silqua birth}       {-11}{82}
+
+% The wedding of Silqua Delain and Cordos Vaimon
+\hisc{Silqua wed}              {Silqua birth}{18}
+\hisc{Silqua married}          {Silqua wed}{0}
+
+
+
+
+\begin{comment}
+\subsection{Darkfall time}
+\end{comment}
+
+% Grith Ecallivan, a Vaimon scoundrel hero. 
+\birthandage{Grith Ecallivan}  {VC}{761}{81}
+
+% Vizicar
+\birthandage{Vizicar}          {VC}{1251}{61}
+
+% Belzir
+\birthandage{Belzir}           {VC}{1486}{73}
+
+% The Darkfall, the fall of the Vaimon Caliphate. 
+\hisc{Darkfall}{Belzir death}  {0}
+\hisc{Hundred Scourges}{Darkfall}{0}
+
+
+
+\begin{comment}
+\subsection{Ortaican and Tepharin}
+\end{comment}
+
+\hisc{Fall of Ortaica}         {Darkfall}{178}
+\hisc{Fall of Tepharae}        {Darkfall}{419}
+
+% Texall discovers his axioms. 
+\hisc{Texall Axioms}           {Fall of Ortaica}{87}
+
+% The time of the Eresh-Kali civilization.
+\hisc{Eresh-Kal flourished}    {VC}{1100}
+\hisc{Eresh-Kal destroyed}     {VC}{1159}
+
+
+
+\begin{comment}
+\subsection{Uther the Tiger's time}
+\end{comment}
+
+% The year of the beginning of the Carzain story, where Carzain fights the mutinying mercenaries. 
+\hisc{Founding of Belkade}     {Darkfall}           {577}
+\hisc{Fall of Belkade}         {Founding of Belkade}{188}
+
+\hisc{Founding of Imetrium}    {Mutiny}             {-848}
+
+\birthandage{Cuthran the Victorious} {Founding of Belkade}{-32}{68}
+\birthandage{Uther the Tiger}        {Founding of Belkade}{-35}{61}
+
+
+
+
+
+
+
+\begin{comment}
+\section{Sentinels of \Miith}
+\end{comment}
+
+\hisc{Mutiny}                      {Fall of Tepharae}   {129}
+\hisc{Catrian dies}                {Mutiny}             {3}
+
+% The year of the Pelidor-Runger war, where Carzain fights.
+\hisc{Runger war}                  {Mutiny}{9} % In terms of year numbers it's two years, but in terms of actual days it's only slightly over one year.
+
+% The year where the Rissitics conquer Fendor.
+\hisc{Siege of Fendor}             {Runger war}{-1}
+
+% The year where Giles Tantor's diary is written. 
+\hisc{Tantor diary}                {Runger war}{-1}
+
+% The year where Ishnaruchaefir slays a Ghobal in Malcur. 
+\hisc{Ishnaruchaefir slays Ghobal} {Runger war}{-1}
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{\RungerWarBook}
+\end{comment}
+
+
+
+\begin{comment}
+\subsubsection{Vertex Awakening}
+\end{comment}
+
+\newcommand{\dateCatrianDies} {%
+  \typesetdate%
+    {Catrian dies}{21st}{\Thimared}}
+
+\newcommand{\dateMutiny} {%
+  \typesetdate%
+    {Mutiny}{11th}{\Magaled}}
+\newcommand{\dateDayAfterMutiny} {%
+  \typesetdate%
+    {Mutiny}{12th}{\Magaled}}
+\newcommand{\dateIlcasNorthstarIntroduction} {%
+  \typesetdate%
+    {Mutiny}{14th}{\Magaled}}
+\newcommand{\dateCarzainFucksMirai} {%
+  \typesetdate%
+    {Mutiny}{20th}{\Magaled}}
+\newcommand{\dateCarzainBackInRedglen} {%
+  \typesetdate%
+    {Mutiny}{17th}{\Cushed}}
+
+
+
+\newcommand{\dateIshnaruchaefirIntroduced} {%
+  \typesetdate%
+    {Ishnaruchaefir slays Ghobal}{13th}{\Teshiron}}
+\newcommand{\dateIshnaruchaefirSlaysAGhobal} {%
+  \typesetdate%
+    {Ishnaruchaefir slays Ghobal}{13th}{\Teshiron}}
+
+
+
+\begin{comment}
+\subsubsection{The Invasion}
+\end{comment}
+
+\newcommand{\dateIcorDies} {%
+  \typesetdate%
+    {Runger war}{21st}{\Atzirah}}
+\newcommand{\dateCurwenKillsOnatol} {%
+  \typesetdate%
+    {Runger war}{22nd}{\Atzirah}}
+\newcommand{\dateCarzainJoinsTheArmy} {%
+  \typesetdate%
+    {Runger war}{2nd}{\Razilah}}
+\newcommand{\dateCarzainGoesToMalcur} {%
+  \typesetdate%
+    {Runger war}{7th}{\Razilah}}
+\newcommand{\dateIcorMeetsPsyrex} {%
+  \typesetdate%
+    {Runger war}{14th}{\Razilah}}
+\newcommand{\dateCharcoalFucksNeedle} {%
+  \typesetdate%
+    {Runger war}{20th}{\Razilah}}
+
+
+
+
+\begin{comment}
+\subsubsection{The March}
+\end{comment}
+
+\newcommand{\dateTheArmySetsOut} {\typesetdate%
+    {Runger war}{1st}{\Keshirah}}
+\newcommand{\dateCharcoalReadsDiary} {\typesetdate%
+    {Runger war}{4th}{\Keshirah}}
+\newcommand{\dateIcorBuried} {\typesetdate%
+    {Runger war}{6th}{\Keshirah}}
+\newcommand{\dateAchsahAndNeedle} {\typesetdate%
+    {Runger war}{9th}{\Keshirah}}
+\newcommand{\dateCharcoalReadsMoreDiary} {\typesetdate%
+    {Runger war}{11th}{\Keshirah}}
+\newcommand{\dateNeinaCaptured} {\typesetdate%
+    {Runger war}{16th}{\Keshirah}}
+\newcommand{\dateCarzainFirstInForklin} {\typesetdate%
+    {Runger war}{17th}{\Keshirah}}
+\newcommand{\dateRianLooksForNeina} {\typesetdate%
+    {Runger war}{18th}{\Keshirah}}
+\newcommand{\dateCarzainVolunteers} {\typesetdate%
+    {Runger war}{18th}{\Keshirah}}
+\newcommand{\dateIcorHauntsTiroco} {\typesetdate%
+    {Runger war}{20th}{\Keshirah}}
+\newcommand{\dateRianAndTheCrazyOldWoman} {\typesetdate%
+    {Runger war}{21st}{\Keshirah}}
+
+
+
+\begin{comment}
+\subsubsection{Jirad Tantor's diary}
+\end{comment}
+
+\newcommand{\dateTantorMeetsTakestsha}        {\typesetdatelink%
+    {Tantor diary}{10th}{\Feazirah}{Feazirah}}
+\newcommand{\dateTakestshaIntroducesEreshKal} {\typesetdatelink%
+    {Tantor diary}{19th}{\Feazirah}{Feazirah}}
+\newcommand{\dateTantorResearchesEreshKal}    {\typesetdatelink%
+    {Tantor diary}{22nd}{\Feazirah}{Feazirah}}
+\newcommand{\dateTakestshaSetsOut}            {\typesetdate%
+    {Tantor diary}{2nd}{\Barion}}
+\newcommand{\dateTakestshaReachesGedrock}     {\typesetdate%
+    {Tantor diary}{14th}{\Barion}}
+\newcommand{\dateWaythaneDayOne}              {\typesetdate%
+    {Tantor diary}{15th}{\Barion}}
+\newcommand{\dateWaythaneDayTwo}              {\typesetdate%
+    {Tantor diary}{16th}{\Barion}}
+\newcommand{\dateWaythaneDayThree}            {\typesetdate%
+    {Tantor diary}{17th}{\Barion}}
+\newcommand{\dateWaythaneDayFourTempleFound}  {\typesetdate%
+    {Tantor diary}{18th}{\Barion}}
+\newcommand{\dateEreshKalDayOne}              {%
+  \dateWaythaneDayFourTempleFound}
+\newcommand{\dateEreshKalDayTwo}              {\typesetdate
+    {Tantor diary}{19th}{\Barion}}
+\newcommand{\dateEreshKalLeftBehindDayOne}    {\typesetdate%
+    {Tantor diary}{20th}{\Barion}}
+\newcommand{\monthWhereTantorsDiaryEnds}      {%
+  \Gamishiel}
+
+
+
+
+\begin{comment}
+\subsubsection{Into the Fray}
+\end{comment}
+
+\newcommand{\dateSortieFindsTown}           {\typesetdate%
+    {Runger war}{23rd}{\Keshirah}}
+\newcommand{\dateTirocoUndergroundWork}     {\typesetdatelink%
+    {Runger war}{1st}{\Feazirah}{Feazirah}}
+\newcommand{\dateRianAndJorgen}             {\typesetdatelink%
+    {Runger war}{3rd}{\Feazirah}{Feazirah}}
+\newcommand{\dateSortieInCombat}            {\typesetdatelink%
+    {Runger war}{4th}{\Feazirah}{Feazirah}}
+\newcommand{\dateRianSeesMagicRitual}       {\typesetdatelink%
+    {Runger war}{6th}{\Feazirah}{Feazirah}}
+\newcommand{\dateTirocoAndTheCrazyOldWoman} {\typesetdatelink%
+    {Runger war}{7th}{\Feazirah}{Feazirah}}
+\newcommand{\dateCarzainDreamsInWaythane}   {\typesetdatelink%
+    {Runger war}{7th}{\Feazirah}{Feazirah}}
+\newcommand{\dateTirocoAndMoro}             {\typesetdatelink%
+    {Runger war}{7th}{\Feazirah}{Feazirah}}
+\newcommand{\dateCarzainReturnsToForklin}   {\typesetdatelink% Five days after 'sortie in combat'!
+    {Runger war}{9th}{\Feazirah}{Feazirah}}
+\newcommand{\dateRianSeesRaid}              {\typesetdatelink%
+    {Runger war}{10th}{\Feazirah}{Feazirah}}
+\newcommand{\dateTirocoDreamsofWorms}       {\typesetdatelink%
+    {Runger war}{11th}{\Feazirah}{Feazirah}}
+\newcommand{\dateTirocoAsksMoro}            {\typesetdatelink%
+    {Runger war}{12th}{\Feazirah}{Feazirah}}
+\newcommand{\dateBilaComesToForklin}        {\typesetdatelink% 
+    {Runger war}{18th}{\Feazirah}{Feazirah}}
+
+
+
+
+\begin{comment}
+\subsubsection{Spectre of the Fray}
+\end{comment}
+
+\newcommand{\dateRungeransBesiegeForclin}   {\typesetdate% 
+    {Runger war}{1st}{\Barion}}
+\newcommand{\dateRungeransBringUpCannons}   {\typesetdate% 
+    {Runger war}{2nd}{\Barion}}
+\newcommand{\datePelidorianSally}           {\typesetdate% 
+    {Runger war}{2nd}{\Barion}}
+\newcommand{\dateTakestshaStormsForclin}    {\typesetdate% 
+    {Runger war}{3rd}{\Barion}}
+
+
+\newcommand{\dateNeedleSummonsBanes}        {\typesetdatelink%
+    {Runger war}{11th}{\Feazirah}{Feazirah}}
+
+\begin{comment}
+\subsubsection{Rissitic story thread}
+\end{comment}
+
+\newcommand{\dateSiegeofFendor} {\typesetdate%
+    {Siege of Fendor}{18th}{\Hapheron}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Cosmic things}
+\end{comment}
+
+
+% The Universe. Is it capitalized or not?
+\newcommand{\Universe}  {Universe\xspace}
+\newcommand{\universe}  {universe\xspace}
+
+% The Cosmos - probably a synonym for the Universe.
+\newcommand{\Cosmos}  {Cosmos\xspace}
+\newcommand{\Cosmic}  {Cosmic\xspace}
+\newcommand{\cosmos}  {Cosmos\xspace}
+\newcommand{\cosmic}  {Cosmic\xspace}
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Realms}
+\end{comment}
+
+% Miith. 
+\newcommand{\Miithians}  {\Miithian{}s\xspace}
+\newcommand{\Miithian}   {\Miith{}ian\xspace}
+\newcommand{\Miith}      {Miith\xspace}
+
+% The Planes. Another term for the Realms, but somewhat more general.
+\newcommand{\Plane}      {Plane\xspace}
+\newcommand{\Planes}     {Planes\xspace}
+
+% Tembrae, the name of the "main" Realm of \Miith{} at the time of the Second Banewar.
+\newcommand{\Tembraeans} {Tembraeans\xspace} 
+\newcommand{\Tembraean}  {Tembraean\xspace}
+\newcommand{\Tembrae}    {Tembrae\xspace}
+
+% Makai, the Hellish underworld containing Inferno and Stygia.
+\newcommand{\Makai}      {Machai\xspace}
+\newcommand{\Machai}     {\Makai}
+\newcommand{\Tuat}       {\Makai}
+\newcommand{\Machaic}    {\Makai{}c\xspace}
+
+% The Crystal Sphere, the seal that keeps the Banelords out. 
+\newcommand{\CrystalSphere}    {Crystal Sphere\xspace}
+
+% The world of the moth-things.
+\newcommand{\Shuggon}          {Shuggon\xspace}
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{The Web of Realms}
+\end{comment}
+
+% The Shrouding, previously called the "Second Shrouding". 
+\newcommand{\SecondShrouding} {Shrouding\xspace}
+\newcommand{\Shrouding}       {Shrouding\xspace}
+
+% Vertex Spike: A sudden big Vertex reaction. 
+\newcommand{\Spike}           {Spike\xspace}
+\newcommand{\spiked}          {Spiked\xspace}
+\newcommand{\spike}           {Spike\xspace}
+\newcommand{\VertexSpike}     {\vertex{} \spike}
+\newcommand{\vertexspike}     {\vertex{} \spike}
+
+% Vertex: A person or item with the ability to profoundly affect the Web of the Realms. 
+\newcommand{\Vertex}          {Vertex\xspace}
+\newcommand{\Vertices}        {Vertices\xspace}
+\newcommand{\vertex}          {Vertex\xspace}
+\newcommand{\vertices}        {Vertices\xspace}
+
+% Nexus: A geographical location especially important in the Web. 
+\newcommand{\Nexus}           {Nexus\xspace}
+\newcommand{\Nexi}            {Nexi\xspace}
+\newcommand{\Nexuses}         {Nexi\xspace}
+\newcommand{\nexus}           {Nexus\xspace}
+\newcommand{\nexi}            {Nexi\xspace}
+\newcommand{\nexuses}         {Nexi\xspace}
+
+% Matrix: An organized group of Vertices. 
+% A sufficiently strong Matrix may unravel much of the Web and re-weave it in their own image.
+\newcommand{\Matrix}          {Matrix\xspace}
+\newcommand{\Matrices}        {Matrices\xspace}
+\newcommand{\matrixx}         {Matrix\xspace}
+\newcommand{\matrices}        {Matrices\xspace}
+% Renew the existing 'matrix' command, which I don't expect to be using. 
+\renewcommand{\matrix}        {Matrix\xspace} 
+
+% Apex: The Vertex that leads and controls a Matrix.
+\newcommand{\Apex}            {Apex\xspace}
+\newcommand{\Apexes}          {Apexes\xspace}
+\newcommand{\apex}            {Apex\xspace}
+\newcommand{\apexes}          {Apexes\xspace}
+
+% Cardinal Points: Pivotal Vertices below the Apex.
+\newcommand{\CardinalPoints}  {\CardinalPoint{}s\xspace}
+\newcommand{\CardinalPoint}   {Cardinal Point\xspace}
+\newcommand{\cardinalpoints}  {\CardinalPoint{}s\xspace}
+\newcommand{\cardinalpoint}   {\CardinalPoint{}\xspace}
+
+% Dweomer: A cosmic source of power. 
+\newcommand{\Dweomers}        {Dweomers\xspace}
+\newcommand{\Dweomer}         {Dweomer\xspace}
+\newcommand{\dweomers}        {dweomers\xspace}
+\newcommand{\dweomer}         {dweomer\xspace}
+
+% Carcer: A soul prison. 
+\newcommand{\Carcers}         {Carcers\xspace}
+\newcommand{\Carcer}          {Carcer\xspace}
+\newcommand{\carcers}         {Carcers\xspace}
+\newcommand{\carcer}          {Carcer\xspace}
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Cosmic gods}
+\end{comment}
+
+
+
+\newcommand{\Zaz}              {Zaz\xspace}
+\newcommand{\Urzaz}            {Urzaz\xspace}
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Chaos Magic}
+\end{comment}
+
+% Spellwords. 
+
+% Guth'nyad is used by Ishnaruchaefir in "What Slithers Beneath". 
+\newcommand{\Guthnyad} {G\ulong{}th'nyad\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Wild things}
+\end{comment}
+
+% Wildfog, the foglike substance that obscures the Wild.
+\newcommand{\Wildfog}  {Wylde-fog\xspace}
+\newcommand{\wildfog}  {Wylde-fog\xspace}
+
+% The Wild.
+\newcommand{\Wylder}   {Wylder\xspace}
+\newcommand{\Wylde}    {Wylde\xspace}
+\newcommand{\wylde}    {Wylde\xspace}
+
+% Eidola: Totems that keep the Wylde at bay.
+\newcommand{\Eidolon}  {Eidolon\xspace}
+\newcommand{\Eidola}   {Eidola\xspace}
+\newcommand{\eidolon}  {Eidolon\xspace}
+\newcommand{\eidola}   {Eidola\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{People}
+\end{comment}
+
+% The Goydens, a savage people living in the Wild in Pelidor. 
+\newcommand{\Goyden}  {Go\y den\xspace}
+\newcommand{\Goydens} {\Goyden{}s\xspace}
+
+% Rangers, people with a special affinity for the Wild.
+\newcommand{\Rangers} {Rangers\xspace}
+\newcommand{\Ranger}  {Ranger\xspace}
+\newcommand{\rangers} {rangers\xspace}
+\newcommand{\ranger}  {ranger\xspace}
+
+% Nycaneers. 
+\newcommand{\Nycaneers} {\Nycaneer{}s\xspace}
+\newcommand{\Nycaneer}  {\Nycan{}eer\xspace}
+\newcommand{\nycaneers} {\nycaneer{}s\xspace}
+\newcommand{\nycaneer}  {\Nycaneer}
+
+% Melda, a Nycan's commanding officer.
+\newcommand{\Meldae}    {Meldae\xspace}
+\newcommand{\Melda}     {Melda\xspace}
+\newcommand{\meldae}    {Meldae\xspace}
+\newcommand{\melda}     {Melda\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% \begin{comment}
+% \part{Cultures of \Miith{}}
+% \end{comment}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Azmith}
+\end{comment}
+
+% The `Known World', the continent on which stuff takes place. 
+% Azmith means `all \Miith{}'
+\newcommand{\Azmithian}   {Ezmithian\xspace} 
+\newcommand{\Azmith}      {Ezmith\xspace} 
+\newcommand{\Ezmith}      {Ezmith\xspace} 
+
+% Kai Leng, the Underworld.
+\newcommand{\KaiLeng}     {Kai-Leng\xspace}
+
+
+
+
+
+
+
+\begin{comment}
+\section{Imetrium}
+\end{comment}
+
+
+
+
+\begin{comment}
+\subsection{Culture}
+\end{comment}
+
+% Imetric military ranks, in descending order.
+\newcommand{\Deccor}   {Deccor\xspace}
+\newcommand{\Retaxis}  {Retaxis\xspace}
+\newcommand{\Salican}  {Salican\xspace}
+\newcommand{\Vexstra}  {Vexter\xspace}
+\newcommand{\Corphin}  {Corphin\xspace}
+\newcommand{\Inclan}   {Inclan\xspace}
+% Generic word for `soldier' in singular and plural.
+\newcommand{\Rengos}   {Rengos\xspace}
+\newcommand{\Rengoi}   {Rengoi\xspace}
+
+% Imetric clerical ranks, in descending order.
+\newcommand{\Laccorin} {Laccorin\xspace}
+\newcommand{\Ispan}    {Ispan\xspace}
+\newcommand{\Telphan}  {Telphan\xspace}
+\newcommand{\Amra}     {Amra\xspace}
+% Generic word for `priest' in singular and plural.
+\newcommand{\Stracos}  {Stracos\xspace}
+\newcommand{\Stracoi}  {Stracoi\xspace}
+
+
+
+
+\begin{comment}
+\subsection{Geography}
+\end{comment}
+
+% The Risvael Sea, the large sea between Belkade, Durcac and the Imetrium
+\newcommand{\Risvael}     {Risvael\xspace}
+\newcommand{\Risvaelsea}  {Risvael Sea\xspace}
+\newcommand{\Risvalsea}   {Risvael Sea\xspace}
+% The two fortress-towns on Fendor
+\newcommand{\FendorSmall} {\c Cicora\xspace} % smaller, western one
+\newcommand{\Cicora}      {\FendorSmall}
+\newcommand{\FendorLarge} {Fendacor\xspace} % bigger, eastern one
+\newcommand{\FendorBig}   {\FendorLarge}
+\newcommand{\Fendacor}    {\FendorLarge}
+% People of Cicora
+\newcommand{\Cicoran}     {\Cicora{}n\xspace}
+\newcommand{\Cicorans}    {\Cicoran{}s\xspace}
+
+% The fortress-town on Tugan (the smaller island in Risvael)
+\newcommand{\TuganTown}   {Pandex\xspace}
+
+
+
+
+
+\begin{comment}
+\subsection{Religion}
+\end{comment}
+
+
+% Setthias, an Imetric goddess
+\newcommand{\Setthias}  {Settias\xspace}
+% Nishi-Setthias, an Imetric goddess
+\newcommand{\NishiS}    {Nishi-\Setthias}
+% Hiothrex
+\newcommand{\Hiothrex}  {Hiothrex\xspace}
+% Telderain, the Northstar sword
+\newcommand{\Telderain} {Teldraxxus\xspace}
+
+% The Imetriad, the holy book of the Imetrium.
+\newcommand{\Imetriad}  {Imetriad\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Meccaran cultures}
+\end{comment}
+
+
+\newcommand{\Meccarans}  {Mecc\along rans\xspace} % Alternate plural. 
+\newcommand{\Meccaran}   {Mecc\along ran\xspace}  % Singular.
+\newcommand{\Meccara}    {Mecc\along ra\xspace}   % Plural.
+\newcommand{\meccarans}  {Mecc\along rans\xspace} % Alternate plural. 
+\newcommand{\meccaran}   {Mecc\along ran\xspace}  % Singular.
+\newcommand{\meccara}    {Mecc\along ra\xspace}   % Plural.
+
+
+
+\begin{comment}
+\subsection{Tribes}
+\end{comment}
+
+\newcommand{\Thbatswa} {Thbatswa\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Rissitics}
+\end{comment}
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Geography}
+\end{comment}
+
+% Isshuri, the Durcaci continent.
+\newcommand{\DurcacContinent} {Isshuri\xspace}
+\newcommand{\Durcaccontinent} {\DurcacContinent}
+
+% Durcac, homeland of the Rissitics
+\newcommand{\Durcac}          {Durcac\xspace}
+\newcommand{\Durcaci}         {Durcaci\xspace}
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Gods and mythology}
+\end{comment}
+
+% Hriist'tet Nechsain, aka Rissit
+\newcommand{\RissitNechsain}   {Rissit \Nechsain}
+\newcommand{\Hriist}           {Hriist'tet\xspace}
+\newcommand{\Nechsains}        {Nekhsains\xspace}
+\newcommand{\Nechsain}         {Nekhsain\xspace}
+%\newcommand{\Nechsain}        {Nechs\^ain{}\xspace}
+\newcommand{\HriistN}          {\Hriist{} \Nechsain}
+
+% Major gods
+\newcommand{\Esphet}           {Es'phet{}\xspace} % Goddess of the wind and weather
+\newcommand{\Rektet}           {Rektet{}\xspace} % Queen of Swarming Insects
+\newcommand{\Tchesef}          {Tchesef{}\xspace} % God of earth and sand
+
+% Maskim or Masqim, malevolent beings of the Shadow World in Rissitic mythology.
+\newcommand{\Maskim}           {Maskim{}\xspace}
+\newcommand{\Maskims}          {\Maskim{}\xspace}
+\newcommand{\Masqim}           {\Maskim{}\xspace}
+\newcommand{\Masqims}          {\Maskims{}\xspace}
+\newcommand{\Neghir}           {Neg'h\ilong r{}\xspace} % % The major gods of the Rissitics, below Nechsain.
+\newcommand{\Annunaki}         {\Neghir{}\xspace}
+\newcommand{\Igigi}            {Igigi{}\xspace} % Collective term for minor spirits or gods in Rissitism.
+
+% Creatures of the Body World.
+\newcommand{\Asakku}{Asakku{}\xspace} 
+\newcommand{\Asakkus}{\Asakku{}s{}\xspace}
+\newcommand{\BodyCreature}{\Asakku{}\xspace}
+\newcommand{\BodyCreatures}{\Asakkus{}\xspace}
+\newcommand{\bodycreature}{\Asakku{}\xspace}
+\newcommand{\bodycreatures}{\Asakkus{}\xspace}
+
+% Creatures of the Spirit World.
+\newcommand{\Utukku}{Utukku{}\xspace} 
+\newcommand{\Utukkus}{\Utukku{}s{}\xspace}
+\newcommand{\SpiritCreature}{\Utukku{}\xspace}
+\newcommand{\SpiritCreatures}{\Utukkus{}\xspace}
+\newcommand{\spiritcreature}{\Utukku{}\xspace}
+\newcommand{\spiritcreatures}{\Utukkus{}\xspace}
+
+% Creatures of the Shadow World.
+\newcommand{\Ekimmu}{Ekimmu{}\xspace} 
+\newcommand{\Ekimmus}{\Ekimmu{}s{}\xspace}
+\newcommand{\ShadowCreature}{\Ekimmu{}\xspace}
+\newcommand{\ShadowCreatures}{\Ekimmus{}\xspace}
+\newcommand{\shadowcreature}{\Ekimmu{}\xspace}
+\newcommand{\shadowcreatures}{\Ekimmus{}\xspace}
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Social things}
+\end{comment}
+
+% Priest caste. 
+\newcommand{\Nyzlet} {N\yvowelrissitic zlet{}\xspace}
+\newcommand{\nyzlet} {\Nyzlet{}\xspace}
+
+% Knight caste. 
+\newcommand{\Reken}  {Rek\'en{}\xspace}
+\newcommand{\reken}  {\Reken{}\xspace}
+\newcommand{\Rekkan} {\Reken{}\xspace}
+
+% Craftsman caste.
+\newcommand{\Bedhin} {Be\rissdh{}\ilong{}n\xspace} 
+\newcommand{\bedhin} {\Bedhin}
+
+% Labourer caste.
+\newcommand{\Hoka}   {\Hok{}\xspace} 
+\newcommand{\Hok}    {H\oroundrissitic{}k{}\xspace}
+\newcommand{\hok}    {\Hok{}\xspace}
+
+% Warrior caste.
+\newcommand{\Kyth}   {K\yvowelrissitic th{}\xspace} 
+\newcommand{\kyth}   {\Kyth{}\xspace}
+
+% The \Keffoydh, the people of Nechsain.
+\newcommand{\Keffoydh}  {Keff\rissoe \yvowelrissitic \rissdh{}\xspace}
+\newcommand{\Keffoidh}  {\Keffoydh{}\xspace}
+\newcommand{\Rissitic}  {\Keffoidh{}\xspace}
+\newcommand{\Rissitics} {\Rissitic{}\xspace}
+\newcommand{\Redhaifyn} {\Keffoidh{}\xspace} % The faithful
+
+% Orders and titles among the Rissitics
+\newcommand{\XulGann}          {Xul-Gann\xspace}
+\newcommand{\RissLich}         {Xul-Gann\xspace}
+\newcommand{\UrrGammosh}       {Xul-Gann\xspace}
+
+\newcommand{\Faledh}           {Fale\rissdh{}\xspace} % Priestly subordinate
+\newcommand{\Uriko}            {Uriko\xspace} % A person's secular superior
+
+\begin{comment}
+\subsubsection{Tsalt, the Priest Caste}
+\end{comment}
+% High Priest
+\newcommand{\TsaltNyzleth}{Tsalt-N\yvowelrissitic zleth{}\xspace} 
+% The three orders of Tsalt
+% Scientists, theologists, mages
+\newcommand{\Dzeyrgvin}{Dzeyrgvin{}\xspace} 
+% Battle mages
+\newcommand{\Sheshefkesad}{Shesshefk\'esad{}\xspace}
+\newcommand{\Shesshefkesad}{\Sheshefkesad{}\xspace}
+\newcommand{\Shessefkesad}{\Sheshefkesad{}\xspace}
+% Administrator priests
+\newcommand{\Tegiul}{Tegiul{}\xspace} 
+% The four ranks of Tsalt
+% Highest rank
+\newcommand{\Kseinga}{Kseinga{}\xspace} 
+% = Giisshef
+\newcommand{\Ginfik}{Khiffesh{}\xspace}  
+\newcommand{\Khiffesh}{\Ginfik{}\xspace}
+\newcommand{\Ryzeyd}{R\yvowelrissitic ze\yconsonantrissitic d{}\xspace}
+% Lowest rank
+\newcommand{\Bryn}{Br\yvowelrissitic{}n{}\xspace} 
+
+% Apprentice priests, not yet assigned to an order
+\newcommand{\Hifrib}{Hifrib{}\xspace} 
+
+
+
+\begin{comment}
+\subsubsection{Rekkan, the Knight Caste}
+\end{comment}
+% The military ranks of the Rekkan
+% Supreme commander of the Rissitic armies
+\newcommand{\Efririm}    {Efr\ilong rim{}\xspace} 
+% General
+\newcommand{\Neftzaid}   {Nefts\adarkrissitic id{}\xspace} 
+\newcommand{\Neftsaid}   {\Neftzaid} 
+% Captain
+\newcommand{\Ondmyst}    {Ondm\yvowelrissitic st\xspace} 
+% Captain or Lieutenant 
+\newcommand{\Kozud}      {Kozud\xspace} 
+
+% Warrior mages
+\newcommand{\Ashenoch}   {Ashenoch\xspace} 
+% The three tiers of Ashenoch
+% Highest
+\newcommand{\Hashkfed}   {Hashkfed\xspace} 
+\newcommand{\Kichodd}    {Kichodd\xspace}
+
+\newcommand{\Fedza}      {Fedza\xspace} 
+
+% Ninjas
+\newcommand{\Gishorn}    {G\ilong sshorn\xspace} 
+\newcommand{\Gisshorn}   {\Gishorn}
+\newcommand{\Gisshorns}  {\Gisshorn}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Scathaese cultures}
+\end{comment}
+
+% Baccon, a type of council
+\newcommand{\Baccons}     {\Baccon{}s\xspace}
+\newcommand{\Baccon}      {Pathyon\xspace}
+\newcommand{\baccons}     {\Baccons}
+\newcommand{\baccon}      {\Baccon}
+% Bacconate, a nation ruled by a baccon.
+\newcommand{\Bacconates}  {\Bacconate{}s\xspace}
+\newcommand{\Bacconate}   {\Baccon{}ate\xspace}
+\newcommand{\bacconates}  {\bacconate{}s\xspace}
+\newcommand{\bacconate}   {\baccon{}ate\xspace}
+% Raebar, a member of a Baccon. 
+\newcommand{\Raebari}     {Raebari\xspace}
+\newcommand{\Raebar}      {Raebar\xspace}
+\newcommand{\raebari}     {Raebari\xspace}
+\newcommand{\raebar}      {Raebar\xspace}
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Ortaica}
+\end{comment}
+
+% The Ortaican religion.
+\newcommand{\Ortaicanism}       {Ortaicanism\xspace}
+
+% The Ortaicans.
+\newcommand{\Ortaicans}         {Ortaicans\xspace}
+\newcommand{\Ortaican}          {Ortaican\xspace}
+
+% Ortaica, a Scathaese Bacconate. 
+\newcommand{\Ortaica}           {Ortaica\xspace}
+
+% The Rethyax, the Ortaican order of Chaos mages. 
+\newcommand{\rethyactic}        {Rethyactic\xspace}
+\newcommand{\rethyaxes}         {\rethyax}
+\newcommand{\rethyax}           {\Rethyax}
+\newcommand{\Rethyactic}        {Rethyactic\xspace}
+\newcommand{\Rethyaxes}         {\Rethyax}
+\newcommand{\Rethyax}           {Rethyax\xspace}
+
+% Arcana. 
+\newcommand{\Arcana}            {Arcana\xspace}
+\newcommand{\Arcanum}           {Arcanum\xspace}
+\newcommand{\arcana}            {Arcana\xspace}
+\newcommand{\arcanum}           {Arcanum\xspace}
+
+% Leges, Ortaican basic laws.
+\newcommand{\lex}               {Lex}
+\newcommand{\leges}             {Leges}
+\newcommand{\Lex}               {Lex}
+\newcommand{\Leges}             {Leges}
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Other}
+\end{comment}
+
+% Masthenon, an ancient Scathaese people. 
+\newcommand{\Masthenon}        {Masthenon\xspace} % Plural. 
+\newcommand{\Mastheno}         {Mastheno\xspace}  % Adjective. 
+\newcommand{\Masthen}          {Masthen\xspace}     % Singular.
+
+% Tepharae, the Tepharin Bacconate. 
+\newcommand{\Tepharae}         {Tepharae\xspace}
+
+% Tephar, the capital city of the Tepharin people. 
+\newcommand{\Tephar}           {Tephar\xspace}
+
+% The Tepharites.
+\newcommand{\Tepharites}       {Tepharites\xspace}
+\newcommand{\Tepharite}        {Tepharite\xspace}
+\newcommand{\Tepharins}        {Tepharites\xspace}
+\newcommand{\Tepharin}         {Tepharin\xspace} % Adjective. 
+
+% The Samurites.
+\newcommand{\Samurite}         {Samurite\xspace}
+\newcommand{\Samurites}        {Samurites\xspace}
+\newcommand{\Samurin}          {Samurin\xspace} % Adjective. 
+\newcommand{\Samure}           {Samur\finale{}\xspace} % The region.
+\newcommand{\Samur}            {Samur\xspace} % The people as a whole. 
+
+% The Ortics. 
+\newcommand{\Ortican}          {Ortic\xspace}
+\newcommand{\Orticans}         {Ortics\xspace}
+\newcommand{\Ortic}            {Ortic\xspace} % Adjective. 
+
+% The Shurco, a Scathaese civilization that existed during the Vaimon Caliphate.
+\newcommand{\Shurcos}          {\Shurco}
+\newcommand{\Shurco}           {Meshemku\xspace}
+\newcommand{\Shurcarie}        {\Shurco}
+%\newcommand{\Shurcarie}        {Shurcari\finale{}\xspace}
+
+% Yormis, a city of sorcerers.
+\newcommand{\Yormis}           {Yormis\xspace}
+\newcommand{\Yormissian}       {Yormissian\xspace}
+
+% Shrun, a mountain near Yormis.
+\newcommand{\Shrun}            {Shr\ulong n\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Vaimon: General}
+\end{comment}
+
+
+% Iquin and Nieur, the forces of Light and Darkness.
+\newcommand{\Iquin}            {Iquin{}\xspace}
+\newcommand{\iquin}            {\Iquin{}\xspace}
+\newcommand{\Nieur}            {\Itzach{}\xspace}
+\newcommand{\nieur}            {\itzach{}\xspace}
+\newcommand{\Itzach}           {Itzach{}\xspace}
+\newcommand{\itzach}           {\Itzach{}\xspace}
+
+% Clerics and Templars: Priest and warrior Vaimons. 
+\newcommand{\clerics}          {\cleric{}s{}\xspace}
+\newcommand{\cleric}           {cleric{}\xspace}
+\newcommand{\Clerics}          {\Cleric{}s{}\xspace}
+\newcommand{\Cleric}           {Cleric{}\xspace}
+\newcommand{\templars}         {\templar{}s{}\xspace}
+\newcommand{\templar}          {templar{}\xspace}
+\newcommand{\Templars}         {\Templar{}s{}\xspace}
+\newcommand{\Templar}          {Templar{}\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Magic and religion}
+\end{comment}
+
+% Archon, the collective term for the various spirits of Vaimon metaphysics
+\newcommand{\Archon}           {Archon\xspace}
+\newcommand{\Archons}          {Archons\xspace}
+\newcommand{\archon}           {Archon\xspace}
+\newcommand{\archons}          {Archons\xspace}
+
+% The Empyrean, the place where the Archons are said to dwell. 
+\newcommand{\Empyrean}         {Empyrean\xspace}
+\newcommand{\empyrean}         {Empyrean\xspace}
+
+% Sephiroth, the Archons of Iquin
+\newcommand{\Sephiroth}        {Sephiroth\xspace}
+\newcommand{\Sephirah}         {Sephir\ahresphan{}\xspace}
+\newcommand{\sephiroth}        {Sephiroth\xspace}
+\newcommand{\sephirah}         {\Sephirah}
+
+% Kliffoth, the Archons of Nieur
+\newcommand{\Kliffoth}         {Qliphoth\xspace}
+\newcommand{\Kliffah}          {Qliph\ahresphan{}\xspace}
+\newcommand{\Qliphah}          {\Kliffah{}\xspace}
+\newcommand{\Qliphoth}         {\Kliffoth{}\xspace}
+\newcommand{\kliffoth}         {Qliphoth{}\xspace}
+\newcommand{\kliffah}          {Qliphah{}\xspace}
+\newcommand{\qliphah}          {\kliffah{}\xspace}
+\newcommand{\qliphoth}         {\kliffoth{}\xspace}
+
+% Malachim, the Archons who incarnate as Scions
+\newcommand{\Malachim}         {Neshamoth\xspace}
+\newcommand{\Malach}           {Nesham\ahresphan{}\xspace}
+\newcommand{\malachim}         {Neshamoth\xspace}
+\newcommand{\malach}           {Nesham\ahresphan{}\xspace}
+
+% Kenosis, the process of a Malach becoming a Scion. 
+\newcommand{\Kenosis}          {Kenosis\xspace}
+\newcommand{\kenosis}          {Kenosis\xspace}
+
+% Apotheosis, the process of a Scion regaining his Malach glory. 
+\newcommand{\Apotheosis}       {Apotheosis\xspace}
+\newcommand{\apotheosis}       {Apotheosis\xspace}
+
+% "Angels".
+\newcommand{\Angel}            {Angel{}\xspace}
+\newcommand{\Angels}           {\Angel{}s{}\xspace}
+\newcommand{\Angelic}          {\Angel{}ic{}\xspace}
+\newcommand{\angel}            {angel{}\xspace}
+\newcommand{\angels}           {\angel{}s{}\xspace}
+\newcommand{\angelic}          {\angel{}ic{}\xspace}
+
+
+
+\newcommand{\Atziluth}         {Atziluth\xspace} % Atziluth, the highest world.
+\newcommand{\Gehinnom}         {Gehinnom\xspace} % Gehinnom, the physical world. 
+\newcommand{\Isphet}           {Isphet\xspace} % Isphet, a dark god.
+\newcommand{\Shechinah}        {Shechin\ahresphan{}\xspace}
+\newcommand{\shechinah}        {\Shechinah} % State of being in touch with the Archons. 
+\newcommand{\Tikkun}           {Tikkun\xspace} % The sacred task of restoring the world to unity. 
+\newcommand{\tikkun}           {Tikkun\xspace}
+
+% The four elements of Iquin. 
+\newcommand{\Mor}              {Mor\xspace}
+\newcommand{\Shiram}           {Shir\along m\xspace}
+\newcommand{\Urisol}           {Urisol\xspace}
+\newcommand{\Zumir}            {Zum\ilong r\xspace}
+
+
+
+
+
+
+
+\begin{comment}
+\subsubsection{Sephiroth}
+\end{comment}
+
+% The sixteen Sephiroth are divided into four groups, one group of four Sephiroth for each of the classical elements. 
+% This is reflected in their names:
+% Sephiroth of Fire end in `on'.
+% Sephiroth of Ait end in `ah'.
+% Sephiroth of Earth end in `ed'.
+% Sephiroth of Water end in `el'.
+
+% Air:
+\newcommand{\Shatzirah} {Sh\aflatresphan tzir\ahresphan\xspace}
+\newcommand{\Atzirah}   {Sh\aflatresphan tzir\ahresphan\xspace}
+\newcommand{\Feazirah}  {F\'e\aflatresphan zir\ahresphan\xspace}
+\newcommand{\Keshirah}  {Keshir\ahresphan\xspace}
+\newcommand{\Razilah}   {R\aflatresphan zil\ahresphan\xspace}
+
+% Fire:
+\newcommand{\Barion}    {B\alongresphan rion\xspace}
+\newcommand{\Hapheron}  {H\aflatresphan pheron\xspace}
+\newcommand{\Sizion}    {S\ilongresphan zion\xspace} % He Who Smites With Flame
+\newcommand{\Izion}     {S\ilongresphan zion\xspace} % He Who Smites With Flame
+\newcommand{\Teshiron}  {Teshiron\xspace}
+
+% Earth:
+\newcommand{\Zumrad}    {Zumrad\xspace}
+\newcommand{\Cushed}    {Zumrad\xspace}
+\newcommand{\Tzadrued}  {Tzadrued\xspace}
+\newcommand{\Hoshied}   {Tzadrued\xspace}
+\newcommand{\Thimarod}  {Thim\adarkresphan rod\xspace}
+\newcommand{\Thimared}  {Thim\adarkresphan rod\xspace}
+\newcommand{\Magaled}   {M\alongresphan g\adarkresphan led\xspace}
+\newcommand{\Yemared}   {M\alongresphan g\adarkresphan led\xspace}
+
+% Water:
+\newcommand{\Vamishiel} {V\aflatresphan mishiel\xspace}
+\newcommand{\Gamishiel} {V\aflatresphan mishiel\xspace}
+\newcommand{\Lishiel}   {Lishiel\xspace}
+\newcommand{\Ishiel}    {Lishiel\xspace}
+\newcommand{\Nomariel}  {Nom\alongresphan riel\xspace}
+\newcommand{\Omariel}   {Nom\alongresphan riel\xspace}
+\newcommand{\Yeziel}    {\Y eziel\xspace}
+
+
+
+% Older names for Sephiroth, now obsolete and replaced
+% Sezyron, a Sephirah of Air who creates bolts of lightning from your hands.
+\newcommand{\Sezyron}   {\Razilah{}\xspace}
+% Bihirai, a Sephirah of Healing
+\newcommand{\Bihirai}{\Ishiel{}\xspace}
+% A Sephirah of the Air, used to create controlled gusts of wind. 
+\newcommand{\Brycorre}{\Keshirah{}\xspace}
+% A Sephirah of the Earth, used to shape, move and Sculpt earthen objects, but can also be used to paralyze a person. 
+\newcommand{\Curomon}{\Cushed{}\xspace}
+% Feazin, used for flying
+\newcommand{\Feazin}{\Atzirah{}\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsubsection{Qliphoth}
+\end{comment}
+
+\newcommand{\Abbath}           {Abbath\xspace}
+\newcommand{\Bozchul}          {Banath-crul\xspace} % Brings death.
+\newcommand{\Djerzad}          {Djerzad{}\xspace}   % Causes bones to break. 
+\newcommand{\Dweryog}          {Dwerjeel\xspace}
+\newcommand{\Gavron}           {Gavron{}\xspace}    % Used to cut stuff
+\newcommand{\Horvaleth}        {Horvaleth{}\xspace} % The Cruel Winter. 
+\newcommand{\Iachadion}        {Iachadion\xspace}
+\newcommand{\Iomelech}         {Iomelech\xspace}
+\newcommand{\Iphicoss}         {Iphicoss{}\xspace}  % The Treacherous Gale. 
+\newcommand{\Kithvaz}          {Kithva\v z{}\xspace} % Attacks the mind.
+\newcommand{\KorRashad}        {Kor-Rashad\xspace}  % The guide through the Empyrean.
+\newcommand{\Micozalra}        {Micozalra\xspace}
+\newcommand{\OmmonThul}        {Ommon-Tul\xspace}  % Slows victims.
+\newcommand{\Oronigath}        {Oronigath\xspace}
+\newcommand{\Ozorugai}         {Ozorugai\xspace}
+\newcommand{\Nyxachel}         {N\yvowel xachel{}\xspace} % Lightning.
+\newcommand{\Shabolan}         {Shabolan\xspace}
+\newcommand{\Shurreem}         {Shurreem\xspace}    % Creates harmless black fire. 
+\newcommand{\Zobbath}          {Zobbath\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Calendar}
+\end{comment}
+
+% The Draconian Supremacy calendar. 
+\newcommand{\DS}               {DS\xspace}
+
+% The Black Dawn calendar. 
+\newcommand{\BD}               {BD\xspace}
+
+% The Vaimon Calendar.
+\newcommand{\VaimonCalendar}   {Vaimon Calendar\xspace}
+\newcommand{\ImperialCalendar} {Vaimon Calendar\xspace}
+\newcommand{\IC}               {VC\xspace}
+\newcommand{\VC}               {VC\xspace}
+
+% The eight days of the week.
+\newcommand{\Corjin}           {Corjin\xspace}
+\newcommand{\Zetherab}         {Zetherab\xspace}
+\newcommand{\Setherab}         {Zetherab\xspace}
+\newcommand{\Rebecab}          {Rebecab\xspace}
+\newcommand{\Arcab}            {Arcab\xspace}
+\newcommand{\Norquin}          {Norquin\xspace}
+\newcommand{\Tirjin}           {Tirjin\xspace}
+\newcommand{\Kerzab}           {Kerzab\xspace}
+\newcommand{\Siljin}           {Siljin\xspace}
+
+% The last day of the year. 
+\newcommand{\Camaire} {Camair\finale{}\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Geography}
+\end{comment}
+
+% Imrath, the nation where Cordos Vaimon was king
+\newcommand{\Imrathic}         {\Imrath{}ic\xspace}
+\newcommand{\Imrathi}          {\Imrath{}i\xspace}
+\newcommand{\Imrath}           {Imrath\xspace}
+% Shi'in Merodar, the old capital city of the Vaimon Caliphate.
+\newcommand{\ShiinMerodar}     {Shiin Merodar\xspace}
+\newcommand{\Merodar}          {\ShiinMerodar}
+
+\newcommand{\Vymorjans}        {\Vymorjan{}s\xspace}
+\newcommand{\Vymorjan}         {\Vymorja{}n\xspace}
+\newcommand{\Vymorja}          {V\ydiphthong morja\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Historical things}
+\end{comment}
+
+% The Darkfall, the cataclysmic downfall of the Vaimon Caliphate.
+\newcommand{\Darkfall}        {\HundredScourges}
+\newcommand{\darkfall}        {\HundredScourges}
+\newcommand{\HundredScourges} {Hundred Scourges\xspace}
+
+% Dragoncraft, a term for black magic in ancient times.
+\newcommand{\Dragoncraft}     {\Dragon{}craft\xspace}
+\newcommand{\dragoncraft}     {\dragon{}craft\xspace}
+
+% Vaimon Caliph and Caliphate. 
+\newcommand{\VaimonCaliphate} {Vaimon Caliphate\xspace}
+\newcommand{\VaimonCaliphs}   {Vaimon Caliphs\xspace}
+\newcommand{\vaimoncaliphs}   {Vaimon Caliphs\xspace}
+\newcommand{\VaimonCaliph}    {Vaimon Caliph\xspace}
+\newcommand{\vaimoncaliph}    {Vaimon Caliph\xspace}
+\newcommand{\Caliphate}       {Caliphate\xspace}
+\newcommand{\Caliphas}        {Caliphas\xspace}
+\newcommand{\Calipha}         {Calipha\xspace}
+\newcommand{\Caliphs}         {Caliphs\xspace}
+\newcommand{\Caliph}          {Caliph\xspace}
+\newcommand{\caliphate}       {Caliphate\xspace}
+\newcommand{\caliphas}        {Caliphas\xspace}
+\newcommand{\calipha}         {Calipha\xspace}
+\newcommand{\caliphs}         {Caliphs\xspace}
+\newcommand{\caliph}          {Caliph\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Other things}
+\end{comment}
+
+% Truesilver, the Vaimon super-metal.
+\newcommand{\Truesilver}{Truesilver{}\xspace}
+\newcommand{\truesilver}{\Truesilver{}\xspace}
+
+% Ishrah, the term for an organized group of mages.
+\newcommand{\Ishroth}  {Ishroth\xspace}
+\newcommand{\Ishrah}   {Ishr\ahresphan{}\xspace}
+\newcommand{\ishroth}  {ishroth\xspace}
+\newcommand{\ishrah}   {ishr\ahresphan{}\xspace}
+
+
+
+\begin{comment}
+\subsubsection{Weapons and martial arts}
+\end{comment}
+
+% A medium-heavy sabre. 
+\newcommand{\chandre}   {\c ch\^andre{}\xspace}
+
+% The art of wielding a chandre. 
+\newcommand{\chatresse} {\c ch\^atr\`esse{}\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Vaimon Clans}
+\end{comment}
+
+\newcommand{\VaimonClans}      {Vaimon clans\xspace}
+\newcommand{\VaimonClan}       {Vaimon clan\xspace}
+\newcommand{\VClans}           {Clans\xspace}
+\newcommand{\VClan}            {Clan\xspace}
+\newcommand{\vclans}           {clans\xspace}
+\newcommand{\vclan}            {clan\xspace}
+\newcommand{\ClanDelaen}       {Clan Delaen\xspace}
+\newcommand{\ClanDelain}       {Clan Delaen\xspace}
+\newcommand{\ClanGeican}       {Clan Geican\xspace}
+\newcommand{\ClanRedcor}       {Clan Redcor\xspace}
+\newcommand{\ClanZether}       {Clan Zether\xspace}
+\newcommand{\ClanSether}       {Clan Sether\xspace}
+\newcommand{\ClanTelcra}       {Clan Telcra\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Irgel}
+\end{comment}
+
+
+% Clan Irgel. 
+\newcommand{\Irgel}{Irgel{}\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Redcor}
+\end{comment}
+
+\begin{comment}
+\subsubsection{Orders}
+\end{comment}
+
+% Ryzin, a female Redcor Templar. 
+\newcommand{\Ryzin}       {R\yvowelredcor \v zin{}\xspace}
+\newcommand{\Ryzins}      {\Ryzin{}\xspace}
+\newcommand{\ryzin}       {\Ryzin{}\xspace}
+\newcommand{\ryzins}      {\ryzin{}\xspace}
+% Gandierre, a male Redcor Templar.
+\newcommand{\Gandierres}  {\Gandierre{}s\xspace}
+\newcommand{\Gandierre}   {G\^andi\`erre\xspace}
+\newcommand{\gandierres}  {\Gandierres}
+\newcommand{\gandierre}   {\Gandierre}
+
+\begin{comment}
+\subsubsection{Geography}
+\end{comment}
+
+% Redce, the homeland of the Redcor
+\newcommand{\Redce}           {Redc\'e{}\xspace}
+\newcommand{\Redcean}         {\Redce{}an{}\xspace}
+
+% The Topaz Chateau, from which the Redcor Conclave rules.
+\newcommand{\Chateau}         {Ch\^ateau{}\xspace}
+\newcommand{\TopazChateau}    {Topaz \Chateau{}\xspace}
+
+\begin{comment}
+\subsubsection{Factions}
+\end{comment}
+
+% The factions, or houses, or whatever.
+\newcommand{\RedcorHouses}    {\RedcorHouse{}s{}\xspace}
+\newcommand{\RedcorHouse}     {House{}\xspace}
+\newcommand{\RedcorFaction}   {\RedcorHouse{}\xspace}
+
+% The Swan Faction. 
+\newcommand{\theSwanFaction}  {the \SwanFaction{}\xspace}
+\newcommand{\TheSwanFaction}  {The \SwanFaction{}\xspace}
+\newcommand{\SwanFaction}     {\Swan{} \RedcorFaction{}\xspace}
+\newcommand{\Swan}            {Swan{}\xspace}
+\newcommand{\theFoxFaction}   {the \FoxFaction{}\xspace}
+\newcommand{\TheFoxFaction}   {The \FoxFaction{}\xspace}
+\newcommand{\FoxFaction}      {\Fox{} \RedcorFaction{}\xspace}
+\newcommand{\Fox}             {Fox{}\xspace}
+\newcommand{\theTulipFaction} {the \TulipFaction{}\xspace}
+\newcommand{\TheTulipFaction} {The \TulipFaction{}\xspace}
+\newcommand{\TulipFaction}    {\Tulip{} \RedcorFaction{}\xspace}
+\newcommand{\Tulip}           {Tulip{}\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Telcra}
+\end{comment}
+
+% The 'Tiger Vaimons' are a new clan founded during the Vaimon Caliphate. 
+\newcommand{\TigerVaimon}  {\Telcra{}\xspace}
+\newcommand{\Telcras}      {\Telcra{}\xspace}
+\newcommand{\Telcra}       {Telcra{}\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Iquinian Church}
+\end{comment}
+
+% The name of the religion.
+\newcommand{\Iquinian}   {Iquinian{}\xspace}
+\newcommand{\Iquinians}  {\Iquinian{}s{}\xspace}
+\newcommand{\iquinian}   {Iquinian{}\xspace}
+\newcommand{\iquinians}  {\iquinian{}s{}\xspace}
+
+% Iquinian clerical ranks. 
+\newcommand{\Neophyte}    {Neophyte{}\xspace}
+\newcommand{\Neophytes}   {\Neophyte {}\xspace}
+\newcommand{\Soror}       {Soror{}\xspace}
+\newcommand{\Sorors}      {\Soror{}s{}\xspace}
+\newcommand{\Sorores}     {\Sorors{}\xspace}
+\newcommand{\Frater}      {Frater{}\xspace}
+\newcommand{\Fraters}     {\Frater{}s{}\xspace}
+\newcommand{\Fratres}     {\Fraters{}\xspace}
+\newcommand{\Pater}       {Pater{}\xspace}
+\newcommand{\Paters}      {\Pater{}s{}\xspace}
+\newcommand{\Patres}      {\Paters{}\xspace}
+\newcommand{\Mater}       {Mater{}\xspace}
+\newcommand{\Maters}      {\Mater{}s{}\xspace}
+\newcommand{\Matres}      {\Maters{}\xspace}
+\newcommand{\Patron}      {Patron{}\xspace}
+\newcommand{\Patrons}     {\Patron{}s{}\xspace}
+\newcommand{\Patriarch}   {Patriarch{}\xspace}
+\newcommand{\Patriarchs}  {\Patriarch{}s{}\xspace}
+\newcommand{\Matron}      {Matron{}\xspace}
+\newcommand{\Matrons}     {\Matron{}s{}\xspace}
+\newcommand{\Matriarch}   {Matriarch{}\xspace}
+\newcommand{\Matriarchs}  {\Matriarch{}s{}\xspace}
+\newcommand{\neophyte}    {\Neophyte{}\xspace}
+\newcommand{\neophytes}   {\neophyte {}\xspace}
+\newcommand{\soror}       {\Soror{}\xspace}
+\newcommand{\sorors}      {\soror{}s{}\xspace}
+\newcommand{\sorores}     {\sorors{}\xspace}
+\newcommand{\frater}      {\Frater{}\xspace}
+\newcommand{\fraters}     {\frater{}s{}\xspace}
+\newcommand{\fratres}     {\fraters{}\xspace}
+\newcommand{\pater}       {\Pater{}\xspace}
+\newcommand{\paters}      {\pater{}s{}\xspace}
+\newcommand{\patres}      {\paters{}\xspace}
+\newcommand{\mater}       {\Mater{}\xspace}
+\newcommand{\maters}      {\mater{}s{}\xspace}
+\newcommand{\matres}      {\maters{}\xspace}
+\newcommand{\patron}      {\Patron{}\xspace}
+\newcommand{\patrons}     {\patron{}s{}\xspace}
+\newcommand{\patriarch}   {\Patriarch{}\xspace}
+\newcommand{\patriarchs}  {\patriarch{}s{}\xspace}
+\newcommand{\matron}      {\Matron{}\xspace}
+\newcommand{\matrons}     {\matron{}s{}\xspace}
+\newcommand{\matriarch}   {\Matriarch{}\xspace}
+\newcommand{\matriarchs}  {\matriarch{}s{}\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Velcad}
+\end{comment}
+
+\newcommand{\Velcadians}    {\Velcadian{}s\xspace}
+\newcommand{\Velcadian}     {\Velcad{}ian\xspace} 
+\newcommand{\Velcad}        {Velcad\xspace}
+\newcommand{\VelcadCountry} {Vidra\xspace}
+\newcommand{\Vidran}        {Vidran\xspace} % Language. 
+\newcommand{\Vidra}         {Vidra\xspace}
+
+
+
+\begin{comment}
+\subsection{Great Velcad}
+\end{comment}
+
+\newcommand{\theVelcadianEmpire}  {\GreatVelcad{}\xspace}
+\newcommand{\GreatVelcad}         {Great \Velcad{}\xspace}
+\newcommand{\theBelkadianEmpire}  {\GreatBelkade{}\xspace}
+\newcommand{\GreatBelkade}        {\GreatVelcad{}\xspace}
+
+
+
+\begin{comment}
+\subsection{Pelidor}
+\end{comment}
+
+\newcommand{\Malcuric}         {\Malcur{}ic\xspace} % Adjective, belonging to Malcur.
+\newcommand{\Malcurians}       {\Malcurian{}s\xspace}
+\newcommand{\Malcurian}        {\Malcur{}ian\xspace} % The people of Malcur.
+\newcommand{\Malcur}           {Malc\ulong r\xspace}
+
+\newcommand{\CastlePelidor}    {Castle Pelidor\xspace}
+
+\newcommand{\Greenhaven}       {Redglen\xspace}
+\newcommand{\Redglen}          {Redglen\xspace} % Carzain's home town. 
+
+\newcommand{\Forkliners}       {Forcliners\xspace}
+\newcommand{\Forkliner}        {Forcliner\xspace}
+\newcommand{\Forklin}          {Forclin\xspace}
+\newcommand{\Forcliners}       {Forcliners\xspace}
+\newcommand{\Forcliner}        {Forcliner\xspace}
+\newcommand{\Forclin}          {Forclin\xspace} % A city in the northern Pelidor
+
+
+
+
+
+\begin{comment}
+\subsection{Scyrum}
+\end{comment}
+
+
+\newcommand{\Scyrics} {\Scyric{}s\xspace} % A kingdom near Pelidor and north of Martinum.
+\newcommand{\Scyric}  {S\c c\ydiphthong ric\xspace}
+\newcommand{\Scyrum}  {S\c c\ydiphthong rum\xspace}
+
+\newcommand{\Pylandos} {P\ydiphthong landos\xspace} % The capital city of Scyrum. 
+
+\newcommand{\Bryndwin}    {Br\yvowel ndwin\xspace} % A large town in eastern Scyrum. 
+\newcommand{\Bryndwiner}  {\Bryndwin{}er\xspace}
+\newcommand{\Bryndwiners} {\Bryndwiner{}s\xspace}
+
+
+
+
+
+\begin{comment}
+\subsection{Runger}
+\end{comment}
+
+
+% The lost Draconic temple in Runger where \Takestsha-tachi allegedly find their magic. 
+\newcommand{\EreshKali}     {Eresh-Kali\xspace}
+\newcommand{\EreshKal}      {Eresh-Kal\xspace}
+\newcommand{\Rungertemple}  {Eresh-Kal\xspace}
+
+
+
+
+
+\begin{comment}
+\subsection{Pelidor continent}
+\end{comment}
+
+
+% The name of the continent containing Pelidor.
+\newcommand{\Galessan}          {Galessan\xspace}
+\newcommand{\Pelidorcontinent}  {Galessan\xspace}
+\newcommand{\PelidorContinent}  {Galessan\xspace}
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Culture}
+\end{comment}
+
+% Take a name and a title. 
+% If the name is empty, print the title. 
+% If the name is non-empty, then append the title to it, italicized. 
+\newcommand{\Nobletitle} [2]{%
+  \ifempty{#1}{\MakeUppercase#2}{#1-\foreign{#2}}}
+\newcommand{\nobletitle} [2]{%
+  \ifempty{#1}{#2}{#1-\foreign{#2}}}
+
+% Rayuth. Equivalent of a duke. 
+\newcommand{\Rayuthships}      {Rayuth-ships\xspace}
+\newcommand{\Rayuthship}       {Rayuth-ship\xspace}
+\newcommand{\rayuthships}      {rayuth-ships\xspace}
+\newcommand{\rayuthship}       {rayuth-ship\xspace}
+\newcommand{\Rayuths}          {Rayuths\xspace}
+\newcommand{\rayuths}          {rayuths\xspace}
+\newcommand{\rayuth}      [1][]{\nobletitle{#1}{rayuth}\xspace}
+\newcommand{\Rayuth}      [1][]{\Nobletitle{#1}{rayuth}\xspace}
+% Rinyuth, the wife or husband of a Rayuth. 
+\newcommand{\rinyuth}     [1][]{\nobletitle{#1}{linyuth}\xspace}
+\newcommand{\Rinyuth}     [1][]{\Nobletitle{#1}{linyuth}\xspace}
+% Rinyuth, the wife or husband of a Rayuth. 
+\newcommand{\scarv}       [1][]{\nobletitle{#1}{scarv}\xspace}
+\newcommand{\Scarv}       [1][]{\Nobletitle{#1}{scarv}\xspace}
+% "-rah". A knightly title. Equivalent of "sir".
+\newcommand{\Rah}         [1][]{\Nobletitle{#1}{rah}\xspace}
+\newcommand{\rah}         [1][]{\nobletitle{#1}{rah}\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Other places}
+\end{comment}
+
+% Marcil, a nation in northeastern Belkade. 
+\newcommand{\Marcil} {Mar\c cil{}\xspace}
+
+% Thyrin, a nation in eastern Belkade. 
+\newcommand{\Thyrin} {Th\ydiphthong rin{}\xspace}
+
+% Pylor, the river between Andras and Scyrum. 
+\newcommand{\Pylor}  {P\ydiphthong lor{}\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Serpentines}
+\end{comment}
+
+% The Serpentines, the lands east of Belkade and west of Irokas
+\newcommand{\Serpentine}  {Serpentine\xspace}
+\newcommand{\Serp}        {Serpentine\xspace}
+\newcommand{\Serpriver}   {Serpentine\xspace}
+\newcommand{\Serpsea}     {Serpentine Sea\xspace}
+\newcommand{\Serplands}   {Serpentines\xspace}
+\newcommand{\Serpadj}     {Serpentine\xspace}
+\newcommand{\Serpadjs}    {Serpentines\xspace}
+
+% The Dragon Ridge, the mountain range between the Serpentines and Nom.
+\newcommand{\DragonRidge} {\Dragon{} Ridge{}\xspace}
+\newcommand{\Dragonridge} {\DragonRidge{}\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Human cultures}
+\end{comment}
+
+\newcommand{\Saruns}           {\Sarun{}s\xspace}
+\newcommand{\Sarun}            {Sar\ulong n\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Other things}
+\end{comment}
+
+% The name of the secret war between Sentinels and Cabal.
+\newcommand{\Secretwar}   {Feud\xspace}
+\newcommand{\secretwar}   {Feud\xspace}
+\newcommand{\Feud}        {Feud\xspace}
+\newcommand{\feud}        {Feud\xspace}
+
+% The Charade: The unspoken agreement that the Cabal-Sentinel feud must be kept secret.
+\newcommand{\Charade}     {Charade\xspace}
+\newcommand{\charade}     {Charade\xspace}
+
+% Dun, the larger of \Miith{}'s two moons, called the Gray Moon. 
+\newcommand{\Dun}         {D\ulong{}n\xspace}
+
+% Ultima Thule, a land to the north.
+\newcommand{\UltimaThule} {Thulaam\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Neevrai}
+\end{comment}
+
+\newcommand{\Neevrai} {Neevrai\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\part{The Denizens of \Miith}
+\end{comment}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Bane and Resphan things}
+\end{comment}
+
+
+
+
+
+
+\begin{comment}
+\section{Cosmos}
+\end{comment}
+
+% Erebos, the Realm of Darkness, the homeworld of the Banes, called also the Baneworld.
+\newcommand{\Erebos}       {Erebos\xspace}
+\newcommand{\Erebean}      {Erebean\xspace} % Adjective.
+\newcommand{\erebean}      {Erebean\xspace}
+\newcommand{\Baneworld}    {\Bane world\xspace}
+\newcommand{\baneworld}    {\Bane world\xspace}
+% Father Erebos, the personification of Erebos.
+\newcommand{\FatherErebos} {Father \Erebos}
+
+% Nyx, the Realm of Twilight that lies between Erebos and \Miith{}.
+\newcommand{\Nyxians} {\Nyx{}ians\xspace} % Adjective.
+\newcommand{\Nyxian}  {\Nyx{}ian\xspace} % Adjective.
+\newcommand{\nyxian}  {\Nyx{}ian\xspace} % Adjective.
+\newcommand{\Nyx}     {N\yvowel x\xspace}
+\newcommand{\Oggra}   {Oggra\xspace}   % Chasm in Nyx.
+\newcommand{\Ullor}   {\Ulong luor\xspace}   % The abysses beneath Nyx.
+\newcommand{\Ulorr}   {\Ullor}   % The abysses beneath Nyx.
+
+
+
+
+
+\begin{comment}
+\section{History}
+\end{comment}
+
+% The Banewar, the first great war between Banes and Dragons.
+\newcommand{\Banewar}       {Banewar\xspace}
+\newcommand{\Banewars}      {Banewars\xspace}
+\newcommand{\banewar}       {Banewar\xspace}
+\newcommand{\banewars}      {Banewars\xspace}
+\newcommand{\FirstBanewar}  {First Banewar\xspace}
+\newcommand{\Firstbanewar}  {First Banewar\xspace}
+\newcommand{\firstbanewar}  {First Banewar\xspace}
+% The Second Banewar, the second great war between Dragons and Banes and now also Resphain.
+\newcommand{\Secondbanewar} {Second Banewar\xspace}
+\newcommand{\secondbanewar} {Second Banewar\xspace}
+% The Resphan wars, the great wars between the Resphan kingdoms.
+\newcommand{\ResphanWars}   {\Resphan Wars\xspace}
+\newcommand{\Resphanwars}   {\Resphan Wars\xspace}
+\newcommand{\resphanwars}   {\Resphan Wars\xspace}
+% The hypothetical Third Banewar. 
+\newcommand{\Thirdbanewar}  {Third Banewar\xspace}
+\newcommand{\thirdbanewar}  {Third Banewar\xspace}
+
+% The Delving, the time when Damiarch-tachi found Semiza. 
+\newcommand{\Delving}       {Delving\xspace}
+\newcommand{\Delver}        {Delver\xspace}
+\newcommand{\Delvers}       {Delvers\xspace}
+
+
+
+
+
+\begin{comment}
+\section{Banes}
+\end{comment}
+
+% Banes, the alien invaders.
+\newcommand{\Banes}            {Banes\xspace}
+\newcommand{\Bane}             {Bane\xspace}
+\newcommand{\banes}            {Banes\xspace}
+\newcommand{\bane}             {Bane\xspace}
+
+% Sitra Achra, another name for the Banes.
+\newcommand{\SitraAchras}      {Sitra Achra\xspace}
+\newcommand{\SitraAchra}       {Sitra Achra\xspace}
+
+% Castes of Banes.
+\newcommand{\Banespawn}        {\Bane{}spawn\xspace}
+\newcommand{\Banespawns}       {\Banespawn}
+\newcommand{\banespawn}        {\Banespawn}
+\newcommand{\banespawns}       {\banespawn}
+\newcommand{\Lesserbane}       {Lesser \bane}
+\newcommand{\Lesserbanes}      {\Lesserbane{}s\xspace}
+\newcommand{\lesserbane}       {Lesser \bane}
+\newcommand{\lesserbanes}      {\lesserbane{}s\xspace}
+\newcommand{\Greaterbane}      {Greater \bane}
+\newcommand{\Greaterbanes}     {\Greaterbane{}s\xspace}
+\newcommand{\greaterbane}      {Greater \bane}
+\newcommand{\greaterbanes}     {\greaterbane{}s\xspace}
+\newcommand{\Baneknight}       {\Bane{}knight\xspace}
+\newcommand{\Baneknights}      {\Baneknight{}s\xspace}
+\newcommand{\baneknight}       {\Baneknight}
+\newcommand{\baneknights}      {\baneknight{}s\xspace}
+\newcommand{\Banelord}         {\Bane{}lord\xspace}
+\newcommand{\Banelords}        {\Bane{}lords\xspace}
+\newcommand{\banelord}         {\bane{}lord\xspace}
+\newcommand{\banelords}        {\bane{}lords\xspace}
+\newcommand{\Baneoverlord}     {\Bane{} Overlord\xspace}
+\newcommand{\Baneoverlords}    {\Baneoverlord{}s\xspace}
+\newcommand{\baneoverlord}     {\Baneoverlord}
+\newcommand{\baneoverlords}    {\baneoverlord{}s\xspace}
+\newcommand{\Baneking}         {\Bane{}king\xspace}
+\newcommand{\Banekings}        {\Baneking{}s\xspace}
+\newcommand{\baneking}         {\Baneking}
+\newcommand{\banekings}        {\baneking{}s\xspace}
+\newcommand{\BaneMessiah}      {\Bane{} Messiah\xspace}
+\newcommand{\banemessiah}      {\Bane{} Messiah\xspace}
+\newcommand{\HalfBane}         {Half-\Bane}
+\newcommand{\halfbane}         {Half-\Bane}
+
+% Baneblood, the white ooze that seeps out when Banes are wounded.
+\newcommand{\Baneblood}        {\Bane{}blood\xspace}
+\newcommand{\baneblood}        {\Baneblood}
+
+% Stalkers, a type of Banes.
+\newcommand{\Stalkers}         {Stalkers\xspace}
+\newcommand{\Stalker}          {Stalker\xspace}
+\newcommand{\stalkers}         {Stalkers\xspace}
+\newcommand{\stalker}          {Stalker\xspace}
+
+% Screamers, a type of Banes.
+\newcommand{\Screamers}        {Screamers\xspace}
+\newcommand{\Screamer}         {Screamer\xspace}
+\newcommand{\screamers}        {Screamers\xspace}
+\newcommand{\screamer}         {Screamer\xspace}
+
+
+
+
+
+
+\begin{comment}
+\section{Resphain}
+\end{comment}
+
+% Resphain, the Tiste Andii of \Miith{}.
+\newcommand{\Resphain}  {Resph\adarkresphan in\xspace}
+\newcommand{\Resphan}   {Resph\aflatresphan n\xspace}
+\newcommand{\resphain}  {Resph\adarkresphan in\xspace}
+\newcommand{\resphan}   {Resph\aflatresphan n\xspace}
+
+% Resviel, the female Resphain.
+\newcommand{\Resviel}  {Resviel\xspace}
+\newcommand{\Resvil}   {Resvil\xspace}
+\newcommand{\resviel}  {Resviel\xspace}
+\newcommand{\resvil}   {Resvil\xspace}
+
+% Neo-Resphain: The new and improved generation of Resphain.
+\newcommand{\NeoResphain} {Neo-\Resphain}
+\newcommand{\NeoResphan}  {Neo-\Resphan}
+\newcommand{\neoresphain} {Neo-\Resphain}
+\newcommand{\neoresphan}  {Neo-\Resphan}
+
+
+\begin{comment}
+\subsection{Social classes}
+\end{comment}
+
+% Satharioth, the Resphan lords who drank the blood of \Astorglax.
+\newcommand{\Sathariah}        {S\adarkresphan th\adarkresphan ri\ahresphan{}\xspace}
+\newcommand{\Satharioth}       {S\adarkresphan th\adarkresphan rioth\xspace}
+\newcommand{\sathariah}        {\Sathariah}
+\newcommand{\satharioth}       {\Satharioth}
+
+% Ketherain, Resphan descendants of the Satharioth.
+\newcommand{\Ketherain}        {Kether\adarkresphan in\xspace}
+\newcommand{\Ketheran}         {Kether\adarkresphan n\xspace}
+\newcommand{\ketherain}        {\Ketherain}
+\newcommand{\ketheran}         {\Ketheran}
+
+% Ruistheleth, descendants of the Satharioth from before they were Satharioth. 
+\newcommand{\Ruistheleth}      {Ruistheleth\xspace}
+\newcommand{\Ruisthel}         {Ruisthel\xspace}
+\newcommand{\ruistheleth}      {Ruistheleth\xspace}
+\newcommand{\ruisthel}         {Ruisthel\xspace}
+
+% Thelyadeth: Purebloods, with pure Resphan ancestors. 
+\newcommand{\thelyadeth}       {\thelyad{}eth\xspace}
+\newcommand{\thelyad}          {\Thelyad}
+\newcommand{\Thelyadeth}       {\Thelyad{}eth\xspace}
+\newcommand{\Thelyad}          {Thely\adarkresphan d\xspace}
+
+% Thelyadeth: Purebloods, with pure Resphan ancestors. 
+\newcommand{\gessurim}         {Gessurim\xspace}
+\newcommand{\gessur}           {Gessur\xspace}
+\newcommand{\Gessurim}         {Gessurim\xspace}
+\newcommand{\Gessur}           {Gessur\xspace}
+
+% Yurideth: Pureblood Resviel kept as sex slaves. 
+\newcommand{\Yurideth}         {Shiphchoth\xspace}
+\newcommand{\Yurid}            {Shiphch\ahresphan{}\xspace}
+\newcommand{\yurideth}         {\Yurideth}
+\newcommand{\yurid}            {\Yurid}
+
+% 'Ashen-blood', the lower classes among the Resphain. 
+\newcommand{\bezedeth}         {\bezed{}eth\xspace}
+\newcommand{\bezed}            {\Bezed}
+\newcommand{\Bezedeth}         {\Bezed{}eth\xspace}
+\newcommand{\Bezed}            {Bezjed\xspace}
+\newcommand{\ashenblooded}     {\ashenblood{}ed\xspace}
+\newcommand{\ashenbloods}      {\ashenblood{}s\xspace}
+\newcommand{\ashenblood}       {ashen-blood\xspace}
+\newcommand{\Ashenblooded}     {\Ashenblood{}ed\xspace}
+\newcommand{\Ashenbloods}      {\Ashenblood{}s\xspace}
+\newcommand{\Ashenblood}       {Ashen-blood\xspace}
+
+\newcommand{\Daemoniacs}       {\Daemoniac{}s\xspace}
+\newcommand{\Daemoniac}        {Daemoniac\xspace}
+\newcommand{\daemoniacs}       {\daemoniac{}s\xspace}
+\newcommand{\daemoniac}        {\Daemoniac}
+
+
+
+
+
+
+\begin{comment}
+\subsection{Dynasties}
+\end{comment}
+
+% Kiriath-Sepher, loyal to the banes. 
+\newcommand{\KiriathSepher}    {Ciri\adarkresphan th-Sepher\xspace}
+\newcommand{\CiriathSepher}    {Ciri\adarkresphan th-Sepher\xspace}
+
+% Timnath-Serah, loyal to the banes. 
+\newcommand{\TiphredSerah}     {Tiphred-Ser\ahresphan\xspace}
+\newcommand{\TimnathSerah}     {Tiphred-Ser\ahresphan\xspace}
+
+% Mystraacht, secretly plotting against the banes.
+\newcommand{\Mystraacht}       {M\yvowel str\alongresphan cht\xspace}
+
+% Kezerad, good guy Resphain. 
+\newcommand{\Kezeradi}         {\Kezerad{}i} % The people of Kezerad.
+\newcommand{\Kezerad}          {Kezer\adarkresphan d{}\xspace}
+
+% Baelzerach, daemonic Resphain.
+\newcommand{\Baelzerach}       {B\aeresphan lzer\adarkresphan ch\xspace}
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Nations}
+\end{comment}
+
+% Merkyrah, the old good Resphan empire.
+\newcommand{\Merkyrans}        {\Merkyran{}s\xspace}
+\newcommand{\Merkyran}         {Mer-kir\adarkresphan n\xspace}
+\newcommand{\Merkyrah}         {Mer-kir\ahresphan{}\xspace}
+
+\newcommand{\Tarcharos}        {T\adarkresphan rch\adarkresphan ros\xspace}
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{Culture}
+\end{comment}
+
+\begin{comment}
+\subsubsection{Items}
+\end{comment}
+
+% Ethylshe, a kind of \resphan{} bloodwine. 
+\newcommand{\ethylshe}         {eth\yvowel lsh\finale\xspace}
+
+% Glowmoss.
+\newcommand{\Glowmoss}         {Glow-moss\xspace}
+\newcommand{\glowmoss}         {glow-moss\xspace}
+
+\begin{comment}
+\subsubsection{Languages}
+\end{comment}
+
+\newcommand{\Umaric}           {Umaric\xspace}
+
+\begin{comment}
+\subsubsection{Magic}
+\end{comment}
+
+\newcommand{\Cafir}            {C\aflatresphan fir\xpace} % Kezeradi dweomer.
+\newcommand{\Esheram}          {Esher\adarkresphan m\xspace} % Merkyran dweomer.
+
+\newcommand{\Beacon}           {Beacon\xspace}  % The Beacons of Kezerad.
+\newcommand{\Beacons}          {Beacons\xspace} 
+\newcommand{\beacon}           {Beacon\xspace} 
+\newcommand{\beacons}          {Beacons\xspace} 
+
+\begin{comment}
+\subsubsection{Martial arts}
+\end{comment}
+
+\newcommand{\Eshethicor}       {Eshethicor\xspace}
+\newcommand{\Rumicor}          {Rumicor\xspace}
+\newcommand{\Shabacora}        {Sh\adarkresphan b\adarkresphan cor\adarkresphan{}\xspace}
+
+\begin{comment}
+\subsubsection{Weapons (individual)}
+\end{comment}
+
+\newcommand{\Ascaril}          {\Aflatresphan shc\adarkresphan \ilongresphan l\xspace}
+
+% Ossiraith, wielded by Menessiaraid.
+\newcommand{\Ossiraith}        {Ossiraith\xspace}
+
+% Scaleron, a sword forged by Dasteron. 
+\newcommand{\Scaleron}         {Sc\aflatresphan leron{}\xspace}
+
+% Strith and Currah, Ramiel's guns. 
+\newcommand{\Strith}           {Strith\xspace}
+\newcommand{\Currah}           {Curr\ahresphan{}\xspace}
+
+% Turishah, wielded by Teshrial.
+\newcommand{\Turishah}         {Turish\ahresphan{}\xspace}
+
+\begin{comment}
+\subsubsection{Weapons (types)}
+\end{comment}
+
+% Belthrad, a type of sword. 
+\newcommand{\Belthradeth}      {\Belthrad{}eth{}\xspace}
+\newcommand{\Belthrad}         {Belthr\adarkresphan d{}\xspace}
+\newcommand{\belthradeth}      {\MakeLowercase \Belthradeth{}\xspace}
+\newcommand{\belthrad}         {\MakeLowercase \Belthrad{}\xspace}
+
+% A gelveir, a special ceremonial knife used in the Communion. 
+\newcommand{\Gelveirs}         {\Gelveir{}s{}\xspace}
+\newcommand{\Gelveir}          {Gelveir{}\xspace}
+\newcommand{\gelveirs}         {\MakeLowercase \Gelveirs{}\xspace}
+\newcommand{\gelveir}          {\MakeLowercase \Gelveir{}\xspace}
+
+% Ghijedeth, pistols.
+\newcommand{\Ghijedeth}        {\Ghijed{}eth{}\xspace}
+\newcommand{\Ghijed}           {Ghijed{}\xspace}
+\newcommand{\ghijedeth}        {\MakeLowercase \Ghijedeth{}\xspace}
+\newcommand{\ghijed}           {\MakeLowercase \Ghijed{}\xspace}
+
+% Kilghain, wing vambraces. 
+\newcommand{\Kilghain}         {Cilghain{}\xspace}
+\newcommand{\Kilghan}          {Cilghan{}\xspace}
+\newcommand{\kilghain}         {\MakeLowercase \Kilghain{}\xspace}
+\newcommand{\kilghan}          {\MakeLowercase \Kilghan{}\xspace}
+
+% Ruthil, a shorter, slimmer sword. 
+\newcommand{\Ruthiel}          {Ruthiel{}\xspace}
+\newcommand{\Ruthil}           {Ruthil{}\xspace}
+\newcommand{\ruthiel}          {\MakeLowercase \Ruthiel{}\xspace}
+\newcommand{\ruthil}           {\MakeLowercase \Ruthil{}\xspace}
+
+% Senaan, a Ciriath-Sepher type of sword. 
+\newcommand{\Senain}           {Sen\adarkresphan in{}\xspace}
+\newcommand{\Senaan}           {Sen\alongresphan n{}\xspace} 
+\newcommand{\senain}           {\MakeLowercase \Senain{}\xspace}
+\newcommand{\senaan}           {\MakeLowercase \Senaan{}\xspace}
+
+
+
+\begin{comment}
+\subsection{Geography}
+\end{comment}
+
+\begin{comment}
+\subsubsection{Holds}
+\end{comment}
+
+\newcommand{\Cathedon}         {C\aflatresphan thedon\xspace}
+\newcommand{\Hyardes}          {Hyardes\xspace} % Towers in Nyx.
+\newcommand{\Carcosa}          {\Hyardes}
+\newcommand{\Surammas}         {Sur\adarkresphan mm\darkfall s\xspace}
+
+\begin{comment}
+\subsubsection{Towers}
+\end{comment}
+
+\newcommand{\Jazerubel}        {J\adarkresphan zerubel\xspace}
+\newcommand{\Lamaruch}         {L\adarkresphan m\adarkresphan ruch\xspace}
+\newcommand{\Roshmal}          {Roshm\adarkresphan l\xspace}
+\newcommand{\Shaiphon}         {Shaiphon\xspace}
+\newcommand{\Sherem}           {Sherem\xspace}
+\newcommand{\Tebethal}         {Tebeth\adarkresphan l\xspace}
+\newcommand{\Tirunad}          {Tirun\adarkresphan d\xspace}
+\newcommand{\Tzarubal}         {Tz\adarkresphan rub\adarkresphan l\xspace}
+
+\begin{comment}
+\subsubsection{More}
+\end{comment}
+
+\newcommand{\Hoshiabalon}      {Hoshiabalon\xspace}
+
+
+
+\begin{comment}
+\subsection{Merkyrah}
+\end{comment}
+
+\newcommand{\Iod}              {Iod\xspace}
+\newcommand{\iod}              {\Iod}
+\newcommand{\Iai}              {Iai\xspace}
+\newcommand{\iai}              {\Iai}
+\newcommand{\Iath}             {Iath\xspace}
+\newcommand{\iath}             {\Iath}
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Mortals}
+\end{comment}
+
+
+
+\begin{comment}
+\subsection{Nephilim}
+\end{comment}
+
+% Nephilim, the ancestors of Humans. 
+\newcommand{\Nephil}       {Nephil\xspace} % singular
+\newcommand{\Nephilim}     {Nephilim\xspace} % plural
+\newcommand{\nephil}       {Nephil\xspace} % singular
+\newcommand{\nephilim}     {Nephilim\xspace} % plural
+\newcommand{\Nephilic}     {Nephil\xspace}  % The adjective.
+\newcommand{\nephilic}     {Nephil\xspace}  % The adjective.
+
+% Gnomphilim, relatives of the Nephilim. 
+\newcommand{\Gnomphil}     {Gnomphil\xspace} % singular
+\newcommand{\Gnomphilim}   {Gnomphilim\xspace} % plural
+\newcommand{\gnomphil}     {Gnomphil\xspace} % singular
+\newcommand{\gnomphilim}   {Gnomphilim\xspace} % plural
+\newcommand{\Gnomphilic}   {Gnomphil\xspace}  % The adjective.
+\newcommand{\gnomphilic}   {Gnomphil\xspace}  % The adjective.
+
+% Girigor, Semiza's land.
+\newcommand{\Girigor}      {\Numah}
+\newcommand{\Numah}        {Numah\xspace}
+
+
+
+\begin{comment}
+\subsection{Humans}
+\end{comment}
+
+% Humans.
+\newcommand{\Humankind}    {Humankind\xspace}
+\newcommand{\Humanity}     {Humanity\xspace}
+\newcommand{\Humans}       {Humans\xspace}
+\newcommand{\Human}        {Human\xspace}
+\newcommand{\humankind}    {Humankind\xspace}
+\newcommand{\humanity}     {Humanity\xspace}
+\newcommand{\humans}       {Humans\xspace}
+\newcommand{\human}        {Human\xspace}
+
+% True Humans.
+\newcommand{\Truehumans}   {True Humans\xspace}
+\newcommand{\Truehuman}    {True Human\xspace}
+\newcommand{\truehumans}   {True Humans\xspace}
+\newcommand{\truehuman}    {True Human\xspace}
+\newcommand{\Truemen}      {True Men\xspace}
+\newcommand{\Trueman}      {True Man\xspace}
+\newcommand{\truemen}      {True Men\xspace}
+\newcommand{\trueman}      {True Man\xspace}
+
+% Demihumans.
+\newcommand{\Demihumans}   {Demihumans\xspace}
+\newcommand{\Demihuman}    {Demihuman\xspace}
+\newcommand{\demihumans}   {Demihumans\xspace}
+\newcommand{\demihuman}    {Demihuman\xspace}
+
+% Feeres, a race of demihumans.
+\newcommand{\Feeres}       {\Feere{}s\xspace}
+\newcommand{\Feere}        {Feere\xspace}
+\newcommand{\feeres}       {\Feeres}
+\newcommand{\feere}        {\Feere}
+
+% Glunes, a race of demihumans.
+\newcommand{\Glunes}       {\Glune{}s\xspace}
+\newcommand{\Glune}        {Glune\xspace}
+\newcommand{\glunes}       {\Glunes}
+\newcommand{\glune}        {\Glune}
+
+% Sheomirs, a race of demihumans.
+\newcommand{\Sheomirs}     {\Sheomir{}s\xspace}
+\newcommand{\Sheomir}      {Sheomir\xspace}
+\newcommand{\sheomirs}     {\Sheomirs}
+\newcommand{\sheomir}      {\Sheomir}
+
+% Tulans, a race of demihumans.
+\newcommand{\Tulans}       {\Tulan{}s\xspace}
+\newcommand{\Tulan}        {Tulan\xspace}
+\newcommand{\tulans}       {\Tulans}
+\newcommand{\tulan}        {\Tulan}
+
+\newcommand{\Shapens}      {\Shapen}
+\newcommand{\Shapen}       {Shapen\xspace}
+\newcommand{\shapens}      {\Shapens}
+\newcommand{\shapen}       {\Shapen}
+
+% Humanoids.
+\newcommand{\Humanoid}     {Humanoid\xspace}
+\newcommand{\Humanoids}    {\Humanoid{}s\xspace}
+\newcommand{\humanoid}     {humanoid\xspace}
+\newcommand{\humanoids}    {\humanoid{}s\xspace}
+
+% Lithrim, the creature formed by all humans combined. 
+\newcommand{\Lithrim}      {Lithrim\xspace}
+
+% Hedrim, servants of the Resphain.
+\newcommand{\Hedor}   [1][]{\maybeappend{Hedor}{#1}}
+\newcommand{\Hedrim}  [1][]{\maybeappend{Hedrim}{#1}}
+\newcommand{\hedor}   [1][]{\maybeappend{hedor}{#1}}
+\newcommand{\hedrim}  [1][]{\maybeappend{hedrim}{#1}}
+
+% Naorim, the elite food slaves of the Resphain. 
+\newcommand{\Naorim}       {\Naor{}im\xspace}
+\newcommand{\Naor}         {N\adarkresphan or\xspace}
+\newcommand{\naorim}       {\naor{}im\xspace}
+\newcommand{\naor}         {\Naor}
+
+
+
+
+\begin{comment}
+\section{Monsters}
+\end{comment}
+
+\newcommand{\Carth}        {Carth\xspace}
+\newcommand{\Carths}       {\Carth{}s\xspace}
+\newcommand{\carth}        {\Carth}
+\newcommand{\carths}       {\Carths}
+
+% Chthonians, the dwellers beneath the earth.
+\newcommand{\Chthonian}    {Chthonian\xspace}
+\newcommand{\Chthonians}   {\Chthonian{}s\xspace}
+\newcommand{\chthonian}    {\Chthonian}
+\newcommand{\chthonians}   {\Chthonians}
+
+\newcommand{\Morkin}       {Morkin\xspace}
+\newcommand{\Morkins}      {\Morkin{}s\xspace}
+\newcommand{\morkin}       {\Morkin}
+\newcommand{\morkins}      {\Morkins}
+
+% Mothlain, Nether Ones.
+\newcommand{\Mothlan}      {Mothl\aflatresphan n\xspace}
+\newcommand{\mothlan}      {\Mothlan}
+\newcommand{\Mothlain}     {Mothl\adarkresphan in\xspace}
+\newcommand{\mothlain}     {\Mothlain}
+
+% Soulreapers, the predators of Erebos who prey on Banes.
+\newcommand{\Umbrae}       {Umbrae\xspace} 
+\newcommand{\Umbra}        {Umbra\xspace}
+\newcommand{\umbrae}       {Umbrae\xspace}
+\newcommand{\umbra}        {Umbra\xspace}
+
+% Gods of the Umbrae.
+\newcommand{\Norganthus}   {Norganthus\xspace}
+\newcommand{\Tzyaragoth}   {Tz\ydiphthong aragoth\xspace}
+
+% Banerats, rat-like monsters.
+\newcommand{\Grimrats}     {\Grimrat{}s{}\xspace}
+\newcommand{\Grimrat}      {Grim-rat{}\xspace}
+\newcommand{\grimrats}     {\grimrat{}s{}\xspace}
+\newcommand{\grimrat}      {\Grimrat{}\xspace}
+\newcommand{\Banerats}     {\Banerat{}s{}\xspace}
+\newcommand{\Banerat}      {\Grimrat{}\xspace}
+\newcommand{\banerats}     {\banerat{}s{}\xspace}
+\newcommand{\banerat}      {\Banerat{}\xspace}
+
+% Ghobaleth, enormous worm monsters from Erebos.
+\newcommand{\Ghobaleth}    {Nogg-yaleth\xspace}
+\newcommand{\Ghobal}       {Nogg-yal\xspace}
+\newcommand{\ghobaleth}    {Nogg-yaleth\xspace}
+\newcommand{\ghobal}       {Nogg-yal\xspace}
+\newcommand{\Noggyaleth}   {Nogg-yaleth\xspace}
+\newcommand{\Noggyal}      {Nogg-yal\xspace}
+\newcommand{\noggyaleth}   {Nogg-yaleth\xspace}
+\newcommand{\noggyal}      {Nogg-yal\xspace}
+
+% Ophanim, many-eyed monsters that the Resphain use as mounts.
+\newcommand{\Ophanim}      {Ophanim\xspace} 
+\newcommand{\Ophan}        {Ophan\xspace}
+\newcommand{\ophanim}      {Ophanim\xspace}
+\newcommand{\ophan}        {Ophan\xspace}
+
+% Flying polyps, monsters in the deeps of Erebos. 
+\newcommand{\Flyingpolyps}     {\Flyingpolyp{}s\xspace}
+\newcommand{\Flyingpolyp}      {Flying Polyp\xspace}
+\newcommand{\flyingpolyps}     {\flyingpolyp{}s\xspace}
+\newcommand{\flyingpolyp}      {\Flyingpolyp}
+
+\newcommand{\Ozurian}       {Ozurian\xspace}
+\newcommand{\Ozurians}      {\Ozurian{}s\xspace}
+\newcommand{\ozurian}       {\Ozurian}
+\newcommand{\ozurians}      {\Ozurians}
+
+
+\begin{comment}
+\section{Places}
+\end{comment}
+
+% Teshrial's mansion. 
+\newcommand{\Ruishagh}  {Ruish\adarkresphan gh{}\xspace}
+
+
+
+
+
+\begin{comment}
+\section{The Cabal}
+\end{comment}
+
+\newcommand{\dasteroncircle} {first\xspace}
+\newcommand{\cishielcircle}  {second\xspace}
+\newcommand{\teshrialcircle} {third\xspace}
+\newcommand{\achsahcircle}   {fourth\xspace}
+\newcommand{\lelmachcircle}  {sixth\xspace}
+\newcommand{\charcoalcircle} {seventh\xspace}
+\newcommand{\needlecircle}   {eighth\xspace}
+\newcommand{\briarcircle}    {ninth\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Things}
+\end{comment}
+
+% The Book of Erebos, penned by Semiza.
+\newcommand{\BookofErebos}             {\BathShemTorradjErebossha}
+\newcommand{\SemizazBook}              {\BookofErebos}
+\newcommand{\BathShemTorradjErebossha} {\BathShem{} Torr\adarkresphan dj\xspace}
+\newcommand{\BathShem}                 {B\alongresphan th Shem\xspace}
+
+% The Morbus, the evil disease planted by Daggerrain.
+\newcommand{\Morbus}                   {Morbus\xspace}
+
+\newcommand{\UmajaTablets}             {\Umaja Tablets\xspace}
+\newcommand{\Umaja}                    {Umaja\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Dragons}
+\end{comment}
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{First generation Dragons}
+\end{comment}
+
+% The first generation of Dragons.
+\newcommand{\Firstgendragon}   {Ctherross{}\xspace}
+\newcommand{\Firstgendragons}  {\Firstgendragon}
+\newcommand{\firstgendragons}  {\firstgendragon}
+\newcommand{\firstgendragon}   {\Firstgendragon}
+
+% The Dominators, also called the Chaos Lords, the great Draconic gods.
+\newcommand{\Dominator}   {Dominator{}\xspace} % singular
+\newcommand{\Dominators}  {Dominators{}\xspace} % plural
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Second generation Dragons}
+\end{comment}
+
+% The second generation of Dragons.
+\newcommand{\shaeeroths}        {\secondgendragons{}\xspace}
+\newcommand{\shaeeroth}         {\secondgendragon{}\xspace}
+\newcommand{\Shaeeroths}        {\Secondgendragons{}\xspace}
+\newcommand{\Shaeeroth}         {\Secondgendragon{}\xspace}
+\newcommand{\Secondgendragon}   {Shae'eroth{}\xspace}
+\newcommand{\Secondgendragons}  {\Secondgendragon{}\xspace}
+\newcommand{\secondgendragon}   {\Secondgendragon{}\xspace}
+\newcommand{\secondgendragons}  {\secondgendragon{}\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Places}
+\end{comment}
+
+% Dragonland, a name for Irokas.
+\newcommand{\Dragonland}    {\Dragon{}land\xspace}
+\newcommand{\dragonland}    {\Dragonland}
+
+\newcommand{\Baltherium}    {Baltherium\xspace}
+
+% Dathka, the capital city of the fallen Dragonland. 
+\newcommand{\Dathka}        {Dathka\xspace}
+
+% Nith'dornazsh, the Draconic city beneath Malcur. 
+\newcommand{\Nithd}         {\Nithdornazsh}
+\newcommand{\Nithdornazsh}  {Nith\rq dornazsh\xspace}
+\newcommand{\Nithvezurun}   {Nith\rq vezurun\xspace}
+
+\newcommand{\Nom}           {Nom\xspace}
+
+\newcommand{\Sardathrion}      {Sardathrion\xspace} % Nexagglachel's city
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Creatures}
+\end{comment}
+
+
+
+\begin{comment}
+\subsection{Dragons}
+\end{comment}
+
+% Draecchonosh, the Kingstongue word for Dragon.
+\newcommand{\Draecchonosh}     {\Dzraicchenoss}
+\newcommand{\draecchonosh}     {\dzraicchenoss}
+\newcommand{\Dzraicchenosses}  {\Dzraicchenoss}
+\newcommand{\Dzraicchenoss}    {Dzraic'chenoss{}\xspace}
+\newcommand{\dzraicchenosses}  {\Dzraicchenosses}
+\newcommand{\dzraicchenoss}    {\Dzraicchenoss}
+
+% Dragons.
+\newcommand{\Dragonkind}       {Dragonkind\xspace}
+\newcommand{\dragonkind}       {Dragonkind\xspace}
+\newcommand{\Dragons}          {Dragons\xspace}
+\newcommand{\Dragon}           {Dragon\xspace}
+\newcommand{\Draconic}         {Draconic\xspace}
+\newcommand{\Draconian}        {Draconian\xspace}
+\newcommand{\dragons}          {Dragons\xspace}
+\newcommand{\dragon}           {Dragon\xspace}
+\newcommand{\draconic}         {Draconic\xspace}
+\newcommand{\draconian}        {Draconian\xspace}
+
+
+
+\begin{comment}
+\subsection{Ophidians}
+\end{comment}
+
+\newcommand{\Ophidian}         {Ophidian\xspace}
+\newcommand{\Ophidians}        {Ophidians\xspace}
+\newcommand{\ophidian}         {Ophidian\xspace}
+\newcommand{\ophidians}        {Ophidians\xspace}
+\newcommand{\TrueOphidian}     {True \Ophidian}
+\newcommand{\TrueOphidians}    {\TrueOphidian{}s}
+\newcommand{\trueophidian}     {\TrueOphidian}
+\newcommand{\trueophidians}    {\TrueOphidians}
+
+% Caisith, another name for the Ophidians.
+\newcommand{\Caisith}          {Caisith\xspace}
+\newcommand{\Caisiths}         {Caisith\xspace}
+\newcommand{\caisith}          {Caisith\xspace}
+\newcommand{\caisiths}         {Caisith\xspace}
+
+% The Quil-Jaaran, an elder race. 
+\newcommand{\QuilJaaran}       {\QuilJaar{}an{}\xspace}
+\newcommand{\QuilJaar}         {Quil-Jaar{}\xspace}
+\newcommand{\quiljaaran}       {\QuilJaaran}
+\newcommand{\quiljaar}         {\QuilJaar}
+
+% Quil-Jaaran nations. 
+\newcommand{\KyanHweDin}       {Kyan-Hwe-Din{}\xspace}
+\newcommand{\Okiriru}          {Okiriru{}\xspace}
+
+% Saphyrae, a Quil-Jaaran nation that existed before the Dragons came. 
+\newcommand{\Saphyraeans}      {\Saphyraean{}s{}\xspace}
+\newcommand{\Saphyraean}       {\Saphyrae{}an{}\xspace}
+\newcommand{\Saphyrae}         {Saph\yvowel rae{}\xspace}
+
+\newcommand{\Asaathur}         {Asaathur\xspace}
+\newcommand{\Haamon}           {Haamon\xspace}
+\newcommand{\Aamon}            {\Haamon}
+
+\newcommand{\UzulKaya}         {Uzul-Kaya\xspace}
+\newcommand{\KulYana}          {Kul-Yana\xspace}
+
+\newcommand{\Serpentmen}       {Serpent-men\xspace}
+\newcommand{\Serpentman}       {Serpent-man\xspace}
+\newcommand{\serpentmen}       {serpent-men\xspace}
+\newcommand{\serpentman}       {serpent-man\xspace}
+\newcommand{\Snakemen}         {Snake-men\xspace}
+\newcommand{\Snakeman}         {Snake-man\xspace}
+\newcommand{\snakemen}         {snake-men\xspace}
+\newcommand{\snakeman}         {snake-man\xspace}
+
+
+
+\begin{comment}
+\subsection{Mortal humanoids}
+\end{comment}
+
+% Scathae.
+\newcommand{\Scathaese}        {Sc\along thaese\xspace}
+\newcommand{\Scathae}          {Sc\along thae\xspace}
+\newcommand{\Scatha}           {Sc\along tha\xspace}
+\newcommand{\scathaese}        {Sc\along thaese\xspace}
+\newcommand{\scathae}          {Sc\along thae\xspace}
+\newcommand{\scatha}           {Sc\along tha\xspace}
+
+% Demiscathae.
+\newcommand{\Demiscathae}      {Demisc\along thae\xspace}
+\newcommand{\Demiscatha}       {Demisc\along tha\xspace}
+\newcommand{\demiscathae}      {Demisc\along thae\xspace}
+\newcommand{\demiscatha}       {Demisc\along tha\xspace}
+
+% Subraces of Scathae.
+\newcommand{\Tassians}          {Tassians\xspace}
+\newcommand{\Tassian}           {Tassian\xspace} % Blue
+\newcommand{\Mekriis}           {Mecrii\xspace} 
+\newcommand{\Mekrii}            {Mecrii\xspace} % Red
+\newcommand{\Lois}              {Loi\xspace}
+\newcommand{\Loi}               {Loi\xspace}
+
+% Male and female Scathae. 
+\newcommand{\daxes}             {daxes\xspace}
+\newcommand{\dax}               {dax\xspace}   % Male Scatha
+\newcommand{\Daxes}             {Daxes\xspace}
+\newcommand{\Dax}               {Dax\xspace} 
+\newcommand{\sphyles}           {sph\ydiphthong les\xspace} 
+\newcommand{\sphyle}            {sph\ydiphthong le\xspace} % Female Scatha
+\newcommand{\Sphyles}           {Sph\ydiphthong les\xspace} 
+\newcommand{\Sphyle}            {Sph\ydiphthong le\xspace} 
+
+% Rachyth, Dragon/Scatha hybrids. 
+\newcommand{\Rachyth}           {Rach\ydiphthong th\xspace}
+\newcommand{\Rachyths}          {\Rachyth}
+\newcommand{\rachyth}           {\Rachyth}
+\newcommand{\rachyths}          {\Rachyths}
+
+% Cregorr.
+\newcommand{\Cregorr}           {Cusharan\xspace}
+\newcommand{\Cregorrs}          {Cusharans} 
+\newcommand{\Cregoradj}         {\Cregorr}
+\newcommand{\cregorr}           {\Cregorr}
+\newcommand{\cregorrs}          {\Cregorrs} 
+\newcommand{\cregoradj}         {\Cregoradj}
+
+% Troglodytes: Degenerate Scathae living underground.
+\newcommand{\Troglodyte}        {Troglodyte\xspace}
+\newcommand{\Troglodytes}       {Troglodytes\xspace}
+\newcommand{\troglodyte}        {Troglodyte\xspace}
+\newcommand{\troglodytes}       {Troglodytes\xspace}
+\newcommand{\Tsutora}           {Tsu-Tora\xspace}
+\newcommand{\Tsutoras}          {Tsu-Toras\xspace}
+\newcommand{\tsutora}           {Tsu-Tora\xspace}
+\newcommand{\tsutoras}          {Tsu-Toras\xspace}
+
+% Locul, a pre-Scathaese servitor race. 
+\newcommand{\Loculs}            {Loc\ulong{}l\xspace}
+\newcommand{\Locul}             {Loc\ulong{}l\xspace}
+\newcommand{\loculs}            {Loc\ulong{}l\xspace}
+\newcommand{\locul}             {Loc\ulong{}l\xspace}
+
+
+
+\begin{comment}
+\subsection{Titles}
+\end{comment}
+
+% Title of the Dragon King or Queen.
+\newcommand{\DragonKing}   {\Dragon{} King{}\xspace}
+\newcommand{\DragonKings}  {\DragonKing{}s{}\xspace}
+\newcommand{\Dragonking}   {\DragonKing{}\xspace}
+\newcommand{\Dragonkings}  {\DragonKings{}\xspace}
+\newcommand{\dragonking}   {\DragonKing{}\xspace}
+\newcommand{\dragonkings}  {\dragonking{}s{}\xspace}
+\newcommand{\DragonQueen}  {\Dragon{} Queen{}\xspace}
+\newcommand{\DragonQueens} {\DragonQueen{}s{}\xspace}
+\newcommand{\Dragonqueen}  {\DragonQueen{}\xspace}
+\newcommand{\Dragonqueens} {\DragonQueens{}\xspace}
+\newcommand{\dragonqueen}  {\DragonQueen{}\xspace}
+\newcommand{\dragonqueens} {\dragonqueen{}s{}\xspace}
+
+% Dragonlord.
+\newcommand{\Dragonlord}   {\Dragon{}lord{}\xspace}
+\newcommand{\Dragonlords}  {\Dragonlord{}s{}\xspace}
+\newcommand{\dragonlord}   {\Dragonlord{}\xspace}
+\newcommand{\dragonlords}  {\dragonlord{}s{}\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{History}
+\end{comment}
+
+% The war between the newly-arisen Draecchonosh and the traditional Ophidians.
+\newcommand{\Draecchonoshwar}  {\Draecchonosh{} War{}\xspace}
+\newcommand{\draecchonoshwar}  {\Draecchonoshwar{}\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{\Sethican philosophy}
+\end{comment}
+
+\newcommand{\DaathKurZulNathla} {Daath-kur-zul-Nathla\xspace}
+\newcommand{\Osserylloch}       {Osserylloch\xspace}
+\newcommand{\Barbeloth}         {Barbeloth\xspace}
+\newcommand{\YothUnXachtyon}    {Yoth-un-Xachthyon\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Things}
+\end{comment}
+
+% Dragonsteel, a powerful metal.
+\newcommand{\Dragonsteel}   {\Dragon{}steel{}\xspace}
+\newcommand{\dragonsteel}   {\Dragonsteel}
+
+% Skekrathuin, Draconic arm blades.
+\newcommand{\Skekrathuin}   {Skekrathuin{}\xspace}
+\newcommand{\Skekrathuins}  {\Skekrathuin}
+\newcommand{\skekrathuin}   {skekrathuin{}\xspace}
+\newcommand{\skekrathuins}  {\skekrathuin}
+
+% Zrekklakh, tail blades. 
+\newcommand{\Zrekklakh}     {Zrekklakh{}\xspace}
+\newcommand{\zrekklakh}     {zrekklakh{}\xspace}
+
+% Colossi, the Dragons' Humongous Mecha.
+\newcommand{\Colossus}      {Colossus{}\xspace}
+\newcommand{\Colossi}       {Colossi{}\xspace}
+\newcommand{\colossus}      {\Colossus}
+\newcommand{\colossi}       {\Colossi}
+
+% Wanderers in Darkness, a poem. 
+\newcommand{\WanderersInDarknessEmph} {\emph{\WanderersInDarkness{}}\xspace}
+\newcommand{\WanderersInDarkness} {Black Stars' Aenigmata\xspace}
+% Melcryth, author of Wanderers in Darkness. 
+\newcommand{\Melcryth}            {Melcr\ydiphthong th{}\xspace}
+
+% Draconic languages.
+\newcommand{\TrueDraconic}   {True Draconic\xspace}
+\newcommand{\CommonDraconic} {Common Draconic\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Other Peoples}
+\end{comment}
+
+% The Voyagers, the foes of the Krakens.
+\newcommand{\Voyager}   {Voyager{}\xspace}
+\newcommand{\Voyagers}  {\Voyager{}s{}\xspace}
+\newcommand{\voyager}   {\Voyager}
+\newcommand{\voyagers}  {\Voyagers}
+
+% Cuezca, the lost, Atlantis-like primordial civilization.
+\newcommand{\Cuezca}    {Cuezca{}\xspace}
+\newcommand{\Cuezcan}   {\Cuezca{}n{}\xspace}
+\newcommand{\Cuezcans}  {\Cuezcan{}s{}\xspace}
+\newcommand{\cuezcan}   {\Cuezcan}
+\newcommand{\cuezcans}  {\Cuezcans}
+
+% The Cuezcan Apocalypse, the great catastrophe surrounding the destruction of Cuezca.
+\newcommand{\CuezcanApocalypse} {\Cuezcan{} Apocalypse{}\xspace}
+
+% The Moon-Wolves, the mystic wolves of the frost-moon. 
+% Inspired by Bal-Sagoth and the Malazan Deragoth.
+\newcommand{\Vorcanths}   {Vorcans\xspace}
+\newcommand{\Vorcanth}    {Vorcan\xspace}
+\newcommand{\vorcanths}   {\Vorcanths}
+\newcommand{\vorcanth}    {\Vorcanth}
+\newcommand{\MoonWolves}  {\Vorcanths}
+\newcommand{\MoonWolf}    {\Vorcanth}
+\newcommand{\moonwolves}  {\vorcanths}
+\newcommand{\moonwolf}    {\vorcanth}
+
+% The Rocolza. An elder race of giants. Related to Nephilim. 
+\newcommand{\Rocolzas} {\Aryothim}
+\newcommand{\Rocolza}  {\Aryoth}
+\newcommand{\rocolzas} {\aryothim}
+\newcommand{\rocolza}  {\aryoth}
+\newcommand{\Aryothim} {\aryothim}
+\newcommand{\Aryoth}   {\aryoth}
+\newcommand{\aryothim} {Aryothim\xspace}
+\newcommand{\aryoth}   {Aryoth\xspace}
+
+
+
+
+\begin{comment}
+\section{Chaos}
+\end{comment}
+
+
+% The force of Chaos.
+\newcommand{\Chaos} {Chaos{}\xspace}
+\newcommand{\chaos} {\Chaos}
+% The adjective `Chaotic'.
+\newcommand{\Chaotic} {Chaotic{}\xspace}
+\newcommand{\chaotic} {chaotic{}\xspace}
+
+% Daemons, the creatures of Chaos.
+\newcommand{\Daimonic} {\Daemonic}
+\newcommand{\Daimonia} {\Daemons}
+\newcommand{\Daimon}   {\Daemon}
+\newcommand{\daimonic} {\daemonic}
+\newcommand{\daimonia} {\daemons}
+\newcommand{\daimon}   {\daemon}
+\newcommand{\Daemonic} {\Daemon{}ic\xspace}
+\newcommand{\Daemons}  {\Daemon{}s\xspace}
+\newcommand{\Daemon}   {Daemon\xspace}
+\newcommand{\daemonic} {\daemon{}ic\xspace}
+\newcommand{\daemons}  {\daemon{}s\xspace}
+\newcommand{\daemon}   {daemon\xspace}
+
+% Homunculi, quasi-intelligent creatures.
+\newcommand{\Homunculi}  {Homunculi}
+\newcommand{\Homunculus} {Homunculus}
+\newcommand{\homunculi}  {Homunculi}
+\newcommand{\homunculus} {Homunculus}
+
+% Magical daemons: Intangible beings or forced that may be summoned to perform spells. 
+\newcommand{\MDaemon}   {\Daemon{}\xspace}
+\newcommand{\MDaemons}  {\Daemons{}\xspace}
+\newcommand{\MDaemonic} {\Daemonic{}\xspace}
+\newcommand{\mdaemon}   {\daemon{}\xspace}
+\newcommand{\mdaemons}  {\daemons{}\xspace}
+\newcommand{\mdaemonic} {\daemonic{}\xspace}
+
+% Physical daemons: Material creatures that may be summoned to act or fight. 
+\newcommand{\PDaemon}   {Devil{}\xspace}
+\newcommand{\PDaemons}  {\PDaemon{}s{}\xspace}
+\newcommand{\PDaemonic} {\PDaemon{}ish{}\xspace}
+\newcommand{\Pdaemon}   {\PDaemon{}\xspace}
+\newcommand{\Pdaemons}  {\PDaemons{}\xspace}
+\newcommand{\Pdaemonic} {\PDaemonic{}\xspace}
+\newcommand{\pdaemon}   {\Pdaemon{}\xspace}
+\newcommand{\pdaemons}  {\pdaemon{}s{}\xspace}
+\newcommand{\pdaemonic} {\pdaemon{}ish{}\xspace}
+
+% Lemures, souls bound in the forms of misshapen \pdaemons.
+\newcommand{\Lemure}   {Lemure{}\xspace}
+\newcommand{\Lemures}  {\Lemure{}s{}\xspace}
+\newcommand{\Lemureic} {\Lemure{}ic{}\xspace}
+\newcommand{\lemure}   {lemure{}\xspace}
+\newcommand{\lemures}  {\lemure{}s{}\xspace}
+\newcommand{\lemureic} {\lemure{}ic{}\xspace}
+
+% The Haskelek, the Rissitic daemon demigod.
+\newcommand{\haskelek}  {\Haskelek{}\xspace}
+\newcommand{\Haskelek}  {Haskelek{}\xspace}
+
+% Balrogs, a race of daemons. 
+\newcommand{\Balrog}  {Balrog{}\xspace}
+\newcommand{\Balrogs} {\Balrog{}s{}\xspace}
+\newcommand{\balrog}  {\Balrog{}\xspace}
+\newcommand{\balrogs} {\balrog{}s{}\xspace}
+
+% Nrekkloi, a race of daemons.
+% A nrekkloi has a lobster-like abdomen with six legs and a hard carapace, and a fur-covered, vaguely humanoid torso with clawed arms. 
+\newcommand{\Nrekkloi}  {Nrekkloi{}\xspace}
+\newcommand{\Nrekklois} {\Nrekkloi{}\xspace}
+\newcommand{\nrekkloi}  {\Nrekkloi{}\xspace}
+\newcommand{\nrekklois} {\Nrekkloi{}\xspace}
+
+% Succubi, pdaemons who tempt people with illusions and promises of sex, power or whatever.
+\newcommand{\Succubus} {Succubus{}\xspace}
+\newcommand{\Succubi}  {Succubi{}\xspace}
+\newcommand{\succubus} {\Succubus}
+\newcommand{\succubi}  {\Succubi}
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\subsection{\XzaiShann}
+\end{comment}
+
+% Xzai-Shann, a race of daemons. 
+% Inspired, to a limited extent, by the Thzan-Tzai from Stephen Marley's books about Chia the Black Dragon Sorceress. 
+\newcommand{\XzaiShannic}      {Xzai-Shann\xspace}
+\newcommand{\XzaiShanns}       {Xzai-Shann\xspace}
+\newcommand{\XzaiShann}        {Xzai-Shann\xspace}
+\newcommand{\xzaishannic}      {Xzai-Shann\xspace}
+\newcommand{\xzaishanns}       {Xzai-Shann\xspace}
+\newcommand{\xzaishann}        {Xzai-Shann\xspace}
+\newcommand{\xs}               {Xzai-Shann\xspace}
+\newcommand{\xss}              {Xzai-Shann\xspace}
+\newcommand{\xsic}             {Xzai-Shann\xspace}
+
+\newcommand{\Theratons}        {Theratons\xspace}
+\newcommand{\Theraton}         {Theraton\xspace}
+\newcommand{\theratons}        {Theratons\xspace}
+\newcommand{\theraton}         {Theraton\xspace}
+
+
+
+\begin{comment}
+\subsubsection{Greater \XzaiShann}
+\end{comment}
+
+\newcommand{\Achamoth}         {Achamoth\xspace}
+
+% Kyaethem Chrei'az, a Xzai-Shann.
+\newcommand{\KyaethemChreiAz}  {Kyathem Chreiza\xspace}
+
+% Khoth-Sell, the Draconic goddess of death.
+\newcommand{\KhothSell}        {Khothsell\xspace}
+
+% He who is the Key and the Gate. 
+\newcommand{\NaathKurRamalech} {Naath-Kur-Ramalech\xspace}
+
+% Nerrhan-Koss, a dark god.
+\newcommand{\NerrhanKoss}      {Nerran-Koss\xspace}
+\newcommand{\NerranKoss}       {Nerran-Koss\xspace}
+\newcommand{\NehranKoss}       {Nerran-Koss\xspace}
+
+% Ruin Satha who reigns from his dark throne.
+\newcommand{\RuinSatha}        {\Ruin-\Satha}
+\newcommand{\Ruin}             {Ruin\xspace}
+\newcommand{\Satha}            {Satha\xspace}
+
+
+
+\begin{comment}
+\subsubsection{Lesser \XzaiShann}
+\end{comment}
+
+\newcommand{\HothNrul}         {Rurglax\xspace}
+\newcommand{\Yolbaoth}         {Yolbaoth\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Nagae}
+\end{comment}
+
+
+% Kraken.
+\newcommand{\Krakens}          {Kraken\xspace}
+\newcommand{\Kraken}           {Kraken\xspace}
+\newcommand{\krakens}          {Kraken\xspace}
+\newcommand{\kraken}           {Kraken\xspace}
+
+% Moroch, the youngest of the Kraken and the creator of the Nagae and Vlekkesh'sala.
+\newcommand{\Moroch}           {Moloch{}\xspace}
+
+% Nagae, the Deep Ones of \Miith{}.
+\newcommand{\Nagalords}        {\Nagalord{}s\xspace}
+\newcommand{\Nagalord}         {\Naga{} Lord\xspace}
+\newcommand{\nagalords}        {\Nagalords}
+\newcommand{\nagalord}         {\Nagalord}
+\newcommand{\Nagae}            {Nagae\xspace}
+\newcommand{\Naga}             {Naga\xspace}
+\newcommand{\nagae}            {Nagae\xspace}
+\newcommand{\naga}             {Naga\xspace}
+
+% Ichtyans, another name for Nagae.
+\newcommand{\Ichthyans}        {Ichthyans\xspace}
+\newcommand{\Ichthyan}         {Ichthyan\xspace}
+\newcommand{\ichthyans}        {Ichthyans\xspace}
+\newcommand{\ichthyan}         {Ichthyan\xspace}
+
+% Linnorms, giant reshaped Nagae that serve as warriors.
+\newcommand{\Linnorms}         {Linnorms\xspace}
+\newcommand{\Linnorm}          {Linnorm\xspace}
+\newcommand{\linnorms}         {Linnorms\xspace}
+\newcommand{\linnorm}          {Linnorm\xspace}
+
+
+
+\begin{comment}
+\section{Animals}
+\end{comment}
+
+
+
+\begin{comment}
+\subsubsection{Birds}
+\end{comment}
+
+% Grulcan (Diatryma/Gastornis).
+\newcommand{\Grulcans}    {\Grulcan{}s{}\xspace}
+\newcommand{\Grulcan}     {Grulcan{}\xspace}
+\newcommand{\grulcans}    {\Grulcans}
+\newcommand{\grulcan}     {\Grulcan}
+
+
+
+\begin{comment}
+\subsection{Dragon-like animals}
+\end{comment}
+
+% Drakes, Ophidian-like saurians. 
+\newcommand{\Drakes}           {\Drake{}s{}\xspace}
+\newcommand{\Drake}            {Drake{}\xspace}
+\newcommand{\drakes}           {\MakeLowercase\Drakes}
+\newcommand{\drake}            {\MakeLowercase\Drake}
+
+\newcommand{\Varcals}          {\Varcal{}s{}\xspace}
+\newcommand{\Varcal}           {Varcal{}\xspace}
+\newcommand{\varcals}          {\MakeLowercase\Varcals}
+\newcommand{\varcal}           {\MakeLowercase\Varcal}
+
+\newcommand{\Lindworms}        {Lindworms\xspace}
+\newcommand{\Lindworm}         {Lindworm\xspace}
+\newcommand{\lindworms}        {Lindworms\xspace}
+\newcommand{\lindworm}         {Lindworm\xspace}
+
+% Mezolisk, aka Daggerdrake.
+\newcommand{\Mezolisks}        {Mezolisks\xspace}
+\newcommand{\Mezolisk}         {Mezolisk\xspace}
+\newcommand{\mezolisks}        {\Mezolisks}
+\newcommand{\mezolisk}         {\Mezolisk}
+
+\newcommand{\Reptilecolossi}   {Reptilian Colossi\xspace}
+\newcommand{\Reptilecolossus}  {Reptilian Colossus\xspace}
+\newcommand{\reptilecolossi}   {Reptilian Colossi\xspace}
+\newcommand{\reptilecolossus}  {Reptilian Colossus\xspace}
+
+% Vreiid (Wyvern).
+\newcommand{\Vreiiden}         {Vreiiden\xspace}
+\newcommand{\Vreiid}           {Vreiid\xspace}
+\newcommand{\vreiiden}         {vreiiden\xspace}
+\newcommand{\vreiid}           {vreiid\xspace}
+\newcommand{\Wyvern}           {\Vreiid}
+\newcommand{\Wyverns}          {\Vreiids}
+\newcommand{\wyvern}           {\vreiid}
+\newcommand{\wyverns}          {\vreiids}
+
+
+
+\begin{comment}
+\subsection{Fish}
+\end{comment}
+
+% Caderyn, the huge monster fish.
+\newcommand{\Caderyn}          {Cader\yvowel n{}\xspace}
+\newcommand{\Caderyns}         {\Caderyn{}s{}\xspace}
+\newcommand{\caderyn}          {\Caderyn{}\xspace}
+\newcommand{\caderyns}         {\caderyn{}s{}\xspace}
+
+
+
+\begin{comment}
+\subsection{Mammals}
+\end{comment}
+
+\newcommand{\Belwans}     {\Belwan{}s{}\xspace}
+\newcommand{\Belwan}      {Belwan{}\xspace}
+\newcommand{\belwans}     {\belwan{}s{}\xspace}
+\newcommand{\belwan}      {belwan{}\xspace}
+
+
+
+\begin{comment}
+\subsection{Pterans}
+\end{comment}
+
+% Pterans.
+\newcommand{\Pterans}     {Pterans\xspace}
+\newcommand{\Pteran}      {Pteran\xspace}
+\newcommand{\pterans}     {pterans\xspace}
+\newcommand{\pteran}      {pteran\xspace}
+
+% Ravcor. A pterosaur. 
+\newcommand{\Ravcors}     {Ravcors\xspace}
+\newcommand{\Ravcor}      {Ravcor\xspace}
+\newcommand{\ravcors}     {ravcors\xspace}
+\newcommand{\ravcor}      {ravcor\xspace}
+
+% Quil-rai. A pterosaur. 
+\newcommand{\Quilrais}    {Quil-rai\xspace}
+\newcommand{\Quilrai}     {Quil-rai\xspace}
+\newcommand{\quilrais}    {quil-rai\xspace}
+\newcommand{\quilrai}     {quil-rai\xspace}
+
+
+
+\begin{comment}
+\subsection{Saurians}
+\end{comment}
+
+% Saurians.
+\newcommand{\Saurians}    {Saurians\xspace}
+\newcommand{\Saurian}     {Saurian\xspace}
+\newcommand{\saurians}    {saurians\xspace}
+\newcommand{\saurian}     {saurian\xspace}
+
+
+
+\begin{comment}
+\subsubsection{Theropods}
+\end{comment}
+
+% Corgorah (Tyrannosaurus).
+\newcommand{\Corgoroth}   {Corgoroth\xspace}
+\newcommand{\Corgorah}    {Corgor\ahresphan{}\xspace}
+\newcommand{\corgoroth}   {\Corgoroth}
+\newcommand{\corgorah}    {\Corgorah}
+\newcommand{\Gorgoroses}  {\Corgoroth}
+\newcommand{\Gorgoros}    {\Corgorah}
+\newcommand{\gorgoroses}  {\corgoroth}
+\newcommand{\gorgoros}    {\corgorah}
+\newcommand{\Cortios}     {\Corgoroth}
+\newcommand{\Cortio}      {\Corgorah}
+\newcommand{\cortios}     {\corgoroth}
+\newcommand{\cortio}      {\corgorah}
+% Rissitic name for a Corgorah. 
+\newcommand{\Tashrek}     {Tashrek\xspace}
+\newcommand{\tashrek}     {Tashrek\xspace}
+
+% Nycan (dromaeosaurid).
+\newcommand{\Nycan}       {N\ydiphthong{}can\xspace}
+\newcommand{\Nycans}      {\Nycan{}s\xspace}
+\newcommand{\Nycanese}    {\Nycan} % Adjective.
+\newcommand{\nycan}       {\Nycan}
+\newcommand{\nycans}      {\nycan{}s\xspace}
+\newcommand{\nycanese}    {\nycan} % Adjective.
+
+% Lotha (medium-sized theropod).
+\newcommand{\Lothae}      {Lothae\xspace}
+\newcommand{\Lotha}       {Lotha\xspace}
+\newcommand{\lothae}      {Lothae\xspace}
+\newcommand{\lotha}       {Lotha\xspace}
+
+
+
+\begin{comment}
+\subsubsection{Ornithischian herbivores}
+\end{comment}
+
+% Tondra. A sauropod. 
+\newcommand{\Tondras}     {\Tondra{}s\xspace}
+\newcommand{\Tondra}      {Tocondra\xspace}
+\newcommand{\tondras}     {\tondra{}s\xspace}
+\newcommand{\tondra}      {tocondra\xspace}
+
+% Brukath. The largest sauropod on Mith.
+\newcommand{\Brukaths}    {\Brukath{}s\xspace}
+\newcommand{\Brukath}     {Brukh\aflatrissitic{}l\xspace}
+\newcommand{\brukaths}    {\Brukath{}s{}\xspace}
+\newcommand{\brukath}     {Brukh\aflatrissitic{}l\xspace}
+
+
+
+\begin{comment}
+\subsubsection{Saurischian herbivores}
+\end{comment}
+
+% Miksha (Gallimimus). 
+\newcommand{\Mikshas}     {\Miksha{}s\xspace}
+\newcommand{\Miksha}      {Mishkla\xspace}
+\newcommand{\mikshas}     {\miksha{}s\xspace}
+\newcommand{\miksha}      {mishkla\xspace}
+
+% Mulgron (Triceratops). 
+\newcommand{\Murocs}      {Murocs\xspace}
+\newcommand{\Muroc}       {Muroc\xspace}
+\newcommand{\murocs}      {murocs\xspace}
+\newcommand{\muroc}       {muroc\xspace}
+\newcommand{\Mulgrons}    {Murocs\xspace}
+\newcommand{\Mulgron}     {Muroc\xspace}
+\newcommand{\mulgrons}    {murocs\xspace}
+\newcommand{\mulgron}     {muroc\xspace}
+
+% Relc (hadrosaurian lizard horse). 
+\newcommand{\Relc}        {Relc\xspace}
+\newcommand{\Relcs}       {Relcs\xspace}
+\newcommand{\relc}        {relc\xspace}
+\newcommand{\relcs}       {relcs\xspace}
+
+% Relcer (a person who rides a relc). 
+\newcommand{\Relcer}      {Relcer\xspace}
+\newcommand{\Relcers}     {Relcers\xspace}
+\newcommand{\relcer}      {relcer\xspace}
+\newcommand{\relcers}     {relcers\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Plants}
+\end{comment}
+
+% Jiliba, a plant whose berries in a tea will help you regain strength. 
+\newcommand{\jiliba}      {jiliba{}\xspace}
+\newcommand{\Jiliba}      {Jiliba{}\xspace}
+% Dvingen, a plant whose leaves can be used to make a healing poultice.
+\newcommand{\dvingen}     {dvingen{}\xspace}
+\newcommand{\Dvingen}     {Dvingen{}\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Undead}
+\end{comment}
+
+% Liches, undead mages.
+\newcommand{\Lich}             {Lich\xspace}
+\newcommand{\Liches}           {\Lich{}es\xspace}
+\newcommand{\lich}             {lich\xspace}
+\newcommand{\liches}           {\lich{}es\xspace}
+
+% Reavers, the Vampires of \Miith{}.
+\newcommand{\Reaver}           {Reaver\xspace} % Singular
+\newcommand{\Reavers}          {Reavers\xspace} % Plural
+\newcommand{\Reaveric}         {Reaver\xspace} % Associated adjective
+\newcommand{\reaver}           {Reaver\xspace} % Singular
+\newcommand{\reavers}          {Reavers\xspace} % Plural
+\newcommand{\reaveric}         {Reaver\xspace} % Associated adjective
+
+% Leeches, the lesser Vampires of \Miith{}.
+\newcommand{\Leech}            {Leech{}\xspace} % Singular
+\newcommand{\Leeches}          {\Leech{}es{}\xspace} % Plural
+\newcommand{\Leechic}          {\Leech{}\xspace} % Associated adjective
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Moon-things}
+\end{comment}
+
+\newcommand{\Glithid}          {Glithid\xspace}
+\newcommand{\Glithids}         {Glithids\xspace}
+\newcommand{\glithid}          {glithid\xspace}
+\newcommand{\glithids}         {glithids\xspace}
+
+\newcommand{\Moongod}          {Moon-god\xspace}
+\newcommand{\Moongods}         {Moon-gods\xspace}
+\newcommand{\moongod}          {Moon-god\xspace}
+\newcommand{\moongods}         {Moon-gods\xspace}
+
+\newcommand{\Moonthing}        {Moon-thing\xspace}
+\newcommand{\Moonthings}       {Moon-things\xspace}
+\newcommand{\moonthing}        {Moon-thing\xspace}
+\newcommand{\moonthings}       {Moon-things\xspace}
+
+\newcommand{\Shugul}           {Sh\ulong{}gul\xspace}
+\newcommand{\Shuguls}          {\Shugul}
+\newcommand{\shugul}           {\Shugul}
+\newcommand{\shuguls}          {\Shugul}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Others}
+\end{comment}
+
+
+% Monsters covered in blades. Perhaps insectoid.
+\newcommand{\NerasKirishgaith} {Neras Kirish'gaith{}\xspace}
+\newcommand{\bladedpeople}     {\NerasKirishgaith{}\xspace}
+
+
+% Nymphs: Collective term for various feminine "spirits". 
+\newcommand{\Nymphs}           {Nymphs\xspace}
+\newcommand{\Nymph}            {Nymph\xspace}
+\newcommand{\nymphs}           {Nymphs\xspace}
+\newcommand{\nymph}            {Nymph\xspace}
+
+% Naiads, water spirits.
+\newcommand{\Naiads}           {\Naiad{}\xspace}
+\newcommand{\Naiad}            {Ne\"ereth{}\xspace}
+\newcommand{\naiads}           {\naiad{}\xspace}
+\newcommand{\naiad}            {\Naiad{}\xspace}
+
+% Sylphs, air spirits.
+\newcommand{\Sylphs}           {Sylphs\xspace}
+\newcommand{\Sylph}            {Sylph\xspace}
+\newcommand{\sylphs}           {Sylphs\xspace}
+\newcommand{\sylph}            {Sylph\xspace}
+
+% Jinni, a mythological creature.
+\newcommand{\Jinni}            {Jinni\xspace}
+\newcommand{\Jinn}             {Jinn\xspace}
+\newcommand{\jinni}            {Jinni\xspace}
+\newcommand{\jinn}             {Jinn\xspace}
+
+% Malgryph, a mythological creature.
+\newcommand{\Malgryphs}        {Malgr\yvowel phs\xspace}
+\newcommand{\Malgryph}         {Malgr\yvowel ph\xspace}
+\newcommand{\malgryphs}        {Malgr\yvowel phs\xspace}
+\newcommand{\malgryph}         {Malgr\yvowel ph\xspace}
+
+% Sylphs, air spirits.
+\newcommand{\Chimaerae}        {Chimaerae\xspace}
+\newcommand{\Chimaera}         {Chimaera\xspace}
+\newcommand{\chimaerae}        {Chimaerae\xspace}
+\newcommand{\chimaera}         {Chimaera\xspace}
+
+\newcommand{\FireSalamanders}  {Raxxians\xspace}
+\newcommand{\FireSalamander}   {Raxxian\xspace}
+\newcommand{\firesalamanders}  {Raxxians\xspace}
+\newcommand{\firesalamander}   {Raxxian\xspace}
+
+\newcommand{\feldraxes}        {\Feldraxes}
+\newcommand{\feldrax}          {\Feldrax}
+\newcommand{\Feldraxes}        {\Feldrax}
+\newcommand{\Feldrax}          {Feldrax\xspace}
+
+\newcommand{\werlocs}          {\Werlocs}
+\newcommand{\werloc}           {\Werloc}
+\newcommand{\Werlocs}          {\Werloc{}s}
+\newcommand{\Werloc}           {Werloc\xspace}
+
+\newcommand{\rulyamoths}       {\Rulyamoths}
+\newcommand{\rulyamoth}        {\Rulyamoth}
+\newcommand{\Rulyamoths}       {\Rulyamoth{}s}
+\newcommand{\Rulyamoth}        {Rulyamoth\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\part{Characters of \Miith}
+\end{comment}
+
+
+% `Mister' and `Mistress', polite titles used in Belkadian. 
+\newcommand{\Mister}           {Mister{}\xspace}
+\newcommand{\Mr}               {\Mister{}\xspace}
+\newcommand{\Mistress}         {Mistress{}\xspace}
+\newcommand{\Mrs}              {\Mistress{}\xspace}
+\newcommand{\Miss}             {Miss{}\xspace}
+% `Dai-' and `Rao-', polite prefixes used in Imetric.
+\newcommand{\Dai}              {Dai-{}\xspace}
+\newcommand{\dai}              {dai-{}\xspace}
+\newcommand{\Rao}              {Rao-{}\xspace}
+\newcommand{\rao}              {rao-{}\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Draconic Faction}
+\end{comment}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{\Ophidians}
+\end{comment}
+
+\newcommand{\Sethican}         {Sethican\xspace}
+\newcommand{\Sethicus}         {Sethicus\xspace}
+\newcommand{\ValcanSethicus}   {\Valcan{} Sethicus\xspace}
+\newcommand{\VardredSethicus}  {\Valcan{} Sethicus\xspace}
+\newcommand{\Vardred}          {\Valcan}
+\newcommand{\Valcan}           {Valcan\xspace}
+
+\newcommand{\Hesherritan}      {Hesherritan\xspace}
+\birthliving{Hesherritan}      {IC} {-231478}
+
+\newcommand{\Ishtacca}         {Ishtacca\xspace}
+\birthliving{Ishtacca}         {Durance begins}{23143}
+
+\newcommand{\Nasshikerr}       {Nasshiker\xspace}
+\birthliving{Nasshikerr}       {IC} {-91854}
+
+\newcommand{\NathRamos}        {Nath Ramos\xspace}
+
+\newcommand{\ZeethanKraal}     {Zeethan \Kraal}
+\newcommand{\Kraal}            {Kraal\xspace}
+\birthliving{Zeethan Kraal}    {IC} {-77231}
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{\Dragons}
+\end{comment}
+
+
+
+\begin{comment}
+\subsection{\Firstgendragons}
+\end{comment}
+
+% Hesod-Nerga, the first Dragon and the father of Tiamat.
+\newcommand{\HesodNerga}                  {Chesod-Nerga\xspace}
+\newcommand{\HesodN}                      {Chesod-Nerga\xspace}
+
+% Tiamat, the terrible Dragon Mother. 
+\newcommand{\Tiamat}                      {T\ydiphthong rasshana\xspace}
+\newcommand{\TyarithXserasshana}          {\Tyarith \Xserasshana}
+\newcommand{\Tyarith}                     {Xzairith\xspace}
+\newcommand{\Xserasshana}                 {\Tiamat}
+\newcommand{\Kserasshana}                 {\Tiamat}
+
+% Typhon, the Dragon god of war. 
+\newcommand{\Typhon}                      {T\ydiphthong phon\xspace}
+
+% Iurzmacul, the Dragon god of the sea and of wisdom.
+\newcommand{\Iurzmacul}                   {Iurzmacul\xspace}
+
+% Apep-Nesthra, the Dragon god of sorcery and diabolism.
+\newcommand{\ApepNesthra}                 {Aphares Nesthra\xspace}
+\newcommand{\ApharesNesthra}              {Aphares Nesthra\xspace}
+\newcommand{\Aphares}                     {Aphares\xspace}
+\newcommand{\Nesthra}                     {Nesthra\xspace}
+
+
+
+\begin{comment}
+\subsection{\Shaeeroth}
+\end{comment}
+
+% Nexagglachel's curse. 
+\newcommand{\NexagglachelsCurse}          {\ps{\Nexagglachel} Curse\xspace}
+
+% Nexagglacheldraex, a Dragonlord, the eldest son of \KhothSell.
+\newcommand{\Nexagglachel}                {Nexaggrael\xspace}
+\newcommand{\RaemythKhivaashNexagglachel} {\Raemyth \Khivaash \Nexagglachel}
+\newcommand{\RaemythNexagglachel}         {\Raemyth \Nexagglachel}
+\newcommand{\Khivaash}                    {Khivaash\xspace}
+\newcommand{\Raemyth}                     {Raem\yvowel th\xspace}
+
+% The third and youngest son of \KhothSell, who is actually Hriist'tet Nechsain.
+\newcommand{\IrocasSecherdamon}           {\Irocas \Secherdamon}
+\newcommand{\Secherdamon}                 {Secherdamon\xspace}
+\newcommand{\Veldraxx}                    {Veldr\"axx\xspace}
+\newcommand{\Irocas}                      {Irocas\xspace}
+\newcommand{\HriistD}                     {\Secherdamon}
+
+% Ishnaruchyfir, a Dragonlord and Ashenclaw knight, the second son of \KhothSell. 
+\newcommand{\QuessanthIshnaruchaefir}     {\Quessanth \Ishnaruchaefir}
+\newcommand{\Quessanth}                   {Quessanth\xspace}
+\newcommand{\Ishnaruchyfir}               {\Ishnaruchaefir}
+\newcommand{\Iscrafel}                    {Iscrafel\xspace}
+\newcommand{\Ishnaruchaefir}              {\Iscrafel}
+%\newcommand{\Ishnaruchaefir}              {Ishnaruch\aediphthong fir\xspace}
+\newcommand{\Melechet}                    {Melechet\xspace}
+\newcommand{\Nierzshah}                   {Nierzshah\xspace}
+\newcommand{\Tzeorossh}                   {Tzeorossh\xspace}
+
+\newcommand{\Rephexsar}                   {Rephexsar\xspace}
+\newcommand{\Dioreth}                     {Dioreth\xspace}
+\newcommand{\DiorethSethicusRephexsar}    {Dioreth Sethicus Rephexsar\xspace}
+\newcommand{\DiorethRephexsar}            {Dioreth Rephexsar\xspace}
+
+\newcommand{\Skelcurmaggra}               {Skelcurmaggra\xspace}
+\newcommand{\Thessulax}                   {Thessulax\xspace}
+
+% Vizsherioch, the son of Secherdamon.
+\newcommand{\Vizsherioch}                 {Vizsherioch\xspace}
+
+
+
+\begin{comment}
+\subsection{Other \Dragons}
+\end{comment}
+
+% Nisgzarchief, Cryocas' lover
+\newcommand{\Nisgzarchief}                {Nisgzarchiev\xspace}
+
+% Cryocas Nzessuacrith, Ishnaruchyfir's daughter.
+\newcommand{\CryocasNzessuacrith}         {\Cryocas \Nzessuacrith}
+\newcommand{\Cryocas}                     {Cr\ydiphthong ocas\xspace}
+\newcommand{\Nzessuacrith}                {Nzessuacrith\xspace}
+
+% Ishnaruchaefir's beloved. 
+\newcommand{\Triestessakhin}              {R\yvowel stessakhin\xspace}
+\newcommand{\Rystessakhin}                {R\yvowel stessakhin\xspace}
+\newcommand{\AeocrithRystessakhin}        {\Aeocrith \Rystessakhin}
+\newcommand{\Aeocrith}                    {Aeocrith\xspace}
+
+% Ishnaruchaefir's three grandchildren.
+\newcommand{\Tentocoth}                   {Tentocoth\xspace}
+\newcommand{\Thiencaste}                  {Sincastra\xspace}
+\newcommand{\Rathyon}                     {Rathyon\xspace}
+
+\newcommand{\Laccashyth}                  {Laccash\ydiphthong th\xspace}
+\newcommand{\Vaccashyth}                  {Laccash\ydiphthong th\xspace}
+
+\newcommand{\Vexstrasshin}                {Vexstrasshin\xspace}
+
+\newcommand{\Xarocchetsel}                {Xarocchetsel\xspace}
+
+\newcommand{\Zessuruch}                   {Zessuruch\xspace}
+
+\newcommand{\Naruc}                       {N\along ruc\xspace}
+\newcommand{\Osanggrath}                  {Osanggrath\xspace}
+\newcommand{\NarucOsanggrath}             {\Naruc{} Osanggrath\xspace}
+
+
+
+
+
+
+
+\begin{comment}
+\section{Servants of the \Dragons}
+\end{comment}
+
+% Criseis, Ishnaruchaëfir's servant.
+\newcommand{\Criseis}     {Cris\"eis{}\xspace}
+
+% Psiotai, Rissit's \scathaese{} servitor.
+\newcommand{\Psyrex}      {Ps\ydiphthong rex{}\xspace}
+\newcommand{\LocarPsyrex} {\Locar{} \Psyrex{}\xspace}
+\newcommand{\Locar}       {Locar{}\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Erebean Faction}
+\end{comment}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{\Banes}
+\end{comment}
+
+% Voidbringer, the Baneking.
+\newcommand{\Voidbringer}      {Voidbringer{}\xspace}
+\newcommand{\Morogamhoth}      {Morogamhoth\xspace}
+\newcommand{\Zephron}          {Zephron\xspace}
+
+% Daggerrain, the Bane Overlord of \Miith{}.
+\newcommand{\Daggerrain}       {Daggerrain{}\xspace}
+\newcommand{\Amothanaxur}      {Amothanaxur\xspace}
+
+% See also the section about Qliphoth. Each Qliphah is actually a Banelord.
+
+
+
+\begin{comment}
+\section{\Resphain}
+\end{comment}
+
+
+
+\begin{comment}
+\subsection{\CiriathSepher}
+\end{comment}
+
+\begin{comment}
+\subsubsection{\Satharioth}
+\end{comment}
+
+\newcommand{\Azraid}       {\Aflatresphan zer\adarkresphan id{}\xspace}
+\newcommand{\Azeraid}      {\Azraid}
+\newcommand{\Gepheral}     {Gepher\adarkresphan l{}\xspace}
+\newcommand{\Gevural}      {Gepher\adarkresphan l{}\xspace}
+\newcommand{\Harbeth}      {H\adarkresphan sher\adarkresphan pel\xspace} % Harbeth, the Raven of the Battlefields.
+\newcommand{\Morcariel}    {Morc\adarkresphan riel\xspace}
+\newcommand{\Mehaloch}     {Men\aflatresphan{}loch\xspace} % Mehaloch, a devourer.
+\newcommand{\Shehizol}     {Shehizol{}\xspace}
+
+\birthliving{Azraid}       {Semiza found}{-608}
+
+\begin{comment}
+\subsubsection{\Ketherain}
+\end{comment}
+
+\newcommand{\Firaxel}      {F\ilongresphan r\adarkresphan xel\xspace}
+\newcommand{\Menessiaraid} {Menessi\adarkresphan r\adarkresphan id\xspace}
+\newcommand{\Teshrial}     {Teshri\aflatresphan l\xspace}
+\newcommand{\Zeirath}      {\Teshrial}
+\newcommand{\Tuerdal}      {Tu\"erd\adarkresphan l{}\xspace} % Tuerdal, Teshrial's father. 
+\newcommand{\Vesrai}       {Vesr\adarkresphan i{}\xspace} % Vesrai, Teshrial's mother.
+\newcommand{\Zereth}       {Zereth{}\xspace} % Zereth, daughter of Azraid. 
+
+\birthliving{Zereth}       {Azraid birth}  {1364}
+\birthliving{Vesrai}       {Zereth birth}  {2085}
+\birthliving{Tuerdal}      {Zereth birth}  {2516}
+\birthliving{Teshrial}     {Runger war}    {-1167}
+\birthliving{Firaxel}      {Teshrial birth}{-480}
+
+\begin{comment}
+\subsubsection{\Thelyadeth}
+\end{comment}
+
+\newcommand{\Ganethed}     {G\aflatresphan{}nethed\xspace} 
+\newcommand{\Jeshred}      {Jeshred{}\xspace} % Jeshred, mother of Zereth. 
+\newcommand{\Paerzim}      {V\aeresphan rz\ilongresphan m\xspace} % Working for Teshrial in Malcur.
+\newcommand{\Urizeth}      {Urizeth\xspace}
+
+\birthliving{Ganethed}     {Teshrial birth}{-418}
+
+
+
+\begin{comment}
+\subsection{\Kezerad}
+\end{comment}
+
+\begin{comment}
+\subsubsection{\Satharioth}
+\end{comment}
+
+\newcommand{\Sithiyacaan}      {Sithi\y \adarkresphan c\alongresphan n\xspace} % Last Kezeradi prince.
+\newcommand{\MoriceHerette}    {Mori\c ce \Herette} % Sithiyacaan in disguise.
+\newcommand{\Herette}          {H\'er\`ette\xspace}
+
+\begin{comment}
+\subsubsection{\Ketherain}
+\end{comment}
+
+\newcommand{\Essenai}      {Essen\adarkresphan{}i\xspace} % A wise one, later a Sephirah.
+
+\begin{comment}
+\subsubsection{\Thelyadeth}
+\end{comment}
+
+% Eryal, the Malach that became Silqua.
+\newcommand{\Ariel}        {Er\y al\xspace}
+\newcommand{\Aryal}        {Er\y al\xspace}
+\newcommand{\Eryal}        {Er\y al\xspace}
+
+\newcommand{\Sevestris}    {Sevestris\xspace} % Sithiyacaan's beloved. 
+
+
+
+\begin{comment}
+\subsection{\Mystraacht}
+\end{comment}
+
+\begin{comment}
+\subsubsection{\Satharioth}
+\end{comment}
+
+\newcommand{\Nathrach}     {N\adarkresphan thr\alongresphan ch{}\xspace}
+\newcommand{\Ramiel}       {R\adarkresphan miel{}\xspace}
+\newcommand{\Shiaraid}     {Sh\ilongresphan\adarkresphan r\adarkresphan id{}\xspace}
+\newcommand{\Zachirah}     {\Netzach}
+\newcommand{\Netzachirah}  {\Netzach}
+\newcommand{\Netzach}      {Netz\adarkresphan ch\xspace}
+
+\birthliving{Zachirah}     {Semiza found}{-691}
+\birthliving{Ramiel}       {Semiza found}{-490}
+\birthliving{Tzerachiel}   {Semiza found}{-479}
+
+\begin{comment}
+\subsubsection{\Ketherain}
+\end{comment}
+
+% Dasteron, would-be Overlord of Mystraacht. 
+\newcommand{\Dasteron}     {D\aflatresphan steron\xspace}
+% Kishiel, daughter of Ramiel. 
+\newcommand{\Cishiel}      {Cishiel\xspace}
+\newcommand{\Kishiel}      {\Cishiel}
+% Ozariel, son of Zachirah and father of Dasteron. 
+\newcommand{\Ozariel}      {\Oroundresphan z\adarkresphan riel\xspace}
+
+\begin{comment}
+\subsubsection{\Thelyadeth}
+\end{comment}
+
+% Dezruth of Mystraacht. 
+\newcommand{\Dezruth}      {Dezruth{}\xspace}
+% Gilchad, an accomplice of Kishiel.
+\newcommand{\Gilchad}      {Gilch\adarkresphan d{}\xspace}
+% Sargamel, cousin of Dasteron. 
+\newcommand{\Sargamel}     {S\adarkresphan rg\adarkresphan mel\xspace}
+% Themirod, cousin of Dasteron. 
+\newcommand{\Themirod}     {Themirod\xspace}
+
+
+
+\begin{comment}
+\subsection{\TiphredSerah}
+\end{comment}
+
+\begin{comment}
+\subsubsection{\Satharioth}
+\end{comment}
+
+% Dorzand, a wise philosopher.
+\newcommand{\Dorzand}      {Dorz\adarkresphan{}nd\xspace}
+% Ishicah, a Resvil and Sathariah who was captured and enslaved by the Ortaicans. 
+\newcommand{\Ishicah}      {Ishic\ahresphan{}\xspace}
+% Quelthah. 
+\newcommand{\Quelthah}     {Quelth\ahresphan{}\xspace}
+
+\begin{comment}
+\subsubsection{\Ketherain}
+\end{comment}
+
+% Lothagiel, who once tried to slay Ishnaruchaefir. 
+\newcommand{\Lothagiel}    {L\oroundresphan th\adarkresphan giel\xspace}
+
+\begin{comment}
+\subsubsection{\Thelyadeth}
+\end{comment}
+
+\newcommand{\Essaryn}      {Ess\adarkresphan r\yvowel n\xspace}
+\newcommand{\Nemuragh}     {Nemur\adarkresphan gh{}\xspace} % Lothagiel's gay lover.
+
+
+
+\begin{comment}
+\subsection{\Merkyrah}
+\end{comment}
+
+\newcommand{\Berugiel}         {Berugiel\xspace}
+\newcommand{\Damiarch}         {D\aflatresphan mi\adarkresphan rch\xspace}
+\birthliving{Damiarch}         {Semiza found}{513}
+\newcommand{\Dolsharra}        {Dolsh\adarkresphan rr\adarkresphan\xspace}
+\newcommand{\Kezrabal}         {\Tezrabal}
+\newcommand{\Lyorith}          {Ly\oroundresphan rith\xspace}
+\newcommand{\Monara}           {Mon\alongresphan r\adarkresphan{}\xspace}
+\newcommand{\Shadrach}         {Sh\aflatresphan rr\adarkresphan th\xspace}
+\newcommand{\Sharrath}         {\Shadrach}
+\newcommand{\Tezrabal}         {Tezr\adarkresphan b\adarkresphan l\xspace}
+\newcommand{\Vahaniel}         {V\adarkresphan h\adarkresphan niel\xspace}
+
+
+
+\begin{comment}
+\subsection{Others}
+\end{comment}
+
+\begin{comment}
+\subsubsection{Ancients}
+\end{comment}
+
+\newcommand{\Sartheron}        {S\adarkresphan rtheron\xspace}
+\newcommand{\Thanatzil}        {Th\aflatresphan n\aflatresphan tzil\xspace}
+
+
+\begin{comment}
+\subsubsection{\Bezedeth}
+\end{comment}
+
+\newcommand{\Achsah}       {\Adarkresphan chs\ahresphan\xspace}
+\newcommand{\Lethiarch}    {Lethi\adarkresphan rch\xspace} % A god of Uruthar.
+\newcommand{\Osra}         {Osr\adarkresphan{}\xspace} % A god of Uruthar.
+
+\birthliving{Achsah}       {Murder of the Dawn}{-233}
+% Lelmach, a Bezed serving Urizeth. 
+\birthliving{Lelmach}      {Teshrial birth}{-284}
+
+
+\begin{comment}
+\subsubsection{\Baelzerach}
+\end{comment}
+
+% Najarod, an ally of Quessanth Ishnaruchaefir. 
+\newcommand{\Najarod}      {N\adarkresphan j\adarkresphan rod\xspace}
+\newcommand{\Shiin}        {Shiin\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{\Aryothim}
+\end{comment}
+
+\newcommand{\Gorgomon}         {Gorgomon\xspace}
+\newcommand{\Klaad}            {Klaad\xspace}
+\newcommand{\Murru}            {Murru\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{\Nephilim}
+\end{comment}
+
+% Semiza (Semyaza), the last god-king of the Nephilim
+\newcommand{\Semiza}       {Sem\ilongresphan z\aflatresphan\xspace}
+
+% Eshayzal (Azazel), Semiza's companion.
+\newcommand{\Eshayzal}     {Esha\yconsonantnephil z\adarkresphan l\xspace}
+
+% Ilu, Semiza's daughter. 
+\newcommand{\Ilu}          {Ilu\xspace}
+
+% Morza, a heroic warrior. 
+\newcommand{\Morza}        {Morza\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Mortals}
+\end{comment}
+
+% Carzain Shireyo is one of the most pivotal characters, so he is listed first. 
+\birthliving{Carzain}{Mutiny}{-22}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Belkadians (miscellaneous)}
+\end{comment}
+
+% The name of the last High King of the Belkadian Empire. 
+\newcommand{\LastHighKing}     {Leopold\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Geicans}
+\end{comment}
+
+\newcommand{\Belzhir}          {Bel\v zir\xspace} 
+\newcommand{\Belzir}           {\Belzhir}
+\newcommand{\Cormin}           {Cormin\xspace}% Cormin, the mother of Belzir.
+\newcommand{\Freid}            {Freid\xspace} % Hayad's family name.
+\newcommand{\Kazzed}           {Kazzed\xspace} % Shereid's family name.
+
+\birthliving{Shereid} {Carzain birth}{-5}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Imetrians}
+\end{comment}
+
+% Ilcas Northstar's military rank when he meets Carzain
+\newcommand{\IlcasStartRank}   {\Salican}
+\newcommand{\IlcSR}            {\IlcasStartRank}
+
+\birthliving{Ilcas Northstar} {Mutiny}{-39}
+\birthliving{Raeco Mannica}   {Mutiny}{-40}
+\birthliving{Curiet Serpentin}{Mutiny}{-22}
+\birthliving{Countess}        {Mutiny}{-10}
+\birthliving{Razor}           {Mutiny}{-6}
+\birthliving{Equin Mirai}     {Mutiny}{-20}
+\birthliving{Ulphon Nestor}   {Mutiny}{-51}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{\Imrathi}
+\end{comment}
+
+\begin{comment}
+\subsubsection{Humans}
+\end{comment}
+
+\newcommand{\Delaen}           {Delaen\xspace} % Silqua's family name.
+
+%Scion of Shiaraid during Silqua's time. 
+% Possible names: Delphine, Delcardi, Cassilda, Eryx Isherai, Iscariah. 
+\newcommand{\Delphine}         {Iscari\ahresphan{}\xspace} 
+
+\newcommand{\Zether}           {Zether\xspace}% Son of Cordos and Silqua.
+
+\begin{comment}
+\subsubsection{Scathae}
+\end{comment}
+
+\newcommand{\Byakun}           {Byak\ulong{}n\xspace}% A dark sorcerer-priest.
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Pelidorians}
+\end{comment}
+
+\begin{comment}
+\subsubsection{House Pelidor}
+\end{comment}
+
+
+\newcommand{\Dornaer}          {Dornaer\xspace} % Icor's younger brother.
+\newcommand{\Icor}             {Icor\xspace}   % The Duke of Pelidor, now deceased
+\newcommand{\Tiroco}           {Tiroco\xspace} % The Duchess of Pelidor
+\newcommand{\Sethgal}          {Sethgal\xspace} % Pelidorian Marshal.
+
+\birthandage{Icor}          {Runger war}{-39}{38}
+\birthliving{Tiroco}        {Runger war}{-27}
+\birthliving{Sethgal}       {Runger war}{-46}
+\birthliving{Liocai}        {Runger war}{-37}
+\birthliving{Dornaer}       {Runger war}{-35}
+\birthliving{Roric}         {Runger war}{-7}
+\birthliving{Frico}         {Runger war}{-3}
+
+\hisc{Icor becomes duke}{Roric birth}{-2}
+
+\begin{comment}
+\subsubsection{At the court in Malcur}
+\end{comment}
+
+\newcommand{\Risvet}           {Risvet\xspace}% Baroness Rispet Hemfork
+
+\newcommand{\Minister}         {Minister\xspace} % Jasper Bartholomy's title.
+\newcommand{\minister}         {minister\xspace}
+
+\newcommand{\WimarNorden}      {Wulfwin Norden\xspace} % Telcra cleric. 
+
+\newcommand{\Kintaer}          {Kintaer\xspace} % Kintaer, a noble family. 
+\newcommand{\Theal}            {Th\"eal\xspace} % Earl Theal Kintaer. 
+\newcommand{\Constance}        {Elfrin\xspace}  % Constance Kintaer.
+
+\birthliving{Constance Kintaer}{Runger war}{-18}
+
+\begin{comment}
+\subsubsection{Commoners in Malcur}
+\end{comment}
+
+
+\newcommand{\Urban}     {Urban\xspace}     % A Sentinel mafia boss.
+\newcommand{\Brittany}  {\Piacet}          % Charcoal's Cabalist subordinate.
+\newcommand{\Piacet}    {Pia\c cet\xspace}
+
+\newcommand{\Bryon}     {Br\ydiphthong on\xspace} % Bryon Carpenter.
+\newcommand{\Mya}       {M\ydiphthong a\xspace}   % A girl Rian once had the hots for.
+\newcommand{\Uswa}      {Uswa\xspace}             % The crazy old woman in Malcur. 
+
+\birthliving{Rian}             {Mutiny}      {-16}
+\birthliving{Badrick}          {Mutiny}      {-19}
+\birthliving{Bryon Carpenter}  {Mutiny}      {-52}
+\birthliving{Neina}            {Mutiny}      {-15}
+\birthliving{Needle}           {Runger war}  {-29}
+\birthandage{Belya}            {Needle birth}{ -2}{16}
+
+\birthliving{Rod Baker}        {Mutiny}      {-39}
+\birthliving{Dennick}          {Rian birth}  {-15}
+\birthliving{Uswa}             {Mutiny}      {-51}
+\birthliving{Jorgen}           {Rian birth}  {-9}
+
+\begin{comment}
+\subsubsection{In Redglen}
+\end{comment}
+
+\begin{comment}
+\paragraph{Shireyo household}
+\end{comment}
+
+% Shireyo, Carzain's and Nishain's last name.
+\newcommand{\Shachar}    {Shachar\xspace}
+\newcommand{\Shireyo}    {Shachar\xspace}
+\newcommand{\MrShachar}  {\Mr{} \Shireyo}
+\newcommand{\MrShireyo}  {\Mr{} \Shireyo}
+\newcommand{\DaiShireyo} {\Dai\Shireyo}
+
+% Roanne/Rowena, Carzain's mother's first name. 
+\newcommand{\Roanne}   {Roanne\xspace}
+
+% Deracille, Carzain's mother's last name.
+\newcommand{\Deracil}   {\Deracille}
+\newcommand{\Delishe}   {\Deracille}
+\newcommand{\Deracille} {D\'er\^a\c cille\xspace}
+
+% Carzain's full name
+\newcommand{\CarzainDeracilleShireyo} {Carzain \Deracille{} \Shireyo}
+\newcommand{\CarzainShireyo}          {Carzain \Shireyo}
+\newcommand{\CarzainShachar}          {Carzain \Shachar}
+
+\birthliving{Nishain Shireyo}    {Carzain birth}            {-33}
+\birthliving{Roanne Deracille}   {Nishain Shireyo birth}    {+8}
+
+\begin{comment}
+\paragraph{Others}
+\end{comment}
+
+\newcommand{\Symeon}  {S\ydiphthong m\"eon{}\xspace} % An officer.
+\newcommand{\Weylon}  {Weylon{}\xspace} % The goldsmith's uncle
+
+\birthliving{Denuis}             {Mutiny}                   {31}
+\birthliving{Leopold Goldsmith}  {Carzain birth}            {0}
+\birthliving{Frederick Goldsmith}{Leopold Goldsmith birth}  {3}
+\birthliving{Gavin Goldsmith}    {Frederick Goldsmith birth}{21}
+\birthliving{Sir Guy}            {Carzain birth}            {42}
+\birthliving{Ethwar Carver}      {Runger war}               {43}
+\birthliving{Theal Carver}       {Runger war}               {5}
+\birthliving{Mesna Tailor}       {Runger war}               {48}
+\birthliving{Symeon}             {Runger war}               {38}
+\birthliving{Gregory Smith}      {Carzain birth}            {2}
+
+\begin{comment}
+\subsubsection{The Ishrah}
+\end{comment}
+
+\newcommand{\MoroCobrel}       {Moro Cobrel\xspace}
+\newcommand{\Cobrel}           {Cobrel\xspace} % Moro Cornel, Pelidorian archmage. 
+\newcommand{\Cornel}           {Cobrel\xspace}
+\newcommand{\MissCornel}       {\Miss Cobrel\xspace}
+
+\birthliving{Moro Cobrel}              {Runger war}               {-63}
+\hisc{Moro Cobrel flees Yormis}        {Moro Cobrel birth}        {20}
+\hisc{Suthis Mephilex learns Arcana}   {Moro Cobrel flees Yormis} {-7}
+\birthliving{Suthis Mephilex}          {Suthis Mephilex learns Arcana} {-18}
+\birthliving{Suthis Cruan}             {Suthis Mephilex birth}         {-39}
+
+\newcommand{\Ambrose}          {Amras\xspace} % Ambrose Anatoli, a Pelidorian mage.
+\newcommand{\Onatol}           {Onatol\xspace}
+\newcommand{\Anatoli}          {\Onatol}
+
+
+% A \scathaese \rethyax, Curwen's second-in-command 
+\newcommand{\Sanyor} {Sanyor\xspace}
+
+\birthliving{Archibald Curwen} {Runger war}{-60}
+\birthliving{Onatol}           {Runger war}{-77}
+\birthliving{Sanyor}           {Runger war}{-55}
+\birthandage{Borg Zelab}       {Runger war}{-79}{77} % Borg Zelab, a Cabalist. 
+
+\begin{comment}
+\subsubsection{The Military}
+\end{comment}
+
+\newcommand{\Delph}    {Delph\xspace}    % A Human soldier, Carzain's friend. 
+\newcommand{\Tsekkect} {Tsekkect\xspace} % A Meccaran soldier, Carzain's friend. 
+
+\birthliving{Tsekkect} {Runger war}   {-18}
+\birthliving{Delph}    {Carzain birth}{1}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Redcor}
+\end{comment}
+
+\begin{comment}
+\subsubsection{Vaimon Age}
+\end{comment}
+
+\begin{comment}
+\subsubsection{Ortaican Age}
+\end{comment}
+
+% Iolivine, a Scion of Ishicah. 
+\newcommand{\Iolivine} {Iolivine{}\xspace}
+
+\begin{comment}
+\subsubsection{Velcadian Age, Redce}
+\end{comment}
+
+% Raquel (or whatever), a Redcor Cleric and Carzain's childhood friend
+\newcommand{\Raquel} {R\^ac\`el{}\xspace}
+\newcommand{\Racel}  {\Raquel{}\xspace}
+\newcommand{\Rakel}  {\Raquel{}\xspace}
+\newcommand{\Raqel}  {\Raquel{}\xspace}
+
+% Esmerel, the Redcor that discovers Carzain and takes him to Redce
+\newcommand{\EsmerelFull}   {\ChyrieEsmerel{}\xspace}
+\newcommand{\ChyrieEsmerel} {\Chyrie{} \Esmerel{}\xspace}
+\newcommand{\Esmerel}       {\`Esmer\`el{}\xspace}
+\newcommand{\Chyrie}        {\c Ch\yvowelredcor rie{}\xspace}
+
+% Sylvie Dereine, a historian. 
+\newcommand{\Dereine}  {Der\`eine{}\xspace}
+\newcommand{\Sylvie}   {S\yvowelredcor lvie{}\xspace}
+
+% Redcor Matriarch, `leader' of the Conclave.
+\newcommand{\Dominice} {Dominic\finale{}\xspace} 
+
+% Redcor Matriarch, big and fat.
+\newcommand{\Brizide}  {Brizide{}\xspace} 
+
+% Laetitia Lacquasse, warrior woman.
+\newcommand{\Laetitia}{Laetitia{}\xspace}
+\newcommand{\Brizen}{Bri\v zen{}\xspace} % Lacquasse's family name.
+
+\newcommand{\PatriccoKimon} {Patrico Kimon\xspace}
+\newcommand{\Patricco}      {Patrico\xspace}
+\newcommand{\Kimon}         {Kimon\xspace}
+
+\birthliving{Chyrie Esmerel}    {Runger war}   {-62}
+\birthliving{Racel Galisetti}   {Carzain birth}{0}
+\birthliving{France Perival}    {Runger war}   {-33}
+\birthliving{Isacc Chiran}      {Runger war}   {-30}
+\birthandage{Sylvie Dereine}    {Runger war}   {-335}{67}
+\birthliving{Clarice Camilienne}{Runger war}   {-36}
+
+\begin{comment}
+\subsubsection{Pelidor}
+\end{comment}
+
+% Zacophine Vincerre, a Redcor emissary in Pelidor.
+\newcommand{\Zacophine}        {\v Z\^acophine{}\xspace}
+\newcommand{\Vincerre}         {Vin\c c\`erre{}\xspace}
+% Clarice Camilienne, a Redcor emissary in Pelidor. 
+\newcommand{\Clarice}          {Cl\^ari\c ce{}\xspace}
+\newcommand{\Camilienne}       {Camili\`enne{}\xspace}
+\newcommand{\ClariceCamilienne}{\Clarice{} Camilienne{}\xspace}
+
+% France Perival, a Gandierre. 
+\newcommand{\France}  {Fr\anredcor\c ce{}\xspace}
+\newcommand{\Perival} {P\'erival{}\xspace}
+
+% Isacc Chiran, a Gandierre. 
+\newcommand{\Isacc}  {Is\^ac{}\xspace}
+\newcommand{\Chiran} {\c Chir\anredcor{}\xspace}
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Rissitics}
+\end{comment}
+
+% Male Scathaese Ashenoch, general.
+\newcommand{\Narkiza}  {Sesstr\adarkrissitic{}\xspace} 
+
+% Narkiza's morning star.
+\newcommand{\Femtu}    {Femtu{}\xspace} 
+\newcommand{\Forshval} {\Femtu{}\xspace}
+
+% Narkiza's assistant officer.
+\newcommand{\Kufur} {Kufur{}\xspace} 
+
+% An evil male human Ashenoch. 
+\newcommand{\Geldashad}  {Geld\aflatrissitic sh\aflatrissitic d{}\xspace}
+
+% A sexy female Human Ashenoch.
+\newcommand{\Dzerezd}   {\Dzerezdin{}\xspace}
+\newcommand{\Dzerezdin} {Dzerezdin{}\xspace}
+
+% Cool Shessefkesad mage with a history. Inspired by Quick Ben from Malazan Book of the Fallen.
+\newcommand{\Dzasselid}  {Dz\aflatrissitic sselid{}\xspace}
+
+% Shesshefkesad mage.
+\newcommand{\Shilred}  {Shilred{}\xspace}
+\newcommand{\Filgzed}  {\Shilred{}\xspace}
+\newcommand{\Filshed}  {\Filgzed{}\xspace}
+
+% A barbarian warrior.
+\newcommand{\KarsaOrlong}  {Kw\^al-shekh{}\xspace}
+
+% The reigning Tsalt-Nyzleth. 
+\newcommand{\TessHanith} {Tes'h\^anith{}\xspace}
+\newcommand{\TesHanith}  {\TessHanith{}\xspace}
+% A Draconic Urr-Gammosh
+\newcommand{\Dasvedshiracht}  
+  {D\aflatrissitic sv\'ed'shir\adarkrissitic cht{}\xspace}
+
+% Narkiza's flagship
+\newcommand{\MotherTiamat}    {\shipname{Mother Tiamat}{}\xspace} 
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Rungerans}
+\end{comment}
+
+\begin{comment}
+\subsubsection{The King's Court}
+\end{comment}
+
+% Morgan's son and daughter. 
+\newcommand{\Mathyas} {Math\ydiphthong as\xspace}
+\newcommand{\Iselle}  {Is\`elle\xspace}
+
+\birthliving{Morgan Runger}{Mutiny}{-55}
+
+\begin{comment}
+\subsubsection{The Ishrah}
+\end{comment}
+
+% Takestsha, a mage in Runger. Actually Nzessuacrith in disguise.
+\newcommand{\Takestsha}  {Takestsha{}\xspace}
+
+% Jirad (previously Giles) Tantor.
+\newcommand{\Jirad}  {Jirad{}\xspace}
+
+% His son. 
+\newcommand{\Mycah} {M\ydiphthong c\ahresphan{}\xspace}
+
+% Orla of Hemfork, Rungeran mage.
+\newcommand{\Orla}  {Orla{}\xspace}
+
+\birthliving{Jirad Tantor}    {Tantor diary}{-50}
+\birthliving{Mycah Tantor}    {Tantor diary}{-15}
+\birthliving{Orla of Fanshire}{Tantor diary}{-54}
+\birthliving{Rosen Jaegwin}   {Tantor diary}{-20}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Shurco}
+\end{comment}
+
+\newcommand{\DulNepherRamas}   {Dul-Nepher-Ramas\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Vaimons}
+\end{comment}
+
+% Redcor pronunciation of Daemien Iras Shanix.
+\newcommand{\DamianChanici} {Dami\anredcor \c Ch\^ani\c ci{}\xspace}
+
+\newcommand{\Ivesser}                {Ivesser\xspace} % A woman of Vizicar's time.
+
+% Vizicar's predecessor as Vaimon Caliph.
+\newcommand{\LucionRinOrcas}         {\Lucion{} Rin Orcas{}\xspace}
+\newcommand{\Lucion}                 {Lu\c cion{}\xspace}
+
+% Tydesmos Gendar-in-Caphet.
+\newcommand{\Tydesmos}               {T\ydiphthong desmos{}\xspace}
+\newcommand{\TydesmosGendarInCaphet} {\Tydesmos{} Gendar-in-Caphet{}\xspace}
+
+% Vizicar Duras Respina.
+\newcommand{\VizicarDurasRespina}    {Vizicar Duras Respina{}\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Yormis}
+\end{comment}
+
+\newcommand{\TulionSperra}     {Tulion Sperra\xspace}
+\newcommand{\Sperra}           {Sperra\xspace}
+\newcommand{\Tulion}           {Tulion\xspace}
+
+\newcommand{\UldraanKerross}   {Uldraan Kerross\xspace}
+\newcommand{\Uldraan}          {Uldraan\xspace}
+\newcommand{\Kerross}          {Kerross\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Others}
+\end{comment}
+
+% Catrian, who dies in the prologue. 
+\birthandage{Catrian}{Catrian dies}{-41}{41}
+
+\newcommand{\Cyri}             {C\ydiphthong ri\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Others}
+\end{comment}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Chthonian Powers}
+\end{comment}
+
+\newcommand{\Malgaddon}        {Malgaddon\xspace}
+\newcommand{\Ubloth}           {Ubloth\xspace}
+\newcommand{\Yagnathul}        {Yagnathul\xspace}
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Ortaican gods}
+\end{comment}
+
+
+\begin{comment}
+\subsection{Primordials}
+\end{comment}
+
+\newcommand{\Primordials}      {Primordials\xspace}
+\newcommand{\Primordial}       {Primordial\xspace}
+\newcommand{\primordials}      {Primordials\xspace}
+\newcommand{\primordial}       {Primordial\xspace}
+
+\newcommand{\Costorul}         {Costorul\xspace}  %\KhothSell).
+\newcommand{\Kythraxas}        {Kythraxas\xspace} %\KyaethemChreiAz). 
+\newcommand{\Nelxurra}         {Nelxurra\xspace}  %\NerranKoss). 
+\newcommand{\Rammasul}         {Rammasul\xspace}  % \NaathKurRamalech). 
+
+\begin{comment}
+\subsection{Younger gods}
+\end{comment}
+
+% Taorthae: Collective term for the gods. 
+\newcommand{\Taorthae}         {\Taortha{}e\xspace}
+\newcommand{\Taortha}          {Taortha\xspace}
+\newcommand{\taorthae}         {\Taortha{}e\xspace}
+\newcommand{\taortha}          {Taortha\xspace}
+
+\newcommand{\Daxian}           {Tlazcan\xspace}
+\newcommand{\Isxae}            {Isxae\xspace}
+\newcommand{\Llorgul}          {Llorgul\xspace}
+\newcommand{\Mezzagrael}       {Mezzagra\"el\xspace}
+\newcommand{\Settras}          {Settras\xspace}
+\newcommand{\Usherain}         {Usherain\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\part{Typesetting}
+\end{comment}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Ordinary words}
+\end{comment}
+
+\begin{comment}
+\section{Danish}
+\end{comment}
+
+% DJØF.
+\newcommand{\DJOF}             {DJ\O F{}\xspace}
+
+
+
+\begin{comment}
+\section{English}
+\end{comment}
+
+\newcommand{\Armoured}         {Armoured\xspace}
+\newcommand{\Armours}          {Armours\xspace}
+\newcommand{\Armour}           {Armour\xspace}
+\newcommand{\armoury}          {armoury\xspace}
+\newcommand{\armoured}         {armoured\xspace}
+\newcommand{\armours}          {armours\xspace}
+\newcommand{\armour}           {armour\xspace}
+
+\newcommand{\Clamour}          {Clamour\xspace}
+\newcommand{\Clamoured}        {Clamoured\xspace}
+\newcommand{\clamour}          {clamour\xspace}
+\newcommand{\clamoured}        {clamoured\xspace}
+
+\newcommand{\cliche}           {clich\'e{}\xspace}
+
+\newcommand{\Coloured}         {Coloured\xspace}
+\newcommand{\Colours}          {Colours\xspace}
+\newcommand{\Colour}           {Colour\xspace}
+\newcommand{\coloured}         {coloured\xspace}
+\newcommand{\colours}          {colours\xspace}
+\newcommand{\colour}           {colour\xspace}
+
+\newcommand{\coordination}     {co\"ordination\xspace}
+\newcommand{\coordinated}      {co\"ordinated\xspace}
+\newcommand{\coordinate}       {co\"ordinate\xspace}
+
+\newcommand{\cooperate}        {co\"operate\xspace}
+\newcommand{\cooperating}      {co\"operating\xspace}
+
+\newcommand{\fiancee}          {fianc\'ee{}\xspace}
+
+\newcommand{\Favoured}         {Favoured\xspace}
+\newcommand{\Favours}          {Favours\xspace}
+\newcommand{\Favour}           {Favour\xspace}
+\newcommand{\favoured}         {favoured\xspace}
+\newcommand{\favours}          {favours\xspace}
+\newcommand{\favour}           {favour\xspace}
+
+\newcommand{\Honorary}         {Honorary\xspace}
+\newcommand{\Honourable}       {Honourable\xspace}
+\newcommand{\Honoured}         {Honoured\xspace}
+\newcommand{\Honours}          {Honours\xspace}
+\newcommand{\Honour}           {Honour\xspace}
+\newcommand{\honorary}         {honorary\xspace}
+\newcommand{\honourable}       {honourable\xspace}
+\newcommand{\honoured}         {honoured\xspace}
+\newcommand{\honours}          {honours\xspace}
+\newcommand{\honour}           {honour\xspace}
+
+\newcommand{\Laboured}         {Laboured\xspace}
+\newcommand{\Labours}          {Labours\xspace}
+\newcommand{\Labour}           {Labour\xspace}
+\newcommand{\laboured}         {laboured\xspace}
+\newcommand{\labours}          {labours\xspace}
+\newcommand{\labour}           {labour\xspace}
+
+\newcommand{\manoeuvrability}  {manoeuvrability\xspace}
+\newcommand{\manoeuvrable}     {manoeuvrable\xspace}
+\newcommand{\manoeuvred}       {manoeuvred\xspace}
+\newcommand{\manoeuvres}       {manoeuvres\xspace}
+\newcommand{\manoeuvre}        {manoeuvre\xspace}
+
+\newcommand{\metres}           {metres\xspace}
+\newcommand{\metre}            {metre\xspace}
+
+\newcommand{\naivete}          {\naive te{}\xspace}
+\newcommand{\naive}            {na\"ive{}\xspace}
+
+\newcommand{\Squalour}         {Squalour\xspace}
+\newcommand{\squalour}         {squalour\xspace}
+
+\newcommand{\Skepticism}       {Skepticism\xspace}
+\newcommand{\Skeptical}        {Skeptical\xspace}
+\newcommand{\Skeptic}          {Skeptic\xspace}
+\newcommand{\skepticism}       {skepticism\xspace}
+\newcommand{\skeptical}        {skeptical\xspace}
+\newcommand{\skeptic}          {skeptic\xspace}
+\newcommand{\Scepticism}       {Skepticism\xspace}
+\newcommand{\Sceptical}        {Skeptical\xspace}
+\newcommand{\Sceptic}          {Skeptic\xspace}
+\newcommand{\scepticism}       {skepticism\xspace}
+\newcommand{\sceptical}        {skeptical\xspace}
+\newcommand{\sceptic}          {skeptic\xspace}
+
+\newcommand{\traveling}        {travelling\xspace}
+\newcommand{\traveled}         {travelled\xspace}
+\newcommand{\travelers}        {travellers\xspace}
+\newcommand{\traveler}         {traveller\xspace}
+\newcommand{\travelling}       {travelling\xspace}
+\newcommand{\travelled}        {travelled\xspace}
+\newcommand{\travellers}       {travellers\xspace}
+\newcommand{\traveller}        {traveller\xspace}
+
+
+
+\begin{comment}
+\section{Fictional}
+\end{comment}
+
+% Melnibone, the homeland of Michael Moorcock's Elric.
+\newcommand{\Melnibone}        {Melnibon\'e\xspace}
+\newcommand{\melnibone}        {Melnibon\'e\xspace}
+
+
+
+\begin{comment}
+\section{French}
+\end{comment}
+
+\newcommand{\blase}            {blas\'e}
+\newcommand{\boheme}           {boh\`eme\xspace}
+
+% D\'ej\`a-vu. 
+\newcommand{\Dejavu}           {D\'ej\'a-vu\xspace}
+\newcommand{\Dejavus}          {\Dejavu{}s\xspace}
+\newcommand{\Deajvus}          {\Dejavus} % Misspelling. 
+\newcommand{\dejavu}           {d\'ej\`a-vu\xspace}
+\newcommand{\dejavus}          {\dejavu{}s\xspace}
+\newcommand{\deajvus}          {\dejavus} % Misspelling. 
+
+% Facade.
+\newcommand{\facade}           {fa\c cade\xspace}
+
+% Faux pas. 
+\newcommand{\fauxpas}          {faux pas\xspace}
+
+% Melee. 
+\newcommand{\melee}            {m\^el\'ee\xspace}
+
+% Noblesse. 
+\newcommand{\noblesse}         {noblesse\xspace}
+
+\begin{comment}
+\subsection{People}
+\end{comment}
+
+% Francois (French name).
+\newcommand{\Francois}         {Fran\c cois\xspace}
+
+% Phedre, the heroine from Jacqueline Carey's Kushiel's Legacy. 
+\newcommand{\PhedreNoDelaunay} {\Phedre n\'o Delaunay\xspace}
+\newcommand{\Phedre}           {Ph\`edre\xspace}
+
+
+
+\begin{comment}
+\section{German}
+\end{comment}
+
+% Über.
+\newcommand{\Uber}             {\"Uber\xspace}
+\newcommand{\uber}             {\"uber\xspace}
+\newcommand{\Ubermensch}       {\Uber{}mensch\xspace}
+
+% Götterdämmerung.
+\newcommand{\Gotterdammerung}  {G\"otterd\"ammerung\xspace}
+
+
+
+\begin{comment}
+\section{Greek}
+\end{comment}
+
+% Hetoimasia.
+\newcommand{\Hetoimasia}       {H\'eto\"imasia\xspace}
+
+% Kenose.
+\newcommand{\Kenose}           {K\'en\^ose\xspace}
+\newcommand{\kenose}           {K\'en\^ose\xspace}
+
+
+
+\begin{comment}
+\section{Hebrew}
+\end{comment}
+
+\newcommand{\Cabbalistic}      {Cabbalistic\xspace}
+\newcommand{\Cabbalists}       {Cabbalists\xspace}
+\newcommand{\Cabbalist}        {Cabbalist\xspace}
+\newcommand{\Cabbalah}         {Cabbalah\xspace}
+
+
+
+\begin{comment}
+\section{Japanese}
+\end{comment}
+
+
+\begin{comment}
+\subsection{Anime}
+\end{comment}
+
+% Gankutsuou. 
+\newcommand{\Gankutsuo}        {Gankutsu\=o{}\xspace}
+
+% Ikari Gendou from Neon Genesis Evangelion.
+\newcommand{\Gendou}           {Gend\=o{}\xspace}
+
+% Jimushi Juubei from Basilisk. 
+\newcommand{\JimushiJuubei}    {Jimushi J\=ubei{}\xspace}
+
+% Urotsukidouji. 
+\newcommand{\Urotsukidouji}    {Urotsukid\=oji{}\xspace}
+\newcommand{\Juujinkai}        {J\=ujinkai{}\xspace}
+
+\begin{comment}
+\subsection{Tokusatsu}
+\end{comment}
+
+% Kamen Rider Ryuki.
+\newcommand{\Ryuki}            {Ry\=uki{}\xspace}
+
+% Ryuuoun from Go Go Sentai Boukenger, and his Jaryuu and Daijakuryuu.
+\newcommand{\Ryuuoun}          {Ry\=u\=on{}\xspace}
+\newcommand{\Jaryuu}           {Jary\=u{}\xspace}
+\newcommand{\Daijakuryuu}      {Dai-Jakury\=u{}\xspace}
+
+% Juuken Sentai Gekiranger
+\newcommand{\JuukenSentaiGekiranger} {{\em J\=uken Sentai Gekiranger}{}\xspace}
+\newcommand{\juukensentaigekiranger} {\JuukenSentaiGekiranger{}\xspace}
+
+% RinJyuKen.
+\newcommand{\Rinjuuken}        {Rinj\=uken{}\xspace}
+
+\begin{comment}
+\subsection{People}
+\end{comment}
+
+\newcommand{\Gou} {G\=o{}\xspace}
+
+\begin{comment}
+\subsection{Other}
+\end{comment}
+
+% Bishounen.
+\newcommand{\Bishounen} {Bish\=onen{}\xspace}
+\newcommand{\bishounen} {bish\=onen{}\xspace}
+
+% Zanbatou, a very large sword. 
+\newcommand{\zanbatou}  {zanbat\=o{}\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Environments}
+\end{comment}
+
+% Blurb environment. Used to typeset back-side blurb.
+\newenvironment{blurb}{\begin{quote}}{\end{quote}}
+
+% Changes environment. Used to list planned changes and revisions. 
+\newenvironment{changes}{}{}
+\newcommand{\changesitem}[2][] {
+  \ifthenelse
+    {\equal{#1}{}}
+    {\subsubsection{#2}}
+    {\subsubsection[#1]{#2}}}
+
+\newenvironment{subchanges}{
+  \begin{description}
+}{
+  \end{description}
+}
+\newcommand{\subchangesitem}[1] {\item[#1:]}
+
+% Poetry environment. Used to quote bits of poetry, such as ``Wanderers in Darkness''.
+\newenvironment{poetry}{%
+  \begin{flushleft}
+  \begin{verse}%
+%   \begin{obeylines}
+    \sl%
+}{%
+%   \end{obeylines}
+  \end{verse}%
+  \end{flushleft}%
+}
+
+% Diary environment. Used when Charcoal reads Tantor's diary. 
+\newenvironment{diary}{%
+  \begin{quotation}\noindent\sl%
+}{%
+  \end{quotation}\noindent}
+
+% Dream environment. Signifies a dream sequence. 
+\newenvironment{dream}{\em}{}
+
+% An alternate kind of comment environment. 
+% It is useful because "garbage" and "comment" can be nested inside one another. 
+\excludecomment{garbage}
+
+% Prose environment. Used in the notes to present a piece of action that is meant to appear more-or-less verbatim in the final prose.
+\newenvironment{prose}{\begin{quote}}{\end{quote}}
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{List things}
+\end{comment}
+
+% Command to typeset a list of Archons
+\newenvironment{sephlist}{\begin{description}}{\end{description}}
+
+% Command to typeset the entry of a Archons. 
+\newcommand*{\seph}[1]{\item[#1:]}
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Dramatis Personae}
+\end{comment}
+\newenvironment{dramatispersonae}{%
+  \begin{flushleft}%
+  \begin{itemize}%
+  \small
+}{%
+  \end{itemize}%
+  \end{flushleft}%
+}
+\newenvironment{subdramatispersonae}{%
+  \begin{itemize}%
+}{%
+  \end{itemize}%
+}
+
+% How to typeset an item. 
+\newcommand*{\basicdramitem}    [1]{\item #1}
+\newcommand*{\basicdramsubitem} [1]{\item #1}
+
+% A "Dramatis item" has three mandatory arguments: 
+% Name, race and gender. IN THAT ORDER.
+% There are also two optional arguments: %
+% Label and title.
+% Will show birth year.
+% ``dramdead'' also shows death year.
+\newcommandtwoopt*{\dramitem} [5][][]{%
+  \basicdramitem{\character{#1}{#2}{#3}{#4}{#5}}}
+\newcommandtwoopt*{\dramdead}      [5][][]{%
+  \basicdramitem{\chardead{#1}{#2}{#3}{#4}{#5}}}
+\newcommandtwoopt*{\dramitemnoyear} [5][][]{%
+  \basicdramitem{\characternoyear{#1}{#2}{#3}{#4}{#5}}}
+
+
+
+\begin{comment}
+\subsection{Characters}
+\end{comment}
+
+% Symbols for female and male, used with \gitemchar command
+\newcommand{\female} {\Venus}
+\newcommand{\male}   {\Mars}
+\newcommand{\neuter} {$\emptyset$}
+
+% Check if a character label #1 has a birth year associated with it.
+% If birth year exists, do #2. Else do #3.
+\newcommand*{\ifborn}[3]{\ifempty{\csuse{NV #1 birth}}{#3}{#2}}
+
+% Gives a character's birth and death years, or just the birth year if still alive. 
+% Argument must be a name label that corresponds to counters (see Timeline section). 
+\newcommand*{\birthtodeath} [1]{\vaimonyear{#1 birth}{} to \yic{#1 death}}
+\newcommand*{\birthtonow}   [1]{born \yic{#1 birth}}
+
+% Typeset years of a live or dead character. 
+% Takes two arguments: Label, status. 
+% If "status" is "live" then birth year is shown. 
+% If "status" is "dead" then birth and death years are shown. 
+% If the character label has no birth year, then do nothing. 
+\newcommand*{\typesetyears}[2] {%
+  \ifborn{#1}{, %
+    \ifthenelse%
+      {\equal{#2}{dead}}%
+      {\birthtodeath{#1}}%
+      {\birthtonow{#1}}%
+  }{}%
+}
+
+% Typeset years of a live or dead character. 
+% Takes three arguments: Label, name, status. 
+% The name is used to look up years, unless "label" is non-empty, in which case the label is used instead. 
+\newcommand*{\typesetyearslabel}[3] {%
+  \ifempty{#1}{\typesetyears{#2}{#3}}{\typesetyears{#1}{#3}}%
+}
+
+% A character. 
+% Arguments are label, title, name, race and gender. In that order. 
+\newcommand*{\character}    [5]{%
+  \typesetcharacter{#1}{#2}{#3}%
+    {\characterparenthesis{#1}{#3}{#4}{#5}{live}}%
+}
+% A dead character (shows birth and death years). 
+\newcommand*{\chardead}     [5]{%
+  \typesetcharacter{#1}{#2}{#3}
+    {\characterparenthesis{#1}{#3}{#4}{#5}{dead}}%
+}
+\newcommand*{\characternoyear}    [5]{%
+  \typesetcharacter{#1}{#2}{#3}%
+    {\characterparenthesisnoyear{#1}{#3}{#4}{#5}{live}}%
+}
+    
+% Typeset the paranthetical part of a character.
+% Takes five arguments:
+% Label, name, race, gender, status (live/dead). 
+\newcommand*{\characterparenthesis}[5]{%
+    {({#3} {#4}\typesetyearslabel{#1}{#2}{#5})}}
+\newcommand*{\characterparenthesisnoyear}[5]{%
+    {({#3} {#4})}}
+
+% How to typeset a character, given label, title, name and parenthesis. 
+\newcommand*{\typesetcharacter} [4]{%
+  \def\typesetindex{%
+    \ifempty{#2}%
+      {\index{#3}}%
+      {\index{#2}}%
+  }%
+  \ifthenelse%
+    {\equal{#1}{}}%
+    {\textbf{\maybehr{#3}{#3}{}} \textnormal{#4{}}\typesetindex}%
+    {\textbf{\maybehr{#1}{#3}{}} \textnormal{#4{}}\typesetindex}%
+}
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Glossary}
+\end{comment}
+
+
+
+\newenvironment{gloss}{\begin{description}}{\end{description}}
+\newenvironment{subgloss}{\begin{gloss}}{\end{gloss}}
+
+
+
+% A glossary item with title and description. 
+\newcommand*{\glositem} [1]{\item[#1:]}
+
+
+
+% Entry for a character. 
+% Three mandatory arguments: Name, race and gender. 
+% There are also two optional arguments: "Status" and label. 
+% If "status" is "live" then birth year is shown. 
+% If "status" is "dead" then birth and death years are shown. 
+% The name is used to look up years, unless "label" is non-empty, in which case the label is used instead. 
+\newcommandtwoopt*{\gitemcharacter}   [5][][]{%
+  \ifempty{#1}%
+    {\glositem{#3 \textnormal{({#4{}} {#5{}})}}\index{#3}}
+    {%
+      \glositem{%
+        #3 \textnormal{{\characterparenthesis{#2}{#3}{#4}{#5}{#1}}}
+      }%
+      \index{#3}%
+    }%
+}
+
+
+
+% Glossary item with the prefix "the". 
+\newcommand*{\gitemthe}[1]{\glositem{The #1}\index{#1}}
+
+% Short form for a glossary item.
+% There are two optional arguments: 
+% Plural form and alternate plural form. 
+\newcommandtwoopt*{\gitem} [3][][]{%
+  \ifthenelse
+    {\equal{#1}{}}
+    {\glositem{#3}\index{#3}} % If there is no plural form given.
+    {\ifthenelse
+      {\equal{#2}{}}
+      {% If there is one plural form given.
+        \item[\textbf{#3{}} 
+          \textnormal{(plural \textbf{#1{}})}:]%
+        \index{#3 (plural #1)}
+      }
+      {% If there are two plural forms given. 
+        \item[\textbf{#3{}} 
+          \textnormal{(plural \textbf{#1{}} or \textbf{#2{}})}:]%
+        \index{#3 (plural #1 or #2)}
+      }}%
+}
+
+% Short form for a glossary item.
+% There are two optional arguments: 
+% Plural form and alternate plural form. 
+\newcommandtwoopt*{\gitemnoindex} [3][][]{%
+  \ifthenelse
+    {\equal{#1}{}}
+    {\glositem{#3}}
+    {\ifthenelse
+      {\equal{#2}{}}
+      {%
+        \item[\textbf{#3{}} 
+          \textnormal{(plural \textbf{#1{}})}:]%
+      }
+      {%
+        \item[\textbf{#3{}} 
+          \textnormal{(plural \textbf{#1{}} or \textbf{#2{}})}:]%
+      }}%
+}
+
+
+
+% A glossary item with link. 
+\newcommand*{\gitemlink} [2][]{%
+  \ifempty{#1}
+    {\glositem{\hs{#2}}}%
+    {\glositem{\hr{#1}{#2}}}%
+}
+
+
+
+\begin{comment}
+\subsection{Tags}
+\end{comment}
+
+%Empty lines. 
+\newcommand{\emptylines} {
+
+}
+\newcommand{\glossarytag} [2]{\emptylines\textbf{#1{}} #2}
+% \newcommand{\also}[1]{\emptylines\emph{See also:} #1.}
+% \newcommand{\also}[1]{\paragraph{See also:} #1.}
+\newcommand{\appearance} [1]{\glossarytag{Appearance:}{#1}}
+\newcommand{\meta} [1]{\glossarytag{Meta:}{#1}}
+\newcommand{\also} [1]{\glossarytag{See also:}{#1}}
+\newcommand{\seee} [1]{See \emph{#1}.}
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Pronunciation guide}
+\end{comment}
+
+
+\newenvironment{pronunciationenvironment}[1]{%
+  \begin{flushleft}%
+  \begin{multicols}{2}[#1]%
+  \begin{description}%
+  \begingroup
+  \small
+}{%
+  \endgroup
+  \end{description}%
+  \end{multicols}%
+  \end{flushleft}%
+}
+
+% Pitem with label - in case the main word has strange symbols in it.
+% So far it does nothing, just the same as a regular pitem. 
+\newcommand*{\pitemlabel} [4]{\pitem{#1}{#2}{#3}}
+\newcommand*{\piteml}     [4]{\pitemlabel{#1}{#2}{#3}{#4}}
+
+% Pronunciation item, i.e., an entry in the pronunciation table.
+% \newcommand*{\pitem} [3]{\item{#1:} \txipa{#2} (#3) \index{#1}}
+\newcommand*{\pitem} [3]{\item{\bf{#1:}} #3\index{#1}}
+
+% \newcommand*{\txipa}  [1]{\textipa{#1}}
+\newcommand*{\txipa}  [1]{BLANK}
+
+\newcommand{\longv} {\textlengthmark}
+
+% Pronunciation example. Used to mark up a well-known word that is used as an example.
+\newcommand*{\pex} [1]{\quo{#1}}
+% Letter. Used to mark a letter or group of letters used for reference/comparison.
+\newcommand*{\lett} [1]{#1}
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Timeline}
+\end{comment}
+
+\newenvironment{epoch}[1]{%
+  \subsubsection{#1}\begin{tabular}{rp{10cm}}%
+}{%
+  \end{tabular}}
+
+\newcommand{\bepo} {\begin{epoch}}
+\newcommand{\eepo} {\end{epoch}}
+
+% \dragonyear is `year DS', as in, a year number in the Draconian Supremacy calendar (reckoned from when Tiamat contacted the Xzai-Shann)
+\newcommand*{\dragonyear} [1]{\difference{#1}{XS}}
+\newcommand*{\yds}        [1]{{\dragonyear{#1}} \DS{}}
+
+% \resphanyear is `year BD', as in, a year number in the Black Dawn calendar (reckoned from the Murder of the Dawn)
+\newcommand*{\resphanyear} [1]{\difference{#1}{Murder of the Dawn}}
+\newcommand*{\ybd}         [1]{{\resphanyear{#1}} \BD{}}
+
+% \vaimonyear is `year \IC{}', as in, a year number in the Vaimon Calendar (reckoned from the founding of the Vaimon Caliphate)
+\newcommand*{\vaimonyear} [1]{\difference{#1}{VC}}
+\newcommand*{\yic}        [1]{{\vaimonyear{#1}} \IC{}}
+
+% \beforevaimonyear is \vaimonyear but with the minus removed. 
+\newcommand*{\beforevaimonyear}[1]{\difference{VC}{#1}}
+
+% An event, with a year number (counter label only) and a description. 
+\newcommand{\event}  [2]{\yic{#1} & #2 \\}
+% Last event in an epoch. The only difference is that it lacks a line break at the end. 
+\newcommand{\eventl} [2]{\yic{#1} & #2}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Quote things}
+\end{comment}
+
+
+
+\begin{comment}
+\section{Names of specific works}
+\end{comment}
+
+% Malazan Book of the Fallen.
+\newcommand{\SEMalazan} {%
+  \authorseries{Steven Erikson}{Malazan Book of the Fallen}}
+% A specific Malazan Book. Takes two arguments: Title and number in the series.
+\newcommand*{\MalazanBook}     [2]{\authorbook{Steven Erikson}{#1}}
+\newcommand{\MalazanReapersGale} {\MalazanBook{Reaper's Gale}      {7}}
+\newcommand{\SEDustofDreams}     {\MalazanBook{Dust of Dreams}     {9}}
+\newcommand{\SETolltheHounds}    {\MalazanBook{Toll the Hounds}    {8}}
+\newcommand{\SEReapersGale}      {\MalazanBook{Reaper's Gale}      {7}}
+\newcommand{\SEBonehunters}      {\MalazanBook{The Bonehunters}    {6}}
+\newcommand{\SEMidnightTides}    {\MalazanBook{Midnight Tides}     {5}}
+\newcommand{\SEHouseofChains}    {\MalazanBook{House of Chains}    {4}}
+\newcommand{\SEMemoriesofIce}    {\MalazanBook{Memories of Ice}    {3}}
+\newcommand{\SEDeadhouseGates}   {\MalazanBook{Deadhouse Gates}    {2}}
+\newcommand{\SEGardensoftheMoon} {\MalazanBook{Gardens of the Moon}{1}}
+
+% Francois Marcela Froideval - Chroniques de la Lune Noire.
+\newcommand{\FMFroideval}      {\Francois{} Marcela Froideval}
+\newcommand{\LuneNoire}        {Chroniques de la Lune Noire}
+\newcommand*{\FLuneNoireVol} [1]{%
+  \authorseries{\FMFroideval}{\LuneNoire{} (Volume #1)}}
+\newcommand{\FLuneNoire}{\authorseries{\FMFroideval}{\LuneNoire{}}}
+
+% Sailor Nothing, complete with link.
+\newcommand{\SailorNothing} {%
+  \href{http://www.pixelscapes.com/sailornothing/}{Sailor Nothing}}
+
+% Duana the Necrobabe (writes dark poetry and stuff). 
+\newcommand{\Duana} {\href{http://www.necrobabes.org/duana/}{Duana}}
+
+% Robert Chambers and The King in Yellow.
+\newcommand{\RWChambers}   {Robert W. Chambers}
+\newcommand{\KinginYellow} {The King in Yellow}
+\newcommand{\RWCTKIY}      {\authorseries{\RWChambers}{\KinginYellow}}
+
+% David Icke and The Biggest Secret.
+\newcommand{\DIBiggestSecret} {%
+  \authorbook{David Icke}{The Biggest Secret}}
+
+% Poppy Z. Brite.
+\newcommand{\PZBrite} {Poppy Z. Brite}
+
+% Howard Phillips Lovecraft.
+\newcommand{\HPLovecraft} {H.P. Lovecraft}
+
+\newcommand{\simonnecronomicon} {Simon's \emph{Necronomicon}}
+
+
+
+\begin{comment}
+\section{Quotes from specific works}
+\end{comment}
+
+% Bal-Sagoth lyrics.
+\newcommand{\lyricsbalsagoth}   [2]{\lyricsbs{Bal-Sagoth}{#1}{#2}}
+
+% Limbonic Art lyrics.
+\newcommand{\lyricslimbonicart} [2]{\lyricsbs{Limbonic Art}{#1}{#2}}
+% Cite author-book. 
+\newcommand{\citelimbonicart}   [3]{%
+  \citebandsong{LimbonicArt:#1}{Limbonic Art}{#2}{#3}}
+
+% Dimmu Borgir lyrics.
+\newcommand{\lyricsdimmuborgir} [2]{\lyricsbs{Dimmu Borgir}{#1}{#2}}
+
+% Duana poem.
+\newcommand{\lyricsduana} [3]{%
+  \lyricsbs{\Duana}{%
+    \href{http://www.necrobabes.org/duana/#1.html}{#2}}{#3}}
+
+% 'Lyrics' from Chroniques de la Lune Noire
+\newcommand{\lyricsflnv}  [2]{\lyricstitle{\FLuneNoireVol{#1}}{#2}}
+
+% Quotes from the Bible. 
+\newcommand{\lyricsbible} [2]{\lyricstitle{The Bible (#1)}{#2}}
+
+% xkcd webcomic. Takes two arguments: Strip number and text. 
+\newcommand{\lyricsxkcd}  [2]{%
+  \lyricstitle{\href{http://xkcd.com/#1/}{xkcd}}
+              {#2}}
+
+\newcommand{\lyricslimyaael}  [2]{%
+  \lyricstitle{%
+    \href{http://limyaael.insanejournal.com/#1.html}{Limyaael}%
+  }{#2}
+}
+
+% Cite Wikipedia. 
+% Arguments are URL, article title and text. 
+\newcommand{\lyricswikipedia} [3]{%
+  \lyricstitle{%
+    \href{http://en.wikipedia.org/wiki/#1}{Wikipedia: #2}%
+  }{#3}
+}
+
+
+
+\begin{comment}
+\section{Types of quotation tags}
+\end{comment}
+
+% Artist-title.
+\newcommand*{\artisttitle} [2]{#1 -- {\em #2}}
+
+% Author-book. Used when referring to books or series.
+\newcommand*{\authorseries} [2]{\artisttitle{#1}{#2}}
+\newcommand*{\authorbook}   [2]{\artisttitle{#1}{#2}}
+
+% Band-title. Used when referring to songs or pieces of music.
+\newcommand*{\bandsong}  [2]{\artisttitle{#1}{#2}}
+\newcommand*{\bandalbum} [2]{\artisttitle{#1}{#2}}
+
+% Movie.
+\newcommand*{\movie} [1]{{\em #1}}
+
+% Lyrics environment. Used when quoting songs, books or other things.
+\newcommand{\lyricstitle} [2]{%
+%   \begin{flushleft}
+    \paragraph{#1}
+%   \end{flushleft}
+  \nopagebreak
+  \lyrics{#2}}
+\newcommand{\lyricsauthorbookpage}[4]{\lyricstitle{\authorbook{#1}{#2} p.#3}{#4}}
+%\newcommand{\lyricsbs}[3]{\paragraph{\artisttitle{#1}{#2}}\lyrics{#3}}
+\newcommand{\lyricsbs} [3]{\lyricstitle{\artisttitle{#1}{#2}}{#3}}
+\newcommand{\lyrics}   [1]{%
+  \begin{quote}%
+    \begin{flushleft}%
+      {\sl\small #1}%
+    \end{flushleft}%
+  \end{quote}%
+}
+
+% Citation with title. 
+% Takes three arguments: Key, title, text. 
+\newcommand{\citetitle} [4][]{%
+  \lyricstitle{#3 \cite{#2}}{#4}}
+
+% Cite movie. 
+\newcommand{\citemovie} [4][]{%
+  \citetitle[#1]{Movie:#2}{#3}{#4}}
+
+% Cite band-song. 
+% Takes four arguments: Key, artist, title, text. 
+\newcommand{\citebandsong} [5][]{%
+  \citetitle[#1]{#2}{\artisttitle{#3}{#4}}{#5}}
+% Cite author-book. 
+\newcommand{\citeauthorbook} [5][]{\citebandsong[#1]{#2}{#3}{#4}{#5}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Books}
+\end{comment}
+
+
+% The titles of the various books in my series. 
+
+
+
+\begin{comment}
+\section{Dominators of \Miith{}}
+\end{comment}
+\newcommand{\DominatorsofMithEmph} {\emph{Genesis of \Miith}\xspace}
+\newcommand{\DominatorsofMith}  {Genesis of \Miith}
+% \newcommand{\DominatorsI}{Chaos Empower}
+% \newcommand{\DominatorsII}{Sons of Darkness Rise}
+% \newcommand{\DominatorsIII}{The Lie Sublime}
+\newcommand{\FirstbanewarBook}  {\Draconian{} Ascendancy\xspace}
+\newcommand{\AvatarofEntropy}   {Entropy's Avatar\xspace}
+\newcommand{\ThanatzilBook}     {\AvatarofEntropy}
+\newcommand{\MerkyrahBook}      {The Murder of the Dawn\xspace}
+\newcommand{\SathariahBook}     {Angels of Blood\xspace}
+\newcommand{\SecondbanewarBook} {Sons of Darkness Rise\xspace}
+\newcommand{\ResphanWarsBook}   {The \Resphanwars}
+\newcommand{\TheLieSublimeBook} {The Lie Sublime\xspace}
+
+\begin{comment}
+\section{Archons of \Miith{}}
+\end{comment}
+
+\newcommand{\ArchonsofMith}         {Archons of \Miith}
+\newcommand{\SilquaBookEmph}        {\emph{Bringer of the Light}\xspace}
+\newcommand{\SilquaBook}            {Bringer of the Light\xspace}
+\newcommand{\HundredScourgesBook}   {Bringer of the Darkness\xspace}
+
+\begin{comment}
+\section{Sentinels of \Miith{}}
+\end{comment}
+\newcommand{\SentinelsofMiithEmph}      {\emph{\SentinelsofMith{}}\xspace}
+\newcommand{\SentinelsofMithEmph}       {\emph{\SentinelsofMith{}}\xspace}
+\newcommand{\SentinelsofMiith}          {\SentinelsofMith}
+\newcommand{\SentinelsofMith}           {Sentinels of the Eschaton\xspace}
+\newcommand{\CarzainPrequelBookEmph}    {\emph{The Dreaming Predator}\xspace}
+\newcommand{\CarzainPrequelBook}        {The Dreaming Predator\xspace}
+\newcommand{\TwilightAngelRememberEmph} {\emph{Twilight Angel, Remember}\xspace}
+\newcommand{\TwilightAngelRemember}     {Twilight Angel, Remember\xspace}
+\newcommand{\RungerWarBook}             {\TwilightAngelRemember}
+\newcommand{\TheKenosis}                {The \Kenosis}
+\newcommand{\CarzainWithRedcorBook}     {\TheKenosis}
+\newcommand{\HaskelekBook}              {\TheKenosis}
+\newcommand{\LicaBook}                  {\CarzainWithRedcorBook}
+\newcommand{\GeicaBook}                 {The Geican Awakening\xspace}
+\newcommand{\ResurrectionBook}          {The Dark Queen's Resurrection\xspace}
+\newcommand{\RamielsAwakeningBook}      {Theosis: My Name Is Legion\xspace}
+\newcommand{\RamielAwakens}             {\RamielsAwakeningBook}
+\newcommand{\SentinelsFinalBookEmph}    {\emph{The Eschaton}\xspace}
+\newcommand{\SentinelsFinalBook}        {The Eschaton\xspace}
+\newcommand{\ThirdBanewarBook}          {\SentinelsFinalBook}
+
+% Text font used when typesetting a book title inside the body of the text. 
+\newcommand*{\booktitle}[1] {\emph{\quo{#1}}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Spells}
+\end{comment}
+
+
+\newcommand*{\spelldra}[1]{\paragraph{#1}{\Draconic{} spell #1}{Spells!#1 (Draconic)}} 
+\newcommand*{\spellim}[1]{\paragraph{#1}{Imetric spell #1}{Spells!#1 (Imetric)}} 
+\newcommand*{\spellime}[1]{\spellim{#1}}
+\newcommand*{\spellris}[1]{\paragraph{#1}{Rissitic spell #1}{Spells!#1 (Rissitic)}} 
+\newcommand*{\spellsha}[1]{\paragraph{#1}{Shaman spell #1}{Spells!#1 (Shamanistic)}} 
+\newcommand*{\spellvai}[1]{\paragraph{#1}{Vaimon spell #1}{Spells!#1 (Vaimon)}} 
+
+% Rissitic spell with special label (if the name contains special characters)
+\newcommand*{\spellrisl}[2]{\paragraphhh{#1}{Rissitic spell #2}{Spells!#1 (Rissitic)}}
+
+% Section reference to spell.
+\newcommand*{\refspelldra}[1]{\ref{\Draconic{} spell #1}}
+\newcommand*{\refspellim}[1]{\ref{Imetric spell #1}}
+\newcommand*{\refspellris}[1]{\ref{Rissitic spell #1}}
+\newcommand*{\refspellsha}[1]{\ref{Shaman spell #1}}
+\newcommand*{\refspellvai}[1]{\ref{Vaimon spell #1}}
+% Page reference to spell.
+\newcommand*{\pagerefspelldra}[1]{\pageref{\Draconic{} spell #1}}
+\newcommand*{\pagerefspellim}[1]{\pageref{Imetric spell #1}}
+\newcommand*{\pagerefspellris}[1]{\pageref{Rissitic spell #1}}
+\newcommand*{\pagerefspellsha}[1]{\pageref{Shaman spell #1}}
+\newcommand*{\pagerefspellvai}[1]{\pageref{Vaimon spell #1}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{General}
+\end{comment}
+
+
+
+\newcommand{\prikker}{\ldots{}\xspace}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Text fonts}
+\end{comment}
+
+
+
+
+\begin{comment}
+\subsection{Hyper-references}
+\end{comment}
+
+% A hyperlink target. 
+\newcommand*{\target}      [1]{\label{#1}\hypertarget{#1}{}}
+% \newcommand*{\target}      [1]{\label{#1}}
+
+% Hyper-reference.
+\newcommand*{\hr}[2]{\hyperref[#1]{#2{}}}
+% \newcommand*{\hr} [2]{\hyperlink{#1}{#2}}
+\newcommand*{\hs} [1]{\hr{#1}{#1}}
+
+% `Maybe' hyperlinks. Link if label exists, otherwise just print the text. 
+\newcommand*{\maybehr}[2]{\eachlabelcase{{#1}{\hr{#1}{#2}}{#2{}}}}
+\newcommand*{\maybehs}[1]{\maybehr{#1}{#1}}
+
+% Glossary reference. Links to the glossary and adds an index entry. 
+% Has two optional arguments: Label and index entry. 
+\newcommandtwoopt*{\gref}[3][][]{%
+  \ifthenelse
+    {\equal{#2}{}}
+    {\ifthenelse
+      {\equal{#1}{}}
+      {\index{#3}\hr{#3}{#3}}
+      {\index{#3}\hr{#1}{#3}}}
+    {\ifthenelse
+      {\equal{#1}{}}
+      {\index{#2}\hr{#3}{#3}}
+      {\index{#2}\hr{#1}{#3}}}
+}
+
+
+
+
+\begin{comment}
+\subsection{Speech and stuff}
+\end{comment}
+
+% The following commands are used to typeset special kinds of text. 
+
+% Encase text in double quotes. 
+\newcommand{\dquo} [1]{\mbox{}``\mbox{}#1\mbox{}''\mbox{}}
+% Encase text in single quotes. 
+\newcommand{\squo} [1]{\mbox{}`#1'\mbox{}}
+% Quotes
+\newcommand{\quo} [1]{\squo{#1}}
+% Guillemets (angular quotes).
+% \newcommand{\gui}[1]{\fg{}#1\og{}} 
+\newcommand{\gui} [1]{\guillemotright{}#1\guillemotleft{}} 
+
+
+% Nested talk, ie., a quote nested within a quote: `So I said: `foo''
+\newcommand{\subtalk} [1]{\squo{#1}}
+\newcommand{\subta}   [1]{\subtalk{#1}}
+
+% Special, foreign words, such as `Nieur'. 
+\newcommand{\foreign} [1]{\emph{#1}}
+% A complete spoken line in a foreign tongue.
+\newcommand{\tafo} [1]{\talk{\foreign{#1}}}
+\newcommand{\word} [1]{\foreign{#1}}
+% A sentence in a foreign tongue. 
+\newcommand{\tongue} [1]{\foreign{#1}}
+% Words in Draconic Kingstongue.
+\newcommand{\kingstongue} [1]{\foreign{#1}}
+\newcommand{\kingst} [1]{\kingstongue{#1}}
+
+% Regular talk. 
+\newcommand{\talk} [1]{\dquo{#1}}
+\newcommand{\ta}   [1]{\talk{#1}}
+
+% A longer spell in Draconic Kingstongue.
+\newcommand{\draconicspell} [1]{\begin{verse}{\sl #1}\end{verse}}
+
+% Something a character thinks to himself. 
+\newcommand{\thought} [1]{{\it#1}}
+\newcommand{\tho}     [1]{\thought{#1}}
+% A telepathic transmission. 
+%\newcommand{\telepathy}[1]{\dquo{\textsc{#1}}}
+\newcommand{\telepathy} [1]{{\it \gui{#1}}}
+\newcommand{\tele}      [1]{\telepathy{#1}}
+% Something that is subcommunicated, conveyed through body language
+\newcommand{\bodyl}     [1]{{\em {\dquo{#1}}}}
+% Hypothetical talk, something that might be spoken but isn't
+\newcommand{\hypotalk}  [1]{\bodyl{#1}}
+\newcommand{\hypota}    [1]{\hypotalk{#1}}
+
+% Shouting.
+\newcommand{\shout} [1]{{\sc #1}}
+
+
+
+\begin{comment}
+\subsection{Characters}
+\end{comment}
+
+% Customized speech for various characters. 
+
+\newcommand{\vizicar}       [1]{\telepathy{#1}}
+\newcommand{\carzain}       [1]{\telepathy{#1}}
+\newcommand{\daggerrain}    [1]{{\sc \gui{#1}}}
+\newcommand{\secherdamon}   [1]{{\sc \gui{#1}}}
+\newcommand{\ishna}         [1]{{\sc \gui{#1}}}
+
+
+
+\begin{comment}
+\subsection{Real life things}
+\end{comment}
+
+% The name of a ship... might be italicized
+\newcommand*{\shipname}[1]{\emph{#1}}
+% The Latin name of an animal species.
+\newcommand*{\latinname}[1]{\emph{#1}}
+
+% Trope: Link to the TV Tropes Wiki.
+\newcommand*{\trope}[2]{\href{http://tvtropes.org/pmwiki/pmwiki.php/Main/#1}{#2}}
+
+\begin{comment}
+\subsubsection{Tropes}
+\end{comment}
+
+\newcommand{\XanatosGambit}{\trope{XanatosGambit}{Xanatos Gambit}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Mathematics}
+\end{comment}
+
+\newcommand{\Rp}{\mathbb{R}_+}                % Positive real numbers
+\newcommand{\Rm}{\mathbb{R}_-}                % Negative real numbers
+\newcommand{\R}{\mathbb{R}}                   % Real numbers
+\newcommand{\Q}{\mathbb{Q}}                   % Rational numbers
+\newcommand{\Z}{\mathbb{Z}}                   % Integers
+\newcommand{\N}{\mathbb{N}}                   % Natural numbers
+\newcommand{\ph}{\varphi}                     % Phi
+\newcommand{\rh}{\varrho}                     % Rho
+\newcommand{\e}{\varepsilon}                  % Epsilon
+\newcommand{\fracs}[2]{\textstyle{\frac{#1}{#2}}} % Small fraction
+\newcommand{\bimp}{\Leftrightarrow}           % Bi-implication
+\newcommand{\imp}{\Rightarrow}                % Implication (`p only if q' or `p implies q')
+\newcommand{\pmi}{\Leftarrow}                 % Implication right to left (`p if q')
+\newcommand{\x}{\times}                       % Cartesian product
+\newcommand{\ri}{\right}                      % Right delimiter
+\newcommand{\lf}{\left}                       % Left delimiter
+\newcommand{\rpar}{\right)}                   % Right parenthesis
+\newcommand{\lpar}{\left(}                    % Left parenthesis
+\newcommand{\rtub}{\right\}}                  % Right tuborg }
+\newcommand{\ltub}{\left\{}                   % Left tuborg {
+\newcommand{\abs}[1]{\left| #1 \right|}       % Absolute/numerical value
+\newcommand{\set}[1]{\ltub #1 \rtub}          % Set
+\newcommand{\supns}[1]{\sup\set{\abs{#1}}}    % Numerical supremum of a set
+\newcommand{\supnsub}[2]{\sup\set{\abs{#1}| \ x \in #2}}
+                                              % Numerical supremum of a subset
+\newcommand{\bolle}{\circ}                    % Bolle - funktionssammensaetning
+\newcommand{\ZMP}[1]{(\mathbb{Z}/#1)^\ast}    % Group of prime remainder classes modulo n
+\newcommand{\alter}{(-1)^n}                   % Alternating sequence
+\newcommand{\alterp}{(-1)^{n+1}}              % Alternating sequence n+1
+\newcommand{\intoi}{\int_1^\infty}            % Integral from one to infty
+\newcommand{\intni}{\int_n^\infty}            % Integral from n to infty
+\newcommand{\intzi}{\int_0^\infty}            % Integral from 0 to infty
+\newcommand{\intzo}{\int_0^1}                 % Integral from 0 to 1
+\newcommand{\intoa}{\int_1^a}                 % Integral from 1 to a
+\newcommand{\intab}{\int_a^b}                 % Integral from a to b
+\newcommand{\sumoi}{\sum_{n=1}^\infty}        % Sum for n = 1...\infty
+\newcommand{\sumzi}{\sum_{n=0}^\infty}        % Sum for n = 0...\infty
+\newcommand{\sumon}{\sum_{n=1}^N}             % Sum for n = 1...N
+\newcommand{\sumzn}{\sum_{n=0}^N}             % Sum for n = 0...N
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}    % N rounded down
+\newcommand{\ceil}[1]{\lceil #1 \rceil}       % N rounded up
+\newcommand{\hfloor}[1]{\floor{#1/2}}         % N/2 rounded down
+\newcommand{\hceil}[1]{\ceil{#1/2}}           % N/2 rounded up
+\newcommand{\hak}[1]{\left\langle #1 \right\rangle} % Cyclical group <g>
+\newcommand{\half}{\frac{1}{2}}               % One half: 1/2 - big
+\newcommand{\halfs}{\fracs{1}{2}}             % One half: 1/2 - small
+\newcommand{\third}{\frac{1}{3}}              % One third: 1/3 - big
+\newcommand{\thirds}{\fracs{1}{3}}            % One third: 1/3 - small
+\newcommand{\quart}{\frac{1}{4}}              % One quarter: 1/4 - big
+\newcommand{\quarts}{\fracs{1}{4}}            % One quarter: 1/4 - small
+\newcommand{\tquart}{\frac{3}{4}}             % Three quarters: 3/4 - big
+\newcommand{\tquarter}{\frac{3}{4}}           % Three quarters: 3/4 - big
+\newcommand{\tquarts}{\fracs{3}{4}}           % Three quarters: 3/4 - small
+\newcommand{\tquarters}{\fracs{3}{4}}         % Three quarters: 3/4 - small
+\newcommand{\nth}{\frac{1}{n}}                % One n'th: 1/n - big
+\newcommand{\nths}{\fracs{1}{n}}              % One n'th: 1/n - small
+\newcommand{\pihalf}{\frac{\pi}{2}}           % Pi half: Pi/2 - big
+\newcommand{\pihalfs}{\fracs{\pi}{2}}         % Pi half: Pi/2 - small
+\newcommand{\toi}{\to \infty}                 % (something) -> \infty
+\newcommand{\limi}[1]{\lim_{#1 \to \infty}}   % lim for #1 going to \infty
+\newcommand{\limmi}[1]{\lim_{#1 \to -\infty}} % lim for #1 going to minus \infty
+\newcommand{\limz}[1]{\lim_{#1 \to 0}}        % lim for #1 going to 0
+\newcommand{\limni}{\limi{n}}                 % lim for n going to \infty
+\newcommand{\limnmi}{\limmi{n}}               % lim for n going to minus \infty
+\newcommand{\for}{\quad \textrm{for} \quad }  % Math mode: `for ...'
+\newcommand{\forni}{\for n\to\infty  }        % Math mode: 'for n -> infty'
+\newcommand{\comma}{\quad \textrm{,} \quad }  % Math mode: (formula) , (text)
+\newcommand{\Yps}{\Upsilon}
+\newcommand{\YPS}{\Upsilon}
+\newcommand{\gaffel}[1]{\left\{ \begin{array}{ll} #1 \end{array} \right.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Chapters and sections}
+\end{comment}
+
+\newcommand*{\bookchapter}[1]{\chapter{#1}}
+
+\newcommand{\placestamp} [1]{\typesetstamp{#1}}
+\newcommand{\timestamp}  [1]{\typesetstamp{#1}}
+\newcommand{\stamp}      [2]{\typesetstamp{#1 \\ \nopagebreak #2}}
+\newcommand{\diarystamp} [1]{{\em\bf #1}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\section{Command macros}
+\end{comment}
+
+% If #1 is the empty string then do #2, else do #3.
+\newcommand{\ifempty} [3]{%
+  \ifthenelse%
+    {\equal{#1}{}}%
+    {#2}%
+    {#3}}
+
+% Append #2 to #1 if #2 is non-empty. Otherwise just return #1
+\newcommand{\maybeappend} [2]{\ifempty{#2}{#1{}\xspace}{#1-#2}}
+
+% Do stuff in the preamble.
+\newcommand{\stuffinthepreamble} {
+  \author{%
+    Claus Appel \\ 
+    \href%
+      {mailto:spectrumdt@gmail.com}%
+      {spectrumdt@gmail.com}%
+  }
+  \makeindex
+  \frenchspacing
+  \bibliographystyle{plainnat}
+  \pagestyle{headings}
+%   \setcounter{tocdepth}{0}
+}
+\providecommand{\citet}[1]{\cite{#1}}
+
+% Do maketitle and other stuff at the start of the document. 
+\newcommand{\stuffatthebeginning} {
+  \pagenumbering{alph}
+  \maketitle
+  \pagenumbering{arabic}
+  \setcounter{page}{2}
+  \renewcommand{\multicolumntoc}{2}
+  { 
+%     \begin{flushleft}
+    \scriptsize
+  %   \addcontentsline{toc}{chapter}{Contents}
+    \tableofcontents
+%     \end{flushleft}
+  }
+}
+
+% Print index and other stuff at the end. 
+% \newcommand{\stuffattheend} {
+%   \bibliography{Mith.bib}
+%   \printindex
+% }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+  \section{Indexing}
+\end{comment}
+
+\index{suppression of technology|see{repression of technology}}
+\index{technology!repression|see{repression of technology}}
+\index{calendar!Vaimon|see{\VaimonCalendar}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

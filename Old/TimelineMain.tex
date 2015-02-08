@@ -1,0 +1,63 @@
+\documentclass[a4paper,10pt,openany,oneside]{book}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{makeidx}
+%\usepackage{showidx}
+\usepackage[pdftex,colorlinks]{hyperref}
+
+\title{The Mith Universe}
+\author{Claus Appel \\ 
+E-mail: \href{mailto:spectrumdt@gmail.com}{spectrumdt@gmail.com}}
+
+\makeindex
+\frenchspacing
+\pagestyle{headings}
+
+
+
+\begin{document}
+
+
+
+\input{CommandsMath}
+\input{CommandsBeginEnd}
+\input{CommandsLabelIndex}
+\input{CommandsMith}
+
+
+
+\frontmatter
+\mainmatter
+
+
+
+\maketitle
+\tableofcontents
+
+
+
+\include{Timeline}
+
+
+
+\appendix
+
+
+
+\include{Glossary}
+
+
+\backmatter
+
+\printindex
+
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "Mith"
+%%% End: 

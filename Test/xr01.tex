@@ -1,0 +1,12 @@
+\documentclass{article}
+\usepackage{xr-hyper}
+\usepackage{hyperref}
+\newcommand{\foo}{foo}
+\externaldocument{xr02}
+\begin{document}
+
+This is a reference to page one: \ref{foo}
+
+This is a reference to page two: \ref{bar}
+
+\end{document}

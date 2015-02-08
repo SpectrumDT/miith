@@ -1,0 +1,64 @@
+\documentclass[a4paper,12pt,openany,oneside]{book}
+
+% \includeonly{Utilities/UsePackages}
+% \includeonly{Utilities/UsePackages,Story/SentinelsofMith}
+% \includeonly{Utilities/UsePackages,World/World}
+
+\include{Utilities/UsePackages}
+\externaldocument{MithMain}
+
+\makeindex
+\frenchspacing
+\bibliographystyle{agu}
+\pagestyle{headings}
+
+\title{The Mith Universe}
+\author{Claus Appel \\ 
+        \href
+          {mailto:spectrumdt@gmail.com}
+          {spectrumdt@gmail.com}}
+
+\begin{document}
+
+
+
+\begin{comment}
+\part{\TeX{} Commands of \Miith}
+\end{comment}
+\input{Commands}
+\input{Hyphenation}
+
+
+
+\stuffatthebeginning
+
+
+
+\begin{comment}
+\part{The Book Series of \Miith}
+\end{comment}
+\section{\Tsekkect}
+\subsubsection[Tsekkect]{\Tsekkect}
+\target{Carzain meets Delph}
+% \include{Story/DominatorsofMith}
+% \include{Story/ArchonsofMith}
+\include{Story/SentinelsofMith}
+\include{Test/SentinelsofMith}
+
+
+
+% \bibliography{Mith.bib}
+% \clearpage
+% \phantomsection
+% \addcontentsline{toc}{chapter}{\indexname}
+% \printindex
+
+
+
+
+% \bibliography{Mith.bib}
+% \printindex
+
+
+
+\end{document}

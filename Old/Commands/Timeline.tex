@@ -1,0 +1,423 @@
+\begin{comment}
+\part{Timeline}
+\end{comment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%       TIMELINE THINGS       %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{comment}
+\chapter{Commands}
+\end{comment}
+
+
+%%% Here follows the definitions of a bunch of historical constants. 
+% A `hiscb' is a `basic historic constant'. Its value is given as a constant. 
+% A `hisc' is a `historic constant'. It's value is given as the value of a base hisc plus an offset. 
+% NB: The base hisc is given as a counter name, without the `\value' tag. (It needs not be a hiscb, it can just be a hisc.) 
+\newcommand{\hiscb}[2]{\newcounter{#1}\setcounter{#1}{#2}}
+\newcommand{\hisc}[3]{\newcounter{#1}\setcounter{#1}{\value{#2}}\addtocounter{#1}{#3}}
+% `birthandage' specifies a person's name (`foo') birth year and his age at death. 
+% It also introduces two hisc's: `foo birth' and `foo death'. 
+% Birth year is given as a base hisc and an offset. 
+% Death year is computed as birth year + age. 
+\newcommand{\birthandage}[4]{\hisc{#1 birth}{#2}{#3}\hisc{#1 death}{#1 birth}{#4}}
+% `deathandage' is like birthandage, except you get to specify a year of death, and the year of birth is calculated. 
+\newcommand{\deathandage}[4]{\hisc{#1 death}{#2}{#3}\hisc{#1 birth}{#1 death}{-#4}}
+% `birthliving' lets you specify the birth year of a person who still lives. 
+\newcommand{\birthliving}[3]{\hisc{#1 birth}{#2}{#3}}
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Milestone Years}
+\end{comment}
+
+% The year where Tiamat first summons the Xzai-Shann. 
+% Considered the beginning of known history. 
+\hiscb{XS}{0}
+
+
+
+
+
+
+
+\begin{comment}
+\section{Dominators of Mith}
+\end{comment}
+
+
+
+\begin{comment}
+\subsection{\FirstbanewarBook}
+\end{comment}
+
+% \hisc{Founding of Irokas}{IC}{-1500}
+% \hisc{Fall of Nom}{Founding of Irokas}{-100}
+% \hisc{Founding of Nom}{Fall of Nom}{-20000}
+% \hisc{First Dragons}{Founding of Nom}{-2000}
+
+\birthliving{Nexagglacheldraex}{XS}{20}
+\birthliving{Ishnaruchaefir}{XS}{130}
+\birthliving{Secherdamon}{XS}{950}
+\hisc{First Banewar}{XS}{3500}
+
+
+
+\begin{comment}
+\subsection{\ThanatzilBook}
+\end{comment}
+
+\birthandage{Thanatzil}{First Banewar}{3000}{13}
+
+
+
+\begin{comment}
+\subsection{\MerkyrahBook}
+\end{comment}
+
+\hisc{Merkyrah falls}{Thanatzil death}{1000}
+
+
+
+\begin{comment}
+\subsection{\SecondbanewarBook}
+\end{comment}
+
+\hisc{Satharioth}{Merkyrah falls}{100}
+\hisc{Second Banewar ends}{Satharioth}{100}
+
+
+
+\begin{comment}
+\subsection{\ResphanWarsBook}
+\end{comment}
+
+
+
+\begin{comment}
+\subsection{\TheLieSublimeBook}
+\end{comment}
+
+\hisc{Cuezca rises}{Second Banewar ends}{1000}
+\hisc{Cuezcan Apocalypse}{Cuezca rises}{100}
+
+
+
+
+
+
+
+\begin{comment}
+\section{Archons of Mith}
+\end{comment}
+
+% The 0th year of the Imperial Calendar, the founding of the Vaimon Empire. 
+\hisc{IC}{XS}{11000}
+\newcommand{\ic}{\value{IC}}
+
+
+
+\begin{comment}
+\subsection{Cordos Vaimon's time}
+\end{comment}
+
+\hisc{Founding of the Vaimon Empire}{IC}{0}
+
+% Cordos Vaimon
+\birthandage{Cordos Vaimon}{IC}{-51}{82}
+% Belandos Vaimon II (Cordos' father)
+\birthandage{Belandos}{Cordos Vaimon birth}{-25}{65}
+% Faegos Vaimon (Cordos' grandfather)
+\birthandage{Faegos}{Belandos birth}{-20}{58}
+% Silqua Delain
+\birthandage{Silqua}{IC}{-35}{30}
+% The wedding of Silqua Delain and Cordos Vaimon
+\hisc{Silqua wed}{Silqua birth}{18}
+\hisc{Silqua married}{Silqua wed}{0}
+
+
+
+\begin{comment}
+\subsection{Darkfall time}
+\end{comment}
+
+% Vizicar
+\birthandage{Vizicar}{IC}{1890}{186}
+
+% Belzir
+\birthandage{Belzir}{IC}{2086}{341}
+
+% The Darkfall, the fall of the Vaimon Empire. 
+\hisc{Darkfall}{IC}{2433}
+
+
+
+\begin{comment}
+\subsection{Pre-Belkadian}
+\end{comment}
+
+% The time of the Eresh-Kali civilization.
+\hisc{\EreshKal{} flourished}{IC}{3000}
+\hisc{\EreshKal{} destroyed}{IC}{3051}
+
+
+
+\begin{comment}
+\subsection{Uther the Tiger's time}
+\end{comment}
+
+% The year of the beginning of the Carzain story, where Carzain fights the mutinying mercenaries. (This is distinct from Carzain's birth.)
+\hisc{Carz}{Darkfall}{1294}
+\hisc{Founding of Imetrium}{Carz}{-850}
+\hisc{Fall of Belkade}{Carz}{29}
+\hisc{Founding of Belkade}{Fall of Belkade}{-388}
+
+\birthandage{Uther the Tiger}{Founding of Belkade}{-32}{65}
+
+
+
+
+
+
+
+\begin{comment}
+\section{Sentinels of Mith}
+\end{comment}
+
+% The year where the Rissitics conquer Fendor.
+\hisc{Siege of Fendor}{Carz}{1}
+
+% The year where Giles Tantor's diary is written. 
+\hisc{Tantor diary}{Carz}{1}
+
+% The year where Ishnaruchaefir slays a Ghobal in Malcur. 
+\hisc{Ishnaruchaefir slays Ghobal}{Carz}{1}
+
+% The year of the Pelidor-Runger war, where Carzain fights.
+\hisc{Runger war}{Carz}{2} % In terms of year numbers it's two years, but in terms of actual days it's only slightly over one year.
+
+
+
+\begin{comment}
+\subsection{Characters}
+\end{comment}
+
+\birthliving{Archibald Curwen}{Carz}{-59}
+
+\birthliving{Morgan Runger}{Carz}{-55}
+
+
+\birthliving{Carzain}{Carz}{-22}
+\birthliving{Nishain Shireyo}{Carzain birth}{-33}
+\birthliving{Rowena Deracille}{Nishain Shireyo birth}{+8}
+\birthliving{Shereid}{Carz}{-39}
+
+\birthliving{Ilcas Northstar}{Carz}{-42}
+\birthliving{Raeco Mannica}{Carz}{-43}
+\birthliving{Curiet Serpentin}{Carz}{-22}
+\birthliving{Countess}{Carz}{-14}
+\birthliving{Razor}{Carz}{-17}
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Dominators of Mith}
+\end{comment}
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Archons of Mith}
+\end{comment}
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\chapter{Sentinels of Mith}
+\end{comment}
+
+
+
+
+
+
+
+\begin{comment}
+\section{\RungerWarBook}
+\end{comment}
+
+
+
+\begin{comment}
+\subsection{Vertex Awakening}
+\end{comment}
+
+\newcommand{\dateCatrianDies}{%
+  \typesetdate%
+    {Carz}{21st}{\Hoshied}}
+\newcommand{\dateMutiny}{%
+  \typesetdate%
+    {Carz}{11th}{\Yeziel}}
+\newcommand{\dateIlcasNorthstarIntroduction}{%
+  \typesetdate%
+    {Carz}{14th}{\Yeziel}}
+\newcommand{\dateCarzainFucksMirai}{%
+  \typesetdate%
+    {Carz}{20th}{\Yeziel}}
+
+
+
+\newcommand{\dateIshnaruchaefirIntroduced}{%
+  \typesetdate%
+    {Ishnaruchaefir slays Ghobal}{13th}{\Teshiron}}
+\newcommand{\dateIshnaruchaefirSlaysAGhobal}{%
+  \typesetdate%
+    {Ishnaruchaefir slays Ghobal}{13th}{\Teshiron}}
+
+
+
+\begin{comment}
+\subsection{The Invasion}
+\end{comment}
+
+\newcommand{\dateIcorDies}{%
+  \typesetdate%
+    {Runger war}{21st}{\Atzirah}}
+\newcommand{\dateCurwenKillsOnatol}{%
+  \typesetdate%
+    {Runger war}{22nd}{\Atzirah}}
+\newcommand{\dateCarzainJoinsTheArmy}{%
+  \typesetdate%
+    {Runger war}{2nd}{\Razilah}}
+\newcommand{\dateCarzainGoesToMalcur}{%
+  \typesetdate%
+    {Runger war}{7th}{\Razilah}}
+\newcommand{\dateIcorMeetsPsyrex}{%
+  \typesetdate%
+    {Runger war}{14th}{\Razilah}}
+\newcommand{\dateCharcoalFucksNeedle}{%
+  \typesetdate%
+    {Runger war}{20th}{\Razilah}}
+
+
+
+
+\begin{comment}
+\subsection{The March}
+\end{comment}
+
+\newcommand{\dateTheArmySetsOut}{%
+  \typesetdate%
+    {Runger war}{1st}{\Keshirah}}
+\newcommand{\dateCharcoalReadsDiary}{%
+  \typesetdate%
+    {Runger war}{4th}{\Keshirah}}
+\newcommand{\dateIcorBuried}{%
+  \typesetdate%
+    {Runger war}{6th}{\Keshirah}}
+\newcommand{\dateAchsahAndNeedle}{%
+  \typesetdate%
+    {Runger war}{9th}{\Keshirah}}
+\newcommand{\dateCharcoalReadsMoreDiary}{%
+  \typesetdate%
+    {Runger war}{11th}{\Keshirah}}
+\newcommand{\dateNeinaCaptured}{%
+  \typesetdate%
+    {Runger war}{14th}{\Keshirah}}
+\newcommand{\dateRianLooksForNeina}{%
+  \typesetdate%
+    {Runger war}{17th}{\Keshirah}}
+\newcommand{\dateCarzainFirstInForklin}{%
+  \typesetdate%
+    {Runger war}{18th}{\Keshirah}}
+
+
+
+\begin{comment}
+\subsubsection{\Jirad{} Tantor's diary}
+\end{comment}
+
+\newcommand{\dateTantorMeetsTakestsha}{%
+  \typesetdate%
+    {Tantor diary}{10th}{\Feazirah}}
+\newcommand{\dateTakestshaIntroducesEreshKal}{%
+  \typesetdate%
+    {Tantor diary}{19th}{\Feazirah}}
+\newcommand{\dateTantorResearchesEreshKal}{%
+  \typesetdate%
+    {Tantor diary}{22nd}{\Feazirah}}
+\newcommand{\dateTakestshaSetsOut}{%
+  \typesetdate%
+    {Tantor diary}{2nd}{\Barion}}
+\newcommand{\dateTakestshaReachesGedrock}{%
+  \typesetdate%
+    {Tantor diary}{14th}{\Barion}}
+\newcommand{\dateWaythaneDayOne}{%
+  \typesetdate%
+    {Tantor diary}{15th}{\Barion}}
+\newcommand{\dateWaythaneDayTwo}{%
+  \typesetdate%
+    {Tantor diary}{16th}{\Barion}}
+\newcommand{\dateWaythaneDayThree}{%
+  \typesetdate%
+    {Tantor diary}{17th}{\Barion}}
+\newcommand{\dateWaythaneDayFourTempleFound}{%
+  \typesetdate%
+    {Tantor diary}{18th}{\Barion}}
+\newcommand{\dateEreshKalDayOne}{\dateWaythaneDayFourTempleFound}
+\newcommand{\dateEreshKalDayTwo}{%
+  \typesetdate%
+    {Tantor diary}{19th}{\Barion}}
+\newcommand{\dateEreshKalLeftBehindDayOne}{%
+  \typesetdate%
+    {Tantor diary}{20th}{\Barion}}
+\newcommand{\monthWhereTantorsDiaryEnds}{\Gamishiel}
+
+
+
+\begin{comment}
+\subsection{Rissitic story thread}
+\end{comment}
+
+\newcommand{\dateSiegeofFendor}{%
+  \typesetdate%
+    {Siege of Fendor}{18th}{\Hapheron}}
+
+
+
+
+
+
+
+
+

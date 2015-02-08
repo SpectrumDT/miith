@@ -1,0 +1,62 @@
+%%%%%%%%%%%%%%%%%%%%%%%%% DISABLED %%%%%%%%%%%%%%%%%%%%%%%%%
+% Give pronunciation as a footnote. 
+%\newcommand{\pronunfoot}[1]{\footnote{[#1]}}
+\newcommand{\pronunfoot}[1]{}
+% Create tuple of (word, pronunciation). At the moment, it is just printed as a footnote. In the future, I hope to be able to automatically compile a pronunciation index to print at the end of the book. 
+\newcommand{\pronunciation}[2]{\pronunfoot{#2}}
+% Pronunciation, but with an added comment. 
+\newcommand{\pronunciationlong}[3]{}%{\footnote{[#2]. #3}}
+
+% Print a word and give pronunciation. 
+\newcommand{\pronun}[2]{#1\pronunciation{#1}{#2}}
+% Print a word in emphasisis and give pronunciation. 
+\newcommand{\pronune}[2]{\emph{#1}\pronunciation{#1}{#2}}
+% Print, pronuciation and add word to index. 
+\newcommand{\pronuni}[2]{#1\pronunciation{#1}{#2}\index{#1}}
+% Print emphasized, pronun and index entry. 
+\newcommand{\pronunei}[2]{\emph{#1}\pronunciation{#1}{#2}\index{#1}}
+% Print word and give pronunciation with an added comment. 
+\newcommand{\pronunlong}[3]{#1\pronunciationlong{#1}{#2}{#3}}
+\newcommand{\pronunelong}[3]{\emph{#1}\pronunciationlong{#1}{#2}{#3}}
+\newcommand{\pronunilong}[3]{#1\pronunciationlong{#1}{#2}{#3}\index{#1}}
+\newcommand{\pronuneilong}[3]{\emph{#1}\pronunciationlong{#1}{#2}{#3}\index{#1}}
+
+% Introduce a term: Print the word, make a label of it and add it to the index. 
+\newcommand{\introduce}[1]{#1\index{#1}\label{#1}}
+% Intro: Short for `introduce'
+\newcommand{\intro}[1]{\introduce{#1}}
+% Intro-double: Introduce, and add a second or variant name as label and index. 
+\newcommand{\introd}[2]{\introduce{#1}\index{#2}\label{#2}}
+% Intro-emph: Introduce, but print it emphasized. 
+\newcommand{\introe}[1]{\emph{\intro{#1}}}
+% Intro-label: Introduce, but with a customizable index entry. 
+\newcommand{\introi}[2]{#1\index{#2}\label{#1}}
+% Intro-label: Introduce, but with a customizable label (useful if the name contains special characters). 
+\newcommand{\introl}[2]{#1\index{#1}\label{#2}}
+% Intro-pronun: Introduce and also give pronunciation. 
+\newcommand{\introp}[2]{\intro{#1}\pronunciation{#1}{#2}}
+% Intro-the: Introduce, and add a `, the' at the index entry. 
+\newcommand{\introt}[1]{#1\index{#1}\label{#1}} 
+\newcommand{\introthe}[1]{\introt{#1}} 
+% Emphasized with an added `the'. 
+\newcommand{\introet}[1]{\emph{#1}\index{#1}\label{#1}} 
+% Customizable label, pronunciation. 
+\newcommand{\introlp}[3]{\introl{#1}{#2}\pronunciation{#1}{#3}}
+% Emphasized, pronunciation and an added `the'. 
+\newcommand{\intropt}[2]{\introt{#1}\pronunciation{#1}{#2}}
+% Emphasized, custom label. 
+\newcommand{\introel}[2]{\emph{#1}\index{#1}\label{#2}}
+% Emphasized, pronunciation. 
+\newcommand{\introep}[2]{\introe{#1}\pronunciation{#1}{#2}}
+% Emphasized, pronunciation and an added `the'. 
+\newcommand{\introept}[2]{\introet{#1}\pronunciation{#1}{#2}}
+% Emphasized, custom label and pronunciation. 
+\newcommand{\introelp}[3]{\introel{#1}{#2}\pronunciation{#1}{#3}}
+% Introduce and give `long' pronunciation (allow for a comment in the pronunciation entry). 
+\newcommand{\introplong}[3]{\intro{#1}\pronunciationlong{#1}{#2}{#3}}
+\newcommand{\introlplong}[4]{\introl{#1}{#2}\pronunciationlong{#1}{#3}{#4}}
+\newcommand{\introeplong}[3]{\introe{#1}\pronunciationlong{#1}{#2}{#3}}
+\newcommand{\introelplong}[4]{\introel{#1}{#2}\pronunciationlong{#1}{#3}{#4}}
+
+
+

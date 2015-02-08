@@ -1,0 +1,95 @@
+
+\documentclass[a4paper,12pt,openany,oneside]{book}
+
+
+
+
+
+\include{Utilities/UsePackages}
+\input{Commands}
+\input{Hyphenation}
+
+
+
+
+\title{The Universe of \Miith}
+
+\stuffinthepreamble
+
+
+
+\begin{document}
+
+
+
+  \stuffatthebeginning
+
+
+
+  \begin{comment}
+    \part{The World of \Miith}
+  \end{comment}
+    \include{World/World}
+  \part{Denizens of \Miith}
+    \include{World/OphidianRaces}
+    \include{World/ErebeanRaces}
+    \include{World/ResphanRace}
+    \include{World/DenizensMinor}
+    \include{World/Azmith}
+    \include{World/Neevrai}
+
+
+
+  \begin{comment}
+    \part{The Characters of \Miith}
+  \end{comment}
+    \include{Characters/OphidianCharacters}
+    \include{Characters/ResphanCharacters}
+    \include{Characters/ImmortalCharacters}
+    \include{Characters/MortalCharacters}
+
+
+
+  \begin{comment}
+    \part{The Book Series of \Miith}
+  \end{comment}
+    % \begin{comment}
+    % \include{SentinelsMain}
+    \include{Story/DominatorsofMith}
+    \include{Story/Incursion}
+    \include{Story/ArchonsofMith}
+    \include{Story/SentinelsofMith}
+    % \end{comment}
+    \begin{comment}
+      \input{Story/Sentinels01Notes} 
+      \input{Story/Sentinels02Notes} 
+    \end{comment}
+
+
+
+  \part{Appendix}
+    \appendix
+
+    % \include{Story/RandomStoryIdeas}
+    %\include{StoryFragmentPart/StoryIdeas}
+
+    \include{Appendix/Timeline}
+    \include{Appendix/Tropes}
+    \include{Appendix/Pronunciation}
+    \include{Appendix/Languages}
+    %\include{Appendix/Glossary}
+    \begin{comment}
+      \include{Sentinels01/Appendix/SmallGlossary}
+    \end{comment}
+
+
+
+    \bibliography{Mith.bib}
+    \printindex
+
+
+
+\end{document}
+
+
+

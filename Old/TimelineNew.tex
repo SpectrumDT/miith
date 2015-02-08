@@ -1,0 +1,51 @@
+\section{Timeline}
+
+
+
+\newenvironment{epoch}[1]{\subsubsection{#1}\begin{tabular}{rp{10cm}}}{\end{tabular}}
+\newcommand{\bepo}{\begin{epoch}}
+\newcommand{\eepo}{\end{epoch}}
+% \yearic is `year IC', as in, a year number in the Imperial Calendar 
+% (reckoned from the founding of the Vaimon Empire)
+\newcommand{\yic}[1]{\arabic{#1} IC}
+
+
+
+
+%%% Here follows the definitions of a bunch of historical constants. 
+% A `hiscb' is a `basic historic constant'. Its value is given as a constant. 
+% A `hisc' is a `historic constant'. It's value is given as the value of a base hisc plus an offset. 
+% NB: The base hisc is given as a counter name, without the `\value' tag. (It needs not be a hiscb, it can just be a hisc.) 
+\newcommand{\hiscb}[2]{\newcounter{#1}\setcounter{#1}{#2}}
+\newcommand{\hisc}[3]{\newcounter{#1}\setcounter{#1}{\value{#2}}\addtocounter{#1}{#3}}
+% `birthandage' specifies a person's name (`foo') birth year and his age at death. 
+% It also introduces two hisc's: `foo birth' and `foo death'. 
+% Birth year is given as a base hisc and an offset. 
+% Death year is computed as birth year + age. 
+\newcommand{\birthandage}[4]{\hisc{#1 birth}{#2}{#3}\hisc{#1 death}{#2}{#3}}
+
+% The 0th year of the Imperial Calendar, the founding of the Vaimon Empire
+\hiscb{IC}{1000}
+\newcommand{\ic}{\value{IC}}
+
+% Cordos Vaimon
+\birthandage{Cordos}{IC}{-50}{80}
+% Belandos Vaimon II (Cordos' father)
+\birthandage{Belandos}{Cordos birth}{-25}{65}
+% Faegos Vaimon (Cordos' grandfather)
+\birthandage{Faegos}{Belandos birth}{-20}{58}
+% Silqua Delain
+\birthandage{Silqua}{IC}{-35}{30}
+%\hisc{Silqua birth}{\value{IC}}{-35}
+%\hisc{Silqua death}{\value{Silqua birth}}{30}
+% Belzir
+
+% The Darkfall, the fall of the Vaimon Empire. 
+\hisc{Darkfall}{IC}{1965} 
+% The wedding of Silqua Delain and Cordos Vaimon. 
+\hisc{Silqua wedding}{Silqua birth}{18}
+
+
+
+\begin{comment}
+\end{comment}

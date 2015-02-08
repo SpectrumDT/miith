@@ -1,0 +1,81 @@
+
+\documentclass[a4paper,12pt,openany,oneside]{book}
+
+% \includeonly{Utilities/UsePackages}
+% \includeonly{Utilities/UsePackages,Story/SentinelsofMith}
+% \includeonly{Utilities/UsePackages,World/World}
+
+\include{Utilities/UsePackages}
+\input{Commands}
+\input{Hyphenation}
+
+\externaldocument{CharactersofMith}
+\externaldocument{HistoryofMiith}
+
+\title{The Universe of \Miith}
+
+\stuffinthepreamble
+
+
+
+\begin{document}
+
+
+
+  \stuffatthebeginning
+  
+  
+  
+  \begin{comment}
+    \part{The World of \Miith}
+  \end{comment}
+  \include{World/World}
+  \include{World/People}
+  \include{World/Azmith}
+  
+  
+  
+  \begin{comment}
+    \part{The Characters of \Miith}
+  \end{comment}
+  \begin{comment}
+    \include{Characters/ImmortalCharacters}
+    \include{Characters/MortalCharacters}
+  \end{comment}
+  
+  
+  
+  \begin{comment}
+    \part{The Book Series of \Miith}
+  \end{comment}
+  \begin{comment}
+    \include{SentinelsMain}
+    \include{Story/DominatorsofMith}
+    \include{Story/ArchonsofMith}
+    \include{Story/SentinelsofMith}
+  \end{comment}
+  
+  
+  
+  \part{Appendix}
+  \appendix
+  
+  \include{Appendix/Timeline}
+  \include{Appendix/Tropes}
+  \include{Appendix/Pronunciation}
+  \include{Appendix/Languages}
+  \begin{comment}
+    \include{Sentinels01/Appendix/SmallGlossary}
+  \end{comment}
+  
+  
+  
+  \bibliography{Mith.bib}
+  \printindex
+
+
+
+\end{document}
+
+
+

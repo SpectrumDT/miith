@@ -1,0 +1,21 @@
+\documentclass{article}
+\begin{document} 
+
+% Takes a key #1, a counter #2 to use as a base, and an offset #3.
+\newcommand*{\definebirthyear}[3]{%
+  \newcounter{#1}%
+  \setcounter{#1}{\value{#2}}%
+  \addtocounter{#1}{#3}%
+}
+\newcommand*{\getbirthyear}[1]{\arabic{#1}}
+
+\newcounter{yearzero}
+\setcounter{yearzero}{0}
+
+\definebirthyear{John Doe}{yearzero}{1980}
+\definebirthyear{Jack Doe}{John Doe}{5}
+
+John Doe was born in \getbirthyear{John Doe}.
+
+Jack Doe was born in \getbirthyear{Jack Doe}.
+\end{document}

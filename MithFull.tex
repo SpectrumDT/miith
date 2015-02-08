@@ -1,0 +1,110 @@
+
+\documentclass[a4paper,12pt,openany,oneside]{book}
+
+
+
+
+
+\include{Utilities/UsePackages}
+\input{Commands}
+\input{Hyphenation}
+
+
+
+
+\title{The Universe of \Miith}
+
+\stuffinthepreamble
+
+
+
+\begin{document}
+
+
+
+  \stuffatthebeginning
+
+
+
+  \part{The Cosmos}
+    \include{World/Universe}
+    \include{World/World}
+    \include{World/Realms}
+    \include{World/Magic}
+  \part{Denizens of \Miith}
+    \include{World/OphidianRaces}
+    \include{World/ErebeanRaces}
+    \include{World/ResphanRace}
+    \include{World/DenizensMinor}
+    \begin{comment}
+      \chapter{Azmith}
+    \end{comment}
+    \include{World/Azmith/Azmith}
+    \begin{comment}
+      \include{World/Azmith/Vaimons}
+    \end{comment}
+
+
+
+  \begin{comment}
+    \part{The Characters of \Miith}
+  \end{comment}
+    \include{Characters/OphidianCharacters}
+    \include{Characters/ResphanCharacters}
+    \include{Characters/ImmortalCharacters}
+    \include{Characters/MortalCharacters}
+
+
+
+  \part{\DominatorsofMith}
+    \include{Story/OphidianCivilization}
+    \include{Story/SethicusRise}
+    \include{Story/SethicusReign}
+    \include{Story/AfterSethicus}
+    \include{Story/AvatarofEntropy}
+    \include{Story/Merkyrah}
+    \include{Story/Incursion}
+    \include{Story/ResphanWars}
+  \begin{comment}
+    \part{Archons of \Miith}
+  \end{comment}
+    \include{Story/ArchonsofMith}
+  \begin{comment}
+    \part{Sentinels of \Miith}
+  \end{comment}
+    \include{Story/SentinelsofMith}
+    % \end{comment}
+    \begin{comment}
+      \input{Story/Sentinels01Notes} 
+      \input{Story/Sentinels02Notes} 
+      \input{Story/Sentinels03Notes} 
+    \end{comment}
+
+
+
+  \part{Appendix}
+    \appendix
+
+    % \include{Story/RandomStoryIdeas}
+    %\include{StoryFragmentPart/StoryIdeas}
+
+    \include{Appendix/Timeline}
+    \include{Appendix/Tropes}
+    \include{Appendix/Pronunciation}
+    \include{Appendix/Languages}
+    %\include{Appendix/Glossary}
+    \begin{comment}
+      \include{Sentinels01/Appendix/SmallGlossary}
+    \end{comment}
+
+
+
+    \bibliography{Mith.bib}
+    \printindex
+
+
+
+\end{document}
+
+
+
