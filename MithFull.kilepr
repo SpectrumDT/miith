@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.3
-lastDocument=Story/OphidianCivilization.tex
+lastDocument=Story/SentinelsofMith.tex
 masterDocument=
 name=MithFull
 pkg_extIsRegExp=false
@@ -50,7 +50,7 @@ Mode=LaTeX
 ReadWrite=true
 
 [document-settings,item:Characters/MortalCharacters.tex]
-Bookmarks=3636
+Bookmarks=2638,3650
 Encoding=UTF-8
 Highlighting=LaTeX
 Indentation Mode=normal
@@ -144,7 +144,7 @@ Mode=LaTeX
 ReadWrite=true
 
 [document-settings,item:Story/Merkyrah.tex]
-Bookmarks=1100
+Bookmarks=1152
 Encoding=UTF-8
 Highlighting=LaTeX
 Indentation Mode=
@@ -309,7 +309,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=186
+line=163
 mode=LaTeX
 open=false
 order=9
@@ -346,33 +346,33 @@ order=2
 
 [item:Characters/ImmortalCharacters.tex]
 archive=true
-column=67
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=1186
+line=1498
 mode=LaTeX
 open=false
 order=4
 
 [item:Characters/MortalCharacters.tex]
 archive=true
-column=54
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=3660
+line=2646
 mode=LaTeX
 open=false
 order=3
 
 [item:Characters/OphidianCharacters.tex]
 archive=true
-column=0
+column=61
 encoding=UTF-8
 highlight=LaTeX
-line=3262
+line=3087
 mode=LaTeX
 open=false
-order=1
+order=2
 
 [item:Characters/ResphanCharacters.tex]
 archive=true
@@ -386,10 +386,10 @@ order=3
 
 [item:Commands.tex]
 archive=true
-column=0
+column=25
 encoding=UTF-8
 highlight=LaTeX
-line=3367
+line=4086
 mode=LaTeX
 open=false
 order=4
@@ -426,20 +426,20 @@ order=-1
 
 [item:MithFull.tex]
 archive=true
-column=7
+column=13
 encoding=UTF-8
 highlight=LaTeX
-line=9
+line=74
 mode=LaTeX
 open=true
 order=0
 
 [item:Story/AfterSethicus.tex]
 archive=true
-column=145
+column=34
 encoding=UTF-8
 highlight=LaTeX
-line=56
+line=169
 mode=LaTeX
 open=false
 order=-1
@@ -449,37 +449,37 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=1338
+line=3190
 mode=LaTeX
-open=false
-order=3
+open=true
+order=2
 
 [item:Story/AvatarofEntropy.tex]
 archive=true
-column=0
+column=128
 encoding=UTF-8
 highlight=LaTeX
-line=754
+line=2131
 mode=LaTeX
 open=false
 order=-1
 
 [item:Story/Incursion.tex]
 archive=true
-column=74
-encoding=UTF-8
-highlight=LaTeX
-line=1982
-mode=LaTeX
-open=false
-order=4
-
-[item:Story/Merkyrah.tex]
-archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=15
+line=366
+mode=LaTeX
+open=true
+order=1
+
+[item:Story/Merkyrah.tex]
+archive=true
+column=43
+encoding=UTF-8
+highlight=LaTeX
+line=45
 mode=LaTeX
 open=false
 order=3
@@ -489,10 +489,10 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=468
+line=563
 mode=LaTeX
-open=true
-order=1
+open=false
+order=3
 
 [item:Story/Sentinels01Notes.tex]
 archive=true
@@ -526,40 +526,40 @@ order=3
 
 [item:Story/SentinelsofMith.tex]
 archive=true
-column=98
+column=32
 encoding=UTF-8
 highlight=LaTeX
-line=2513
+line=3671
 mode=LaTeX
-open=false
-order=2
+open=true
+order=4
 
 [item:Story/SethicusReign.tex]
 archive=true
-column=0
+column=4
 encoding=UTF-8
 highlight=LaTeX
-line=548
+line=95
 mode=LaTeX
 open=false
 order=3
 
 [item:Story/SethicusRise.tex]
 archive=true
-column=33
+column=79
 encoding=UTF-8
 highlight=LaTeX
-line=572
+line=864
 mode=LaTeX
-open=false
-order=1
+open=true
+order=3
 
 [item:Utilities/UsePackages.tex]
 archive=true
-column=30
+column=27
 encoding=UTF-8
 highlight=LaTeX
-line=17
+line=20
 mode=LaTeX
 open=false
 order=1
@@ -586,70 +586,70 @@ order=4
 
 [item:World/DenizensMinor.tex]
 archive=true
-column=19
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=1260
+line=635
 mode=LaTeX
-open=true
+open=false
 order=2
 
 [item:World/ErebeanRaces.tex]
 archive=true
-column=43
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=25
+line=1705
 mode=LaTeX
 open=false
 order=1
 
 [item:World/Magic.tex]
 archive=true
-column=268
+column=68
 encoding=UTF-8
 highlight=LaTeX
-line=1162
+line=1358
 mode=LaTeX
 open=false
 order=2
 
 [item:World/OphidianRaces.tex]
 archive=true
-column=25
+column=36
 encoding=UTF-8
 highlight=LaTeX
-line=1683
+line=1722
 mode=LaTeX
-open=true
+open=false
 order=3
 
 [item:World/Realms.tex]
 archive=true
-column=53
+column=12
 encoding=UTF-8
 highlight=LaTeX
-line=19
+line=1860
 mode=LaTeX
 open=false
 order=5
 
 [item:World/ResphanRace.tex]
 archive=true
-column=17
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=3859
+line=3671
 mode=LaTeX
 open=false
 order=2
 
 [item:World/Universe.tex]
 archive=true
-column=0
+column=53
 encoding=UTF-8
 highlight=LaTeX
-line=1602
+line=2653
 mode=LaTeX
 open=false
 order=2
@@ -666,9 +666,9 @@ order=6
 
 [view-settings,view=0,item:Appendix/Languages.tex]
 CursorColumn=0
-CursorLine=186
+CursorLine=163
 JumpList=
-ViMarks=
+ViMarks=.,154,57,[,154,4,],154,57
 
 [view-settings,view=0,item:Appendix/Pronunciation.tex]
 CursorColumn=45
@@ -681,34 +681,34 @@ CursorColumn=75
 CursorLine=122
 
 [view-settings,view=0,item:Characters/ImmortalCharacters.tex]
-CursorColumn=67
-CursorLine=1186
+CursorColumn=0
+CursorLine=1498
 JumpList=
 ViMarks=.,1186,66,[,1185,45,],1186,66
 
 [view-settings,view=0,item:Characters/MortalCharacters.tex]
-CursorColumn=54
-CursorLine=3660
+CursorColumn=0
+CursorLine=2646
 JumpList=
-ViMarks=.,3660,53,[,3660,10,],3660,53,d,3636,2
+ViMarks=.,2639,65,[,2639,60,],2639,65,a,2638,0,d,3650,2
 
 [view-settings,view=0,item:Characters/OphidianCharacters.tex]
-CursorColumn=0
-CursorLine=3262
+CursorColumn=61
+CursorLine=3087
 JumpList=
-ViMarks=.,3270,216,[,3270,216,],3270,216,a,2541,0
+ViMarks=.,3087,61,[,3087,61,],3087,61,a,2541,0
 
 [view-settings,view=0,item:Characters/ResphanCharacters.tex]
 CursorColumn=0
 CursorLine=3671
 JumpList=
-ViMarks=.,4851,14,[,4851,7,],4851,14
+ViMarks=.,3949,48,[,3949,48,],3949,48
 
 [view-settings,view=0,item:Commands.tex]
-CursorColumn=0
-CursorLine=3367
+CursorColumn=25
+CursorLine=4086
 JumpList=
-ViMarks=.,6435,0,[,6435,0,],6435,0
+ViMarks=.,4090,24,[,4090,24,],4090,24
 
 [view-settings,view=0,item:Hyphenation.tex]
 CursorColumn=9
@@ -723,40 +723,46 @@ JumpList=
 ViMarks=.,1157,47,[,1157,46,],1157,47,a,1124,0
 
 [view-settings,view=0,item:MithFull.tex]
-CursorColumn=7
-CursorLine=9
+CursorColumn=13
+CursorLine=74
 JumpList=
 ViMarks=.,59,40,[,59,40,],59,40
 
 [view-settings,view=0,item:Story/AfterSethicus.tex]
-CursorColumn=145
-CursorLine=56
+CursorColumn=34
+CursorLine=169
 JumpList=
-ViMarks=.,849,78,[,849,78,],849,78
+ViMarks=.,170,30,[,170,4,],170,30
 
 [view-settings,view=0,item:Story/ArchonsofMith.tex]
 CursorColumn=0
-CursorLine=1338
+CursorLine=3190
+JumpList=
+ViMarks=
 
 [view-settings,view=0,item:Story/AvatarofEntropy.tex]
-CursorColumn=0
-CursorLine=754
+CursorColumn=128
+CursorLine=2131
+JumpList=
+ViMarks=
 
 [view-settings,view=0,item:Story/Incursion.tex]
-CursorColumn=74
-CursorLine=1982
+CursorColumn=0
+CursorLine=366
 JumpList=
 ViMarks=.,1982,74,[,1982,74,],1982,74
 
 [view-settings,view=0,item:Story/Merkyrah.tex]
-CursorColumn=0
-CursorLine=15
+CursorColumn=43
+CursorLine=45
+JumpList=
+ViMarks=.,45,41,[,45,33,],45,41,a,1152,0
 
 [view-settings,view=0,item:Story/OphidianCivilization.tex]
 CursorColumn=0
-CursorLine=468
+CursorLine=563
 JumpList=
-ViMarks=.,295,64,[,295,64,],295,64
+ViMarks=.,568,0,[,568,0,],568,95
 
 [view-settings,view=0,item:Story/Sentinels01Notes.tex]
 CursorColumn=73
@@ -777,26 +783,26 @@ JumpList=
 ViMarks=.,1884,304,[,1884,297,],1884,304
 
 [view-settings,view=0,item:Story/SentinelsofMith.tex]
-CursorColumn=98
-CursorLine=2513
+CursorColumn=32
+CursorLine=3671
 JumpList=
-ViMarks=.,2513,97,[,2513,97,],2513,97
+ViMarks=.,3671,31,[,3671,26,],3671,31
 
 [view-settings,view=0,item:Story/SethicusReign.tex]
-CursorColumn=0
-CursorLine=548
+CursorColumn=4
+CursorLine=95
 JumpList=
-ViMarks=.,277,1,[,277,1,],277,1
+ViMarks=.,79,12,[,79,12,],79,21
 
 [view-settings,view=0,item:Story/SethicusRise.tex]
-CursorColumn=33
-CursorLine=572
+CursorColumn=79
+CursorLine=864
 JumpList=
-ViMarks=.,123,74,[,123,72,],123,74
+ViMarks=.,864,83,[,864,76,],864,83
 
 [view-settings,view=0,item:Utilities/UsePackages.tex]
-CursorColumn=30
-CursorLine=17
+CursorColumn=27
+CursorLine=20
 JumpList=
 ViMarks=.,19,30,[,19,30,],19,30
 
@@ -815,46 +821,46 @@ CursorColumn=34
 CursorLine=3108
 
 [view-settings,view=0,item:World/DenizensMinor.tex]
-CursorColumn=19
-CursorLine=1260
+CursorColumn=0
+CursorLine=635
 JumpList=
 ViMarks=.,262,0,[,262,0,],262,0,a,2688,0,b,223,0,c,341,0,d,2687,0
 
 [view-settings,view=0,item:World/ErebeanRaces.tex]
-CursorColumn=43
-CursorLine=25
+CursorColumn=0
+CursorLine=1705
 JumpList=
 ViMarks=.,25,42,[,25,38,],25,42,a,1391,0
 
 [view-settings,view=0,item:World/Magic.tex]
-CursorColumn=268
-CursorLine=1162
+CursorColumn=68
+CursorLine=1358
 JumpList=
-ViMarks=.,1162,267,[,1162,254,],1162,267
+ViMarks=.,1358,67,[,1358,34,],1358,67
 
 [view-settings,view=0,item:World/OphidianRaces.tex]
-CursorColumn=25
-CursorLine=1683
+CursorColumn=36
+CursorLine=1722
 JumpList=
-ViMarks=.,1683,0,[,1683,0,],1683,0
+ViMarks=.,1722,34,[,1722,18,],1722,34
 
 [view-settings,view=0,item:World/Realms.tex]
-CursorColumn=53
-CursorLine=19
+CursorColumn=12
+CursorLine=1860
 JumpList=
-ViMarks=.,19,52,[,19,52,],19,52
+ViMarks=.,1809,21,[,1809,16,],1809,21
 
 [view-settings,view=0,item:World/ResphanRace.tex]
-CursorColumn=17
-CursorLine=3859
+CursorColumn=0
+CursorLine=3671
 JumpList=
 ViMarks=.,3750,143,[,3750,143,],3750,143,a,3697,0,b,979,0
 
 [view-settings,view=0,item:World/Universe.tex]
-CursorColumn=0
-CursorLine=1602
+CursorColumn=53
+CursorLine=2653
 JumpList=
-ViMarks=.,1055,72,[,1055,72,],1055,72
+ViMarks=.,2653,25,[,2653,26,],2653,25
 
 [view-settings,view=0,item:World/World.tex]
 CursorColumn=201
