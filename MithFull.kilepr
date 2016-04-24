@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.3
-lastDocument=World/ResphanRace.tex
+lastDocument=Story/Sentinels03Notes.tex
 masterDocument=
 name=MithFull
 pkg_extIsRegExp=false
@@ -50,7 +50,7 @@ Mode=LaTeX
 ReadWrite=true
 
 [document-settings,item:Characters/MortalCharacters.tex]
-Bookmarks=2638,3650
+Bookmarks=2638,3642
 Encoding=UTF-8
 Highlighting=LaTeX
 Indentation Mode=normal
@@ -366,17 +366,17 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=583
+line=3809
 mode=LaTeX
-open=false
-order=5
+open=true
+order=2
 
 [item:Characters/OphidianCharacters.tex]
 archive=true
-column=0
+column=8
 encoding=UTF-8
 highlight=LaTeX
-line=3266
+line=281
 mode=LaTeX
 open=false
 order=2
@@ -436,7 +436,7 @@ archive=true
 column=13
 encoding=UTF-8
 highlight=LaTeX
-line=36
+line=54
 mode=LaTeX
 open=true
 order=0
@@ -453,10 +453,10 @@ order=-1
 
 [item:Story/ArchonsofMith.tex]
 archive=true
-column=0
+column=29
 encoding=UTF-8
 highlight=LaTeX
-line=3190
+line=1232
 mode=LaTeX
 open=false
 order=2
@@ -503,10 +503,10 @@ order=2
 
 [item:Story/Sentinels01Notes.tex]
 archive=true
-column=150
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=4845
+line=1974
 mode=LaTeX
 open=false
 order=2
@@ -516,20 +516,20 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=1278
+line=1429
 mode=LaTeX
 open=false
 order=6
 
 [item:Story/Sentinels03Notes.tex]
 archive=true
-column=78
+column=39
 encoding=UTF-8
 highlight=LaTeX
-line=218
+line=675
 mode=LaTeX
-open=false
-order=6
+open=true
+order=1
 
 [item:Story/Sentinels04Notes.tex]
 archive=true
@@ -543,10 +543,10 @@ order=2
 
 [item:Story/SentinelsofMith.tex]
 archive=true
-column=14
+column=7
 encoding=UTF-8
 highlight=LaTeX
-line=1704
+line=1687
 mode=LaTeX
 open=false
 order=4
@@ -586,7 +586,7 @@ archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=3224
+line=1905
 mode=LaTeX
 open=false
 order=7
@@ -613,10 +613,10 @@ order=2
 
 [item:World/ErebeanRaces.tex]
 archive=true
-column=0
+column=324
 encoding=UTF-8
 highlight=LaTeX
-line=207
+line=802
 mode=LaTeX
 open=false
 order=1
@@ -658,7 +658,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=2963
 mode=LaTeX
-open=true
+open=false
 order=1
 
 [item:World/Universe.tex]
@@ -707,13 +707,13 @@ ViMarks=.,1186,66,[,1185,45,],1186,66
 
 [view-settings,view=0,item:Characters/MortalCharacters.tex]
 CursorColumn=0
-CursorLine=583
+CursorLine=3809
 JumpList=
-ViMarks=.,4008,89,[,4008,89,],4008,89,a,2638,0,d,3650,2
+ViMarks=.,3810,0,[,3810,0,],3810,0,a,2638,0,d,3642,2
 
 [view-settings,view=0,item:Characters/OphidianCharacters.tex]
-CursorColumn=0
-CursorLine=3266
+CursorColumn=8
+CursorLine=281
 JumpList=
 ViMarks=.,3282,65,[,3282,65,],3282,65,a,2655,0
 
@@ -743,7 +743,7 @@ ViMarks=.,1388,0,[,1379,0,],1388,0,a,1124,0
 
 [view-settings,view=0,item:MithFull.tex]
 CursorColumn=13
-CursorLine=36
+CursorLine=54
 JumpList=
 ViMarks=.,60,4,[,60,4,],60,4
 
@@ -754,10 +754,10 @@ JumpList=
 ViMarks=.,170,30,[,170,4,],170,30
 
 [view-settings,view=0,item:Story/ArchonsofMith.tex]
-CursorColumn=0
-CursorLine=3190
+CursorColumn=29
+CursorLine=1232
 JumpList=
-ViMarks=
+ViMarks=.,1230,0,[,1228,0,],1230,1
 
 [view-settings,view=0,item:Story/AvatarofEntropy.tex]
 CursorColumn=0
@@ -784,22 +784,22 @@ JumpList=
 ViMarks=.,245,24,[,245,15,],245,24,a,202,0
 
 [view-settings,view=0,item:Story/Sentinels01Notes.tex]
-CursorColumn=150
-CursorLine=4845
+CursorColumn=0
+CursorLine=1974
 JumpList=
-ViMarks=.,4795,59,[,4795,59,],4795,65
+ViMarks=.,276,24,[,276,25,],276,24
 
 [view-settings,view=0,item:Story/Sentinels02Notes.tex]
 CursorColumn=0
-CursorLine=1278
+CursorLine=1429
 JumpList=
-ViMarks=.,1277,52,[,1277,52,],1277,58
+ViMarks=.,1423,11,[,1423,11,],1423,11
 
 [view-settings,view=0,item:Story/Sentinels03Notes.tex]
-CursorColumn=78
-CursorLine=218
+CursorColumn=39
+CursorLine=675
 JumpList=
-ViMarks=.,218,78,[,218,78,],218,78
+ViMarks=.,675,39,[,675,39,],675,39
 
 [view-settings,view=0,item:Story/Sentinels04Notes.tex]
 CursorColumn=14
@@ -808,10 +808,10 @@ JumpList=
 ViMarks=.,1672,13,[,1672,13,],1672,13
 
 [view-settings,view=0,item:Story/SentinelsofMith.tex]
-CursorColumn=14
-CursorLine=1704
+CursorColumn=7
+CursorLine=1687
 JumpList=
-ViMarks=.,1704,23,[,1704,23,],1704,23
+ViMarks=.,1050,0,[,1050,0,],1050,1
 
 [view-settings,view=0,item:Story/SethicusReign.tex]
 CursorColumn=0
@@ -833,9 +833,9 @@ ViMarks=.,19,30,[,19,30,],19,30
 
 [view-settings,view=0,item:World/Azmith/Azmith.tex]
 CursorColumn=0
-CursorLine=3224
+CursorLine=1905
 JumpList=
-ViMarks=.,3333,54,[,3333,54,],3333,54
+ViMarks=.,1906,67,[,1907,0,],-1,-1
 
 [view-settings,view=0,item:World/Azmith/Vaimons.tex]
 CursorColumn=58
@@ -854,8 +854,8 @@ JumpList=
 ViMarks=.,533,0,[,531,0,],533,47,a,2742,0,b,223,0,c,341,0,d,2741,0
 
 [view-settings,view=0,item:World/ErebeanRaces.tex]
-CursorColumn=0
-CursorLine=207
+CursorColumn=324
+CursorLine=802
 JumpList=
 ViMarks=.,206,102,[,206,102,],206,102,a,1462,0
 
