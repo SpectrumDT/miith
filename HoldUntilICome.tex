@@ -12,11 +12,30 @@
 
 
 %\usepackage{sectionbreak}
-\include{UsePackages}
+%\usepackage[all]{nowidow}
+
+\usepackage[english]{babel}
+% \usepackage[
+%   backend=biber,
+%   style=alphabetic,
+%   citestyle=authortitle
+% ]{biblatex}
+\usepackage[utf8]   {inputenc}
+\usepackage[T1]     {fontenc}
+\usepackage         {comment}
+\usepackage         {etoolbox} 
+\usepackage         {graphicx}
+\usepackage[toc]    {multitoc}
+\usepackage         {twoopt}
+\usepackage         {xspace}
+\usepackage[pdftex,colorlinks,linkcolor=blue,pdfstartview=FitH]{hyperref}
+
+%\include{UsePackages}
 \input{Commands}
 \input{Hyphenation}
 
 \newcommand{\sectionbreak}{\bigskip\noindent}
+\newcommand{\drum}[1]{\textsl{#1}}
 
 
 
@@ -34,6 +53,7 @@
 
 
     \maketitle
+    \tableofcontents
 
 
 
@@ -63,128 +83,168 @@
 
 
 
+\section{War}
 ``'Hold until I come'{}'', the captain read aloud from the telegram. ``'And protect the hierophant at all costs.' That is the message from Exalted Lord Iscrafel.'' 
 
 Murmuring broke out among the soldiers and others: ``Great Insharrad!'' and ``Jach-dun preserve us!'' 
 
-Filima Kepra did not understand what was going on in the world. All he knew was that rumours said the resphan kingdoms had banded together and launched a great war against the suchian nations. 
+Filima Kepra did not understand what was going on in the world. 
+All he knew was that rumours said the resphan kingdoms had gone to war against the suchian nations. 
 
 Kepra looked out. From where he stood in the Cressax citadel courtyard he could not see only the walls. Those massive white walls that looked impenetrable. 
-
 But out there somewhere to the west was an enemy army bent on their destruction.
 
-Why was there suddenly war? Why would the resphain attack? \emph{Then again, who understands the resphain? Who can understand the strange mind of a mammal?} The mammalian races - resphain and humans - were not like sane reptiles. The mammals did not know the two Holy Principles, Zotha and Asheen, greatness and harmony, that guided the noble reptilian civilization. Nor did they know any of the Epitomes. A human could be \emph{taught} about the Principles and the Epitomes, sure, but they did not and could not \emph{feel} it. They did not have Zotha and Asheen in their hearts, and so no Epitome could truly touch them. 
+Why was there suddenly war? Why would the resphain attack? 
+\emph{Then again, who understands the resphain? Who can understand the strange mind of a mammal?} 
+The mammalian races\dash{}resphain and humans\dash{}were not like sane reptiles. The mammals did not know the two Holy Principles\dash{}Zotha and Asheen, the virtues of Greatness and Harmony\dash{}that guided the noble reptilian civilization. Nor did they know any of the Epitomes. A human could be \emph{taught} about the Principles and the Epitomes, sure, but they did not and could not \emph{feel} it. They did not have Zotha and Asheen in their hearts, and so no Epitome could truly touch them. 
 
-Still, Kepra knew, humans were not savage beasts. They had intelligence. Nor were they wholly evil. They could have morals and honour. At the best of times a human could be noble, almost as even a suchian. But Kepra did not understand them. \emph{Without the Principles, what leads a human to good or evil?} 
+Still, Kepra knew, humans were not savage beasts. They had intelligence. Nor were they wholly evil. They could have morals and honour. At the best of times a human could be noble, almost like even a suchian. But Kepra did not understand them. \emph{Without the Principles, what leads a human to good or evil?} 
 
 And as for a resphan, who could tell? The greater mammalian race, far above humans, far greater and more terrifying. Capable of good, he supposed, but also of great evil. Who could tell what went on in the terrible mind of a resphan? As he mused, Kepra muttered a prayer to Jach-dun, the Epitome of defiance against foreign powers.
 
-\emph{And now they are coming here.} Kepra’s tongue darted out nervously to lick his eyes.
+\emph{And now they are coming here.} 
+
+Kepra’s tongue darted out nervously to lick his eye.
 
 %If the foe did intend to wreak evil and destruction, it made sense for them to come here to Cressax Outpost. 
 
 %Filima Kepra defends Cressax Outpost outside the city of Luth Gormat. Kepra is assigned here because he and his brood, the Filima, are citizens of Luth Gormat, under the rule of the Gormat brood. Cressax is an important site, containing both a zest refinery and one of the Sacred Pillars of the Great Concord that keeps the suchian race united. Surely the resphain do not intend to destroy or desecrate the Pillar? Surely not even a resphan is capable of such blasphemous evil? Kepra glances towards the Pillar. It is a marvel. Outwardly an obelisk of white and black stone, adorned with figures of Epitomes, heroes and serpents in gold and brass and iron. And inside it houses marvellous machinery devised by brilliant mages and engineers, consecrated to the Epitomes Kelesh, Suthalba and Tsor. It is this machinery, channelled through the splendid obelisk and many other Pillars like it, that uphold the Divine Concord and thus keep all reptilians connected to each other and to the virtuous Epitomes. It is the Concord that allows the Epitomes to guide all suchians and scathae to lead virtuous lives and contribute to the greatness and harmony of their civilization.
 
-Cressax Outpost was an important site, containing not only a major zest refinery but more importantly one the Sacred Pillars of the Great Concord that kept the suchian race united. Surely the resphain could not intend to destroy or desecrate the Pillar? Surely not even a resphan was capable of such blasphemous evil? 
+Cressax Outpost was an important site, housing not only a major zest refinery but more importantly one the Sacred Pillars of the Great Concord that kept the suchian race united. Surely the resphain could not intend to destroy or desecrate the Pillar? Surely not even a resphan was capable of such blasphemous evil? 
 
-Kepra turned his head to look at the Pillar. It was a marvel. On the outside an obelisk of white and black stone, adorned with figures of Epitomes, heroes and serpents in gold and brass and iron. And inside it housed marvellous machinery devised by brilliant mages and engineers, consecrated to Kelesh, Suthalba and Tsor, the Epitomes of the Concord. It was this machinery, channelled through the splendid obelisk and many other Pillars like it, that upheld the Divine Concord and thus kept all reptilians connected to each other and to the virtuous Epitomes. It was the Concord that allowed the Epitomes to guide all suchians and scathae to lead virtuous lives and contribute to the greatness and harmony of their civilization.
+Kepra turned his head to look at the Pillar. It was a marvel. On the outside a monolithic obelisk of white and black stone, adorned with figures of Epitomes, heroes and serpents in gold and brass and iron. And inside it was full of marvellous machinery devised by brilliant mages and engineers, consecrated to Kelesh, Suthalba and Tsor, the Epitomes of the Concord. It was this machinery, channelled through the splendid obelisk and many other Pillars like it, that upheld the Divine Concord and thus kept all reptilians connected to each other and to the virtuous Epitomes. It was the Concord that allowed the Epitomes to guide all suchians and scathae to lead virtuous lives and contribute to the greatness and harmony of their civilization.
 
 \emph{Would the resphain seek to destroy this? Is that how deep their evil goes?}
 
 Kepra could not even imagine what might happen if the Pillar were destroyed and the Concord damaged. Would all reptiles lose sight of the Epitomes? Would they lose the Holy Principles, Zotha and Asheen, Greatness and Harmony? Would they turn on each other like mad beasts, bereft of all morals, all civilization, all bonds of kinship?
 
+\emph{
+    We must not let that happen.%
+%     We must hold until the Exalted Lord arrives.
+     }
+
+
+
+\section{Hierophant}
 % The captain, Onocca Sabot, says: 
 ``We are in luck'', said the captain. ``The resphan force is small. They have only about 2000 humans and no heavy siege engines. They outnumber us, but we have the citadel. We can hold them. But I will not deceive you: It will not be easy. They have several resphain with them.'' 
 
 A shudder went through the army at the thought of facing resphain. Kepra was no great warrior, but he would stand up to marauding humans with Zotha in his heart. 
 %And with Druzcalacht, Epitome of valour. 
-But resphain? \emph{How does one fight against such monsters?}
+But resphain? 
+\emph{How does one fight against such monsters?}
 Kepra prayed silently that Druzcalacht, the Epitome of valour, would give them all strength.
 
 The captain continued: ``But we stand not alone. We need only hold until the Dragonlord Iscrafel comes to our rescue. Stay true to the Epitomes and to your comrades and we will live. The Dragonlord will be here before nightfall.''
 
 \emph{The Dragonlord! A dragon is coming to rescue us!} 
 
-And not just any dragon, but Iscrafel! Belraphon Quessanth Iscrafel, the Juggernaut, the right hand and champion of the Last Mysteriarch, the most renowned warrior-mage of all suchian-kind! Kepra had seen a dragon before, but only one of the less famous ones.
+And not just any dragon, but Iscrafel! Belraphon Quessanth Iscrafel, the Juggernaut, the Last Mysteriarch's right hand and champion, the most renowned warrior-mage of all suchian-kind! Kepra had seen a dragon before, but only one of the less famous ones.
 %- Semirex was her name. 
 But Iscrafel! The thought of getting to see Iscrafel and his army in battle made Kepra's heart soar with a tingle of Zotha, the Principle of Greatness.
 
-\emph{And we will need him.} Kepra looked around. The defenders numbered only perhaps two hundred - most of them scathae, with about twenty suchians like Kepra, and unit of about thirty human spearmen.
+\emph{And we will need him.} 
+Kepra looked around. 
+Cressax was a strong fortress, but they were unprepared for war and had only a skeleton garrison.
+They numbered a mere two hundred\dash{}most of them scathae, with about twenty suchians like Kepra and unit of about thirty human spearmen.
 
 He hoped their walls would hold. 
 
 %Their force numbers maybe 200. Most are scathae. There are about 20 suchians like Kepra, mostly mages and founts plus the commanding captain. They also have 20-30 human spearmen.
 
-Another suchian stepped forth next to the captain - their spiritual leader, the hierophant Aeocryth of Rystessakhin.
+Another suchian stepped forth next to the captain\dash{}their spiritual leader, the hierophant Aeocryth of Rystessakhin.
 She looked exotic in her beautiful yellow robe with many stones and jewels. 
 Where Kepra and most of the other suchians here had gray scales, Aeocryth’s faintly maroon-tinted scales marked her as a foreigner. 
-Though she spoke perfect High Talaac, she was not ethnically Talaac like Kepra and his master. Nor was she Saphyr like many of the others. Rystessakhin was a Felgian brood; hence her strange name, ``Aeocryth of Rystessakhin''. By Talaac or Saphyr tradition the name ought to be Rystessakhin Aeocryth. 
+Though she spoke perfect High Talaac, she was not ethnically Talaac like Kepra and his master. Nor was she Saphyr like many of the others. 
+Rystessakhin was a Felgian brood; hence her strange name, \emph{Aeocryth of Rystessakhin}. 
+By Talaac or Saphyr tradition the name would be Rystessakhin Aeocryth. 
+
+She was the one whom Lord Iscrafel told them to protect.
 
 Aeocryth spoke: ``We must stand together. Trust in the man next to you, and be true to the Epitomes. Have Druzcalacht in your heart, and Jach-dun, and Insharrad!'' 
-The hierophant intoned the holy names with great passion, and every reptile present felt it - felt the truth and the presence of the Epitomes in their bodies. Felt the Concord. 
-Kepra smiles at the touch of Insharrad, called by some the Greatest Epitome and representing the pride and unity of the suchian race.
+The hierophant intoned the holy names with great passion, and every reptile present felt it\dash{}felt the truth and the presence of the Epitomes in their bodies. Felt the Concord. 
+Kepra smiled at the touch of Insharrad, called by some the Greatest Epitome and representing the pride and unity of the suchian race.
+
+And underneath it all, Kepra seemed to detect in her a certain sadness.
 
 The hierophant went off to say some words to the humans among the defenders. 
 It made sense, Kepra supposed, that the humans would need special spiritual guidance, since they could not feel the reptilian Epitomes. But he had no idea what she said to them.
 
 \emph{Those humans. No Asheen in them. No Zotha. How can you trust them?}
 
+That reminded Kepra of something. 
+When the captain had announced the order to protect her ``at all costs'', he thought he'd seen a flicker of a strange reaction from her. 
+He thought she had winced or even cringed. 
+What was that? 
+Was it fear at the thought of getting killed by resphain? 
+It must be.
+
+
+
+\section{Founts}
 ``Take your positions!'' said a scatha lieutenant. 
 
-Kepra double-checked that he had his dagger - for emergency self-defense. 
+Kepra double-checked that he had his dagger\dash{}for emergency self-defense. 
 He attached his third drumstick to his tail. 
 He adjusted the position of his secondary drum. 
 Then he picked up his two main drumsticks.
 
-Kepra was of the greater reptilian race, the suchians. But he took orders from the lieutenant, a scatha. 
+Kepra was of the greater reptilian race, the suchians. 
+But he took orders from the lieutenant, a scatha. 
 This was just the way things were. 
-Many scathae in the world outranked him.
-Kepra’s brood, the Filima, were not of noble status, and besides, Kepra knew he was young and inexperienced - just 33, barely a man by the standards of his people. 
+The scathae were a lower race, but they could rise in the ranks, so many scathae in the world ended up outranking one such as him.
+Kepra’s brood, the Filima, were not of noble status, and besides, Kepra knew he was young and inexperienced\dash{}just 33, barely a man by the standards of his people. 
 And he was no officer or mage. 
 Barely even a soldier. 
 He was just a youth with a drum. 
+
 He once dreamed of being a mage, but that had proven too dangerous for one of his meagre talents. 
+So now he served as a fount. Not the most glorious of professions, but a perfectly respectable one, and well-paid.
 
-So now he served as a fount. Not a glorious profession, but a perfectly respectable one, and well-paid.
-
-He took his place at his giant drum, with a smaller drum behind him so he could also use his tail. 
+He took his place at his giant bass drum, with a smaller drum behind him so he could also use his tail. 
 
 He looked around to see his friends. 
-The ones he knew best were of course his fellow founts attending ward-mage Tezoron Rarxan. 
+The ones he knew best were of course his fellow founts in service to the ward-mage Tezoron Rarxan. 
 They were all in place. Grecca with his smaller drums. Sorom and Contor with their horns. Sipel with her flutes. 
 And there, robed in blue and silver and strapped into the ward machine, was master Tezoron. 
 It was she whose work Kepra and his fellows would be supporting. And over there was the other ward-mage, Griph Parun, and her founts. He did not know them quite as well, but they had trained in concert together. 
 
 \emph{We can do this.}
 
-With the two ward-mages was the hierophant Aeocryth of Rystessakhin.
-She was unarmed. She was a mage, but not a warrior-mage. 
-Her role was to be their spiritual guide, to make sure every reptile could know and feel Zotha and Asheen and the Epitomes, and thus keep their army together and their spirits high.
+With the two ward-mages was the hierophant Aeocryth of Rystessakhin, seated on a sacred altar-throne that connected her directly to the Pillar. 
+Kepra's drums happened to get set up in a spot that put her right in his line of sight. 
+She carried no weapon. 
+She was a mage, but not a warrior-mage. 
+Her role was to be their spiritual guide, to keep Zotha and Asheen and the Epitomes alive in the heart of every reptile and thus keep their army together and their spirits high. 
 
-She was the one whom Lord Iscrafel told them to protect ``at all costs''.
+He could easily understand why Lord Iscrafel had admonished them to protect her.
 
 \emph{Iscrafel. I hope he will be here soon.} 
 
-Kepra pictured the Exalted Dragonlord flying at the head of a glorious army to sweep away the resphain and their minions. He pictured the dragon, flanked by flying Fireborne knights blasting resphain out of the sky; rows of shining cavalry following on the ground below, mowing down droves of resphan-worshippers. 
-What a marvelous sight it would be! Again he felt Zotha swelling inside him at the thought, and Insharrad. 
+Kepra pictured the Exalted Dragonlord flying at the head of a splendid army to sweep away the resphain and their minions. He pictured the dragon flanked by flying Fireborne knights blasting resphain out of the sky; rows of shining cavalry following on the ground below mowing down droves of resphan-worshippers. 
+What a glorious sight it would be! Again he felt Zotha swelling inside him at the thought, and Insharrad. 
 
-A marvellous sight. If they survived to see it.
+A glorious sight. If they survived to see it.
 
-\sectionbreak
+
+
+\section{Mages}
 ``Enemy sighted!'' yelled a scout.
 
-From his position Kepra could not see the enemy, only the wall. He could only hear the news as it was passed back from the front line at the battlements. 
+From his position Kepra could not see the enemy, only the immense wall. He could only hear the news as it was passed back from the battlements. 
 The resphan army marched on the west gate. 
-They called it the ``resphan'' army, but it consists almost entirely of humans - the lesser mammalian race. Kepra heard there should be five resphain according to the Fireborne that came back from scouting. That was already bad enough. Kepra did not even want to think about the idea of facing a genuine army of resphain. 
+The ``resphan'' army consisted almost entirely of humans\dash{}the lesser mammalian race. 
+Apparently the Fireborne reported five resphain. That was already bad enough. Kepra did not even want to think about the idea of facing a genuine army of resphain. 
 
-A mighty suchian warrior - like one of the Fireborne - might be a match for a resphan, but not a lowly fount like Kepra. 
+A mighty suchian warrior\dash{}like one of the Fireborne\dash{}might be a match for a resphan, but not a lowly fount like Kepra. 
 
-\emph{I hate resphain. If only someone would wipe them out.} Were they even of this world? Or were the rumours true that the resphain hailed from some other world, some gigantic corpse-city of eternal night?
+\emph{I hate resphain. If only someone would wipe them out.} Were they even of this world? Or were the rumours true that the resphain hailed from some other world, some vast corpse-city of crumbling towers and eternal night?
 
-Now gasp rippled through the ranks of defenders, and mutters of ``Jach-dun!''. 
+His reverie was broken by a gasp that rippled through the ranks of defenders. 
+Mutters of ``Jach-dun!''. 
 Kepra felt a foreign presence sweep over them.
 In his mind it was like a shower of heavy rocks, pounding them and weighing them down. 
-He peered out. Above the wall he glimpsed a pair of shapes above the enemy army, like humans but greater, with great feathered wings on their backs. Clad in gleaming jeweled armour and wielding wicked bladed weapons. 
+He peered out. Above the wall he glimpsed a pair of shapes hovered above the enemy army, like humans but greater, with great feathered wings on their backs. Clad in gleaming jeweled armour and wielding wicked bladed weapons. 
 They soared like harbingers of death, evil coming off them in palpable waves. 
 Their fell eyes seemed to through pierce him with harpoons of dread, and Kepra had to resist the urge to cower. 
 
@@ -193,9 +253,13 @@ Their fell eyes seemed to through pierce him with harpoons of dread, and Kepra h
 \emph{I hope Lord Iscrafel and his army will be here soon.}
 
 Then a surge of warmth welled up in him, sweeping away the dread like water sweeps away filth. 
-``Ready, noble defenders!'' said Aeocryth. Kepra felt her presence in the Concord, channelled through the mighty Pillar behind them. ``Remember Druzcalacht, valour! Remember Jach-dun, defiance! Remember Insharrad, unity of reptiliankind! Remember Asheen and Zotha!'' 
+``Be ready, brethren!'' said Aeocryth. 
+Kepra felt her presence in the Concord, channelled through the mighty Pillar behind them. 
+Like strong kind hands holding him up. 
+Like the hands of the loving brood nurses that had raised him from an egg to a man.
+``Remember Druzcalacht, valour! Remember Jach-dun, defiance! Remember Insharrad, unity of reptiliankind! Remember Asheen and Zotha!'' 
 
-And Kepra felt them, flowing through him and giving him strength. He stood up straight, as did every suchian and scatha in sight. 
+And Kepra felt them, flowing through him and giving him power. He stood up straight, as did every suchian and scatha in sight. 
 
 \emph{Zotha. Greatness. Asheen. Harmony. With these in heart we stand up to evil. With these in heart we defy the resphain and destroy their minions!}
 
@@ -206,25 +270,32 @@ A loud boom followed his call, the first blast from the defensive cannons.
 ``Founts, get ready!'' said Tezoron Rarxan. 
 
 %With his giant drum, Kepra is responsible for keeping the rhythm. Kepra begins beating his drum. 
-Kepra began beating his drum. As the big drummer, he was responsible for keeping the rhythm for everyone else.
+Kepra began beating his drum. As bass drummer he was responsible for keeping the rhythm for everyone else.
 
-He had no spear or gun or armor. Just a drum. He felt unprepared. defenseless. 
+\drum{One two three four five.} 
+
+He had no spear or gun or armor. Just a drum. 
+%He felt unprepared. defenseless. 
 But the others needed him. The founts were vital. 
 
-One two three four five. 
+\drum{One two three four five.}
 
-A five-beat rhythm, as is traditional in suchian music. One two three four five. One two three four \emph{tail}. One two three four \emph{tail}. One two-and-three four-and-five. One-and-two-and-three four-and-five. One-and-two \emph{tail} four-and-five. One-and-two \emph{tail} four-and-five. 
+A five-beat rhythm, as was traditional in suchian music. 
+\drum{%
+    One two three four five. One two three four \emph{tail}. One two three four \emph{tail}. One two-and-three four-and-five. One-and-two-and-three four-and-five. One-and-two \emph{tail} four-and-five. One-and-two \emph{tail} four-and-five.}
 
-The other musicians joined in. 
-
-After a while Kepra began to feel the trance. He could sense the connection to his brethren - his fellow founts and Master Tezoron. And the hierophant Aeocryth, soaring above and guiding them all. 
+The other fount-musicians joined in. 
+Soon Kepra began to feel the trance. 
+He could sense the connection to his brethren\dash{}his fellow founts and Master Tezoron. And the hierophant Aeocryth, their spiritual matriarch, soaring above and guiding them all. 
 Now in trance, the founts could begin to share the strength of their minds and bodies with their master.
 
 They played a well-known battle song. 
 Those soldiers who could began to sing the words to the song. Some stomped their feet, some pounded their spears to the rhythm. Kepra felt them in the Concord. Though the soldiers were not trained founts and could not share their strength directly, they could still contribute to the trance and help strengthen the Epitomes in everyone.
 
+The hierophant nodded at them all with a benevolent smile.
+
 Thus empowered by her loyal founts, Master Tezoron began to chant spellwords in Mystic Talaac. 
-Kepra could not understand much of the meaning. Mystic Talaac was difficult to understand; very different from High Talaac or his native dialect, 
+Kepra could not understand much of the meaning. Mystic Talaac was difficult to understand; very different from High Talaac or his native dialect.
 But he knew the gist of it. It was a spell of warding. 
 
 Master Tezoron’s eyes rolled back. Her body shivered. She must be descending in her mind into the mystic Labyrinth. Kepra knew only hearsay about the feared Labyrinth; after all, he had failed the entrance exam to the academy of mages and had been told to train as a fount instead. 
@@ -233,8 +304,12 @@ As such, Kepra could only guess at the spectral horrors that his master must fac
 Master Griph, Tezoron's colleague, was likewise murmuring her spellwords. 
 The glass tubes and spheres of the ward machine began to hum and shimmer. Soon the air above them crackled and sparkled as the defensive barrier materialized.
 
-Gunners and archers were in position on the walls now, waiting for the foe to come within range. 
-The loyal humans stood ready on the walls with spears to fight off any attackers that might try to to scale them. 
+Vital energy flowed. 
+Quickened by the music and the trance, power flowed through the founts' bodies and between them, through the wise hierophant, through the mages, through the machines. And into the shimmering barrier that would keep them alive. 
+Such was the wonder and beauty of suchian magic.
+
+Meanwhile gunners and archers stood ready at the battlements, waiting for the foe to come within range. 
+The loyal humans were in position with spears to fight off any attackers that might try to to scale the walls. 
 The defensive cannons pounded away at the enemy. Kepra could see nothing, but he smiled with Zotha at the thought of cannonballs ripping resphan-worshippers to shreds.
 
 %The humans on the defenders’ side stood ready on the walls with spears, to fight off any attackers that try to scale them. Spears are what humans are good at. With these small numbers it does not matter much, but Kepra knows that humans are very often used as spearmen or pikemen. Due to their upright stance you can pack many humans tight, forming a strong pike formation. Scathae and suchians are bad a pike formations because they take up a lot of space with their vertical bodies and tails. Scathae, with their quick, strong legs, make better skirmishers. 
@@ -244,71 +319,96 @@ Kepra looked at the human spearmen. He hoped those humans would remain true to�
 
 \emph{Show your worth, humans. Show that your race is not all resphan-worshipping marauding scum.}
 
-\sectionbreak
-Enemy artillery was barking in the distance.
 
-The archers on the wall begin firing. The enemy must be close.
+
+\section{Ward}
+Enemy artillery barked in the distance.
+
+Soon after that, the archers on the wall begin firing. The enemy must be close.
 
 After several misses, the first enemy artillery shell shattered against the barrier, sending crackling ripples of lightning across it. Master Tezoron shuddered and hissed through clenched teeth as if struck. Through the Concord Kepra felt a dull thud of that pain, like a punch to the brain. 
 
 \emph{Stand firm, master! Jach-dun!} Kepra prayed as he sent her his energy.
 
-One two \emph{tail} four five. One-and-two \emph{tail} four \emph{tail}.
+\drum{One two \emph{tail} four five. One-and-two \emph{tail} four \emph{tail}.}
 
 ``Well done, noble founts!'' said Aeocryth. ``That could have killed us!'' 
 Kepra felt a surge of courage at her words, like water to a thirsty throat. 
 
 \emph{We can do this!}
 
-At the walls, gunfire was intensifying. A scatha cried out in pain. Kepra could see. It could be an enemy hit or it could be the soldier’s own gun malfunctioning.
+And was he mistaken or had she nodded and smiled directly at him just before when he sent prayers to his master? 
+Was she reading his mind?
 
-Kepra drummed on. The trance was strong. He clearly felt his connection to the barrier and how his body and mind were doing their part to uphold it.
+At the battlements, gunfire was intensifying. A scatha cried out in pain. Kepra could see. It could be an enemy hit or it could be the soldier’s own gun malfunctioning.
 
-More shells struck the barrier. It seethed and threw sparks. But it held. The founts were doing their job.
+Kepra drummed on. 
+\emph{Must keep the barrier strong.}
+%The trance was strong. He clearly felt his connection to the barrier and how his body and mind were doing their part to uphold it.
 
-\sectionbreak
-One two-and-three four \emph{tail}. One-and-two \emph{tail} four-and-five.
+\drum{One two-and-three four-and-five. One two-and-three four-and-five.}
 
-Then came a swift jab of pain. A fellow fount cried out and stumbled for a moment. Out of the corner of his eye Keprea saw a great arrow clattering to the ground, stopped by the barrier. 
+More shells struck the barrier. It seethed and threw sparks. But the founts did their duty. The barrier held.
 
-Another stab of pain - as hard as before, but less of a surprise now. Another arrow dropped to the ground.
 
-``Resphan!'' someone cries. 
+
+\section{Resphain}
+\drum{One two-and-three four \emph{tail}. One-and-two \emph{tail} four-and-five.}
+
+Suddenly a swift jab of pain. A fellow fount cried out and stumbled for a moment. Out of the corner of his eye Kepra saw a great arrow clattering to the ground, stopped by the barrier. 
+
+Another stab of pain\dash{}as hard as before, but expected now. Another arrow dropped to the ground.
+
+Then someone cried out: ``Resphan!''
 
 The soldiers gasped. Kepra looked up while keeping his rhythm. A hideous winged form swept past, leaving a trace of foul evil like a stench in its wake. 
 
 A black-armoured resphan, wielding a great bow carved with eldritch symbols. 
 
-The resphan beat his wings and rose high into the air. Then he folded his wings and let himself drop. In free fall, the resphan notched an arrow and loosed. And again. The two arrows howled through the air like hungry daemons and punched into the barrier with a crackle. Once again the resphan spreads his wings and veered off.
+The resphan beat his wings and rose high into the air. Then he folded his wings and let himself drop. In free fall, the resphan notched an arrow and loosed. And another. The two arrows howled through the air like hungry daemons and punched into the barrier with a crackle. Once again the resphan spreads his wings and veered off.
 
 When the resphan dragged the bow through the air, the bow seemed to leave behind an inky smear of black murderous evil. 
 The weapon must be consecrated by whatever dark nameless powers the resphain prayed to, ensorcelled to bring destruction and death.
 
-``Kill the resphan! Shoot him down!'' cried the captain. Archers and gunners let loose upon the flying resphan, but noned manage to score a hit before he rose out of reach. 
+``Kill the resphan! Shoot him down!'' cried the captain. Archers and gunners let loose upon the flying resphan, but none manage to score a hit before he rose out of reach. 
 
 The resphan soared, unable to draw back his bow while beating his wings. 
-Then he dove again and fired. This time one arrow punched through the barrier with a resounding crack. 
+Then he dove again and loosed. This time one arrow punched through the barrier with a resounding crack. 
 Near the outer edge of the barrier a soldier wailed, impaled on the arrow. Master Tezoron pounded her fist on something and growled in frustration. She hissed spellwords. 
 
-The barrier held. One arrow punched through, but the barrier held. 
+Again Kepra felt the watchful presence of the hierophant, soothing their fears and keeping them standing.
 
-The officers shouted orders. More gunners fired on the resphan, but to little effect. The shots that did touch him either bounced off or took a feather or two at most.
+The barrier held. One arrow had punched through, but the barrier held. 
 
-``More resphain!'' someone shouted. Kepra peeked and caught a glimpse of another resphan swooping near the wall - slimmer, possibly female, wielding great scimitar-like talons attached to her boots.
+The officers shouted orders. More gunners fired on the resphan, but to little effect. The shots that did touch him either bounced off or took a feather or two at best.
+
+``Another resphan!'' someone shouted. 
+
+Kepra peeked and caught a glimpse of a resphan diving near the wall\dash{}this one slimmer, perhaps female\dash{}wielding great scimitar-like talons attached to her boots.
 %a curved greatsword that shrieked as it swung. 
-The resphan’s foot-sword shrieked as it clove straight through a scatha spearman, who fell to the ground without even a cry. 
+The resphan swooped and kicked. Her talon-sword shrieked as it punched straight through a scatha spearman. 
+He fell to the ground without even a cry. 
 To Kepra’s eyes it seemed as though the slain man shrivelled as he fell, as if that daemoniac blade destroyed his very soul and essence. There was an cold ripple in the Concord like a torrent of razor-sharp shards of deathly ice. 
 
 Kepra dropped his drumstick in momentary shock. 
 
-\emph{How can we fight foes like this? Where is the Dragonlord?}
+\emph{How can we fight foes like this? Where is Lord Iscrafel?}
 
 ``Hold fast, men!'' said the leader.
 
-Aeocryth, too, admonished them: ``Don’t falter, noble founts! Asheen! Remember Asheen! Stand with your fellows!''
-And there was Asheen, the Principle of Harmony. Throbbing within. Kepra felt his fellows’ need. He picked up his drumstick. Picked up the rhythm. 
+And Kepra's drumstick was back in his hand. He barely remembered picking it up. 
+He was sure the hierophant had taken it from the ground and handed it to him. Such was her influence. 
 
-One two three four \emph{tail}. One two \emph{tail} four \emph{tail}. 
+Aeocryth admonished the men: ``Don’t falter, noble founts! Asheen! Remember Asheen! Stand with your fellows!''
+And there was Asheen, the Principle of Harmony. Throbbing within all of them. 
+%Kepra felt his fellows’ need. 
+
+\emph{That's right. My fellows need me. We are all in this together. Asheen.}
+
+Kepra picked up the rhythm.
+%He picked up his drumstick. Picked up the rhythm. 
+
+\drum{One two three four \emph{tail}. One two \emph{tail} four \emph{tail}.}
 
 The other founts likewise found their pace again. 
 They reached out to each other’s presence and the hierophant’s guidance. It gave them strength. Asheen swelled in their hearts, and Zotha.
@@ -318,23 +418,25 @@ They reached out to each other’s presence and the hierophant’s guidance. It 
 %     Think of the horrors that will befall the city of Luth Gormat without the Concord and with an army of marauding resphain at the door!
     Think of the horrors that will befall his home without the Concord and with an army of marauding resphain at the door!%
 } 
-Kepra thought of his brood. His beloved kinsmen. The wise brood elders. The kind nurses and caretakers. The hatchlings and eggs. 
+Kepra thought of his beloved kinsmen, the Filima brood. His brothers and cousins. The wise brood elders. The kind nurses and caretakers. The hatchlings and eggs. 
 \emph{Think of the eggs!}
+
+\drum{One two-and-three-and-four \emph{tail}. One-and-two \emph{tail} four \emph{tail}.}
 
 \emph{Please come soon, Lord Iscrafel!}
 
 Emboldened by Asheen, scatha spearmen rushed the talon-bearing resphan woman and managed to drive her off the walls. 
 
-Kepra looked around. Many defenders were down - some felled by enemy shot, some cut down by the cruel resphain. 
+Kepra looked around. Many defenders were down\dash{}some felled by enemy shot, some cut down by the cruel resphain. 
 The remnants of the loyal humans were holding their ground, to their credit. 
 Even with several of their number fallen and without Asheen and Zotha they remained loyal. None had laid down arms and fled. 
 
 \emph{Maybe humans are not that bad.}
 
-One-and-two three-and-four \emph{tail}. One-and-two-and-three \emph{tail} five. 
+\drum{One-and-two three-and-four \emph{tail}. One-and-two-and-three \emph{tail} five.}
 
 The taloned resphan returned. This time she flew high over the wall and dove straight down in their midst. 
-%She flies straight through the barrier - for it protects only against projectiles. 
+%She flies straight through the barrier\dash{}for it protects only against projectiles. 
 The barrier only protected against missile weapons, so she passed right through it. 
 She flew low over the defenders and slashed with her daemoniac blades. 
 Soldiers gasped as they fell to her sword.
@@ -350,7 +452,7 @@ Aeocryth cried out:
 
 Kepra shook his head and picked up his rhythm. 
 
-One two-and-three four-and-five. One two-and-three four-and-five.
+\drum{One two-and-three four-and-five. One two-and-three four-and-five.}
 
 \emph{We must hold. Think of the brood. Think of the little ones and the eggs!}
 
@@ -361,7 +463,7 @@ Kepra keeps drumming.
 
 Jach-dun. Jach-dun! Asheen!
 
-One two three-and-four five. One two three-and-four-and-five.
+\drum{One two three-and-four five. One two three-and-four-and-five.}
 
 On his other side, Kepra just barely saw a third resphan swooping right at him, swinging some bladed weapon that Kepra failed to identify. Kepra throws himself on the ground moments before the resphan's weapon clove his giant drum. 
 
@@ -579,7 +681,9 @@ Darkness.
 
 Nothingness.
 
-\sectionbreak
+
+
+\section{Life}
 % {``\sc{Live.}''}
 {\Large{``{LIVE.}''}}
 
@@ -593,10 +697,12 @@ His limbs spin and tingle. %, but they are too weak to move.
 His body and mind obeys the command of the spellword. 
 He lives.
 
-\sectionbreak
+
+
+\section{Exalted}
 Kepra's body burned in agony for what seemed like forever. 
 
-After a time - he had no idea how long - he opened his eyes. 
+After a time\dash{}he had no idea how long\dash{}he opened his eyes. 
 The weak evening light was blinding to his poor eyes. 
 
 The first face he saw was the gentle hierophant Aeocryth. 
@@ -605,7 +711,7 @@ Looming over them was a gigantic black-scaled and metallic form.
 
 \emph{Iscrafel.}
 
-% Iscrafel is clad only in his lesser body now - half machine and hugely massive, but still suchian-sized, unlike his Draconian greater body. 
+% Iscrafel is clad only in his lesser body now\dash{}half machine and hugely massive, but still suchian-sized, unlike his Draconian greater body. 
 
 % Black-scaled Iscrafel gives a toothy smile. 
 The Dragonlord gave a toothy smile.
@@ -645,7 +751,7 @@ In the distance he could hear the footsteps of the fleeing resphan army.
 
 ``Where is your army, Exalted Lord?''
 
-``Army?'' Iscrafel raised an eyebrow - one of the fleshy parts of his face.
+``Army?'' Iscrafel raised an eyebrow\dash{}one of the fleshy parts of his face.
 
 It dawned on Kepra. 
 
@@ -663,7 +769,7 @@ Iscrafel grinned, apparently reading his mind. ``You all did well, Filima. Despi
 
 \newpage
 \appendix
-\section{Pronunciation}
+\section{Pronunciation Guide}
 % Pronunciation is given in both IPA (International Phonetic Alphabet) and my own makeshift phonetics. 
 Some notes about my home-made phonetics: 
 [CH] is like in German \pex{ach}. 
